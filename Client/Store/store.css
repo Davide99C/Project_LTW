@@ -1,0 +1,146 @@
+html,
+
+body {
+    background-color:black;
+}
+
+
+/*barra superiore dello store*/
+
+#barra-shop {
+    background-color:#a6a6a6;
+    width:60%;
+    /*right:20%;
+    /*left:20%;*/
+    top: 88px;
+    height: 60px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+.sez {
+    font-size:20px;
+    font-weight:500;
+    width:100%;
+    text-align:center;
+    height:100%;
+    padding-right: 2%;
+}
+
+.sez label {
+    cursor:pointer;
+}
+
+.sez li {
+    padding: 5px;
+    padding-right: 0;
+    text-align: left;
+    display:block;
+    background-color: #a6a6a6;
+    width:100%;
+}
+.sez a {
+    text-decoration: none;
+    color: black;
+    width:100%;
+}
+
+.sottosez{
+    position:relative;
+    display: none;
+    margin-top: 15px;
+    background-color: #a6a6a6;
+    width:100%;
+    margin-left: -40px;
+    padding-right: 60px;
+}
+
+.sez a:hover {
+    color:rgb(190, 0, 0);
+}
+
+hr {
+    height:auto;
+    border:1px solid;
+}
+
+#carrello {
+    margin-right: 20px;
+}
+.cart {
+    height: 50px ;
+    width: 50px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+/* Parte centrale */
+
+#centro {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    /*background-color: white;
+    background-size: cover;*/
+    background: url(../img/sfondo_shop.jpg) no-repeat;
+    background-size: cover;
+}
+
+.lato {
+    height: 100;
+    width: 14%;
+    /*background: url(../img/sfondo_verticale.jpg) no-repeat;
+    background-size: cover;
+    border: 1px solid black;*/
+    position: relative;   
+}
+
+#img_sx, #img_dx {
+    position: fixed;
+    margin-top:15%;
+    width:13vw;
+}
+
+.img-lato {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#prodotti {
+    position: relative;
+    display: inline-block;
+    height:100%;
+    width: 80%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    padding-top: 10%;
+    background-color: white;
+    /*border: 1px solid black;*/
+}
+
+.prodotto {
+    margin-left:30px;
+    height:30%;
+    width:30%;
+    display: inline-block;
+    /*border: 1px solid black;*/
+    padding-bottom: 80px;
+    cursor: pointer;
+    margin-bottom:5%;
+}
+
+.prodotto img {
+    height:100%;
+    width:100%;
+}
+
+.desc-prod {
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+
+

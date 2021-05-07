@@ -1,0 +1,122 @@
+html,
+
+body {
+    background-color:black;
+}
+
+
+/*Parte centrale FORM*/
+*{
+    box-sizing: border-box;
+    
+  }
+  #form {
+    background: url(../img/lake-696098_1920.jpg) no-repeat;
+    height: auto;
+    padding:5%;
+    background-size: cover;
+}
+
+.h3 {
+  margin: 20px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+}
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: left;
+  }
+
+  input[type=date] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: left;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: left;
+  }
+
+  input[type=password] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: left;
+  }
+  
+  .container label {
+    padding: 12px;
+    display: inline-block;
+    color: white;
+    float: left;
+  }
+
+  .checkbox {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  
+  button[type=submit] {
+    font-size: 30px;
+    height: 60px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 2px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: rgb(180, 48, 48);
+    border-color:rgb(180, 48, 48);
+  }
+  
+  .container {
+    width:35%;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.726);
+  }
+  
+  .col-30 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+  }
+  
+  .col-70 {
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+  

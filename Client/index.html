@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Homepage </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="aux.css" />
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" lang="javascript" src="index.js"> </script>
+
+</head>
+
+<body onload="chat()">
+    <!--HEADER-->
+    <header id="menu">
+        <ul id="menu-1">
+            <li>
+                <a href="#" onclick="openNav()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="Gofishing/gofishing.html" role="button" class="btn"> GO FISHING </a><br>
+                    <a href="Store/store.html" role="button" class="btn"> NEGOZIO </a><br>
+                    <a href="Galleria/galleria.html" role="button" class="btn"> GALLERIA </a><br>
+                    <a href="Faq/faq.html" role="button" class="btn"> FAQ </a><br>
+                    <a href="ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a>
+                </div>
+            </li>
+        </ul>
+        <ul id="menu-center">
+            <a href="index.html" role="button" class="img"> <img src="img/logo.png"> </a>
+        </ul>
+        <ul id="menu-2">
+            <a href="Login/login.html" role="button" class="btn"><img class="img-accedi" src="img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>
+                 
+        </ul>
+    </header>
+    <!---->
+
+    <!--LOADING SCREEN-->
+    <div id="loading_screen">
+        <div id="caricamento">
+            <div width="100" height="100" viewBox="0 0 24 24">
+                <img class="image-spin" src="img/loading.png" style="height:150px; width:150px;">
+                <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                -->
+            </div><br>
+            <h1>Loading...</h1>
+            <p>La pagina è in caricamento<br />
+                Resta connesso e non cambiare sito!</p>
+        </div>
+    </div>
+    <!---->
+
+    <!--IMMAGINE CENTRALE + TESTO-->
+    <div id="main">
+        <section id="video-logo" align="center">
+            <div id="image" align="center">
+                <img src="img/logo.png">
+                <br><label id="titolo"> Wild Fishing </label><br><label> IL PIACERE DI PESCARE</label>
+            </div>
+
+            <!-- scroll-btn start -->
+            <div align="center">
+                <a href="#goal" class="scroll-btn pointer-large">
+                    <div class="scroll-btn-flip-box">
+                        <span class="scroll-btn-flip" data-text="Scroll">Scroll</span>
+                    </div>
+                    <div class="scroll-arrow-box" align="center">
+                        <span class="scroll-arrow"></span>
+                    </div>
+                </a>
+            </div>
+            <!-- scroll-btn end -->
+
+        </section>
+        <!---->
+
+        <!--Chat-->
+        <img src="img/png-clipart-computer-icons-email-desktop-email-miscellaneous-angle.png" id="img email" width="20%"
+            class="open-button" onclick="openForm()">
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+
+                <label class="email"><b>Email: </b></label>
+                <input type="email" placeholder="Inserisci la tua email" name="usrmail" required></input>
+                <br><br>
+                <label for="msg"><b>Messaggio</b></label><br>
+
+                <textarea placeholder="Scrivi il tuo messaggio.." name="msg" required></textarea>
+
+                <button type="submit" class="btn">Invia</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Chiudi</button>
+            </form>
+        </div>
+        <!---->
+
+        <!--OBIETTIVO-->
+        <section id="goal">
+            <img src="img/IMG_1018.png" class="image-goal" style="width:400px; height: 400px;" align="left">
+            
+            <div id="scritta" >
+            <label class="title" > OBIETTIVO </label>
+            <br>
+            <label> Creare una community di pescatori italiani nel rispetto delle acque
+                del territorio italiano e dei pesci che le abitano.
+                Vogliamo condividere con voi appassionati di pesca sportiva riportando qui nel sito tutti i fiumi e i
+                laghi del nostro paese con
+                le relative specie ittiche che vi appartengono.
+            </label>
+        </div>
+
+        </section>
+        <!---->
+
+        <!--Cerchi-->
+        <section id="sezione3">
+            
+            <label class="title" align="center"> ESPLORA </label>
+        </section>
+            <section id="foto">
+            <ul id="gof">
+                <div class="box1" align="center">
+                    <img src="img/fish.jpg" class="image" style="width:400px; height: 400px;">
+                    <div class="middle">
+                        <a class="text" href="Gofishing/gofishing.html">GO FISHING</a>
+                    </div>
+                </div>
+            </ul>
+
+            <ul id="store">
+
+
+                <div class="box1" align="center">
+                    <img src="img/fishing-rod-5277293_1920.jpg" class="image" style="width:400px; height: 400px;">
+                    <div class="middle">
+                        <a class="text" href="Store/store.html">NEGOZIO</a>
+                    </div>
+                </div>
+            </ul>
+            
+        </section>
+        <!---->
+
+
+        <!--NEWSLETTER-->
+        <div id="newsletter" class="newsletter">
+            <ul class="left">
+                <h1> ISCRIVITI ALLA NEWSLETTER!</h1><br>
+                <p> Riceverai tante offerte e novità nella tua e-mail!</p>
+            </ul>
+            <ul class="right">
+                <form action="newsletter.php" class="form-newsletter" method="POST" name="myForm"
+                    onsubmit="return validateForm()">
+                    <input type="email" name="inputEmail" required placeholder=" Indirizzo Email" />
+                    <button class="btn" name="newsletterButton" type="submit"> Iscriviti </button>
+                </form>
+            </ul>
+        </div>
+    </div>
+    <!---->
+
+    </div>
+
+    <!--FOOTER-->
+    <footer id="footer">
+        <ul id="imagefooter">
+            <img src="img/White-logo.png">
+        </ul>
+
+        <ul id="menufooter">
+            <a href="ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+            <a href="Store/store.html" role="button" class="btn"> NEGOZIO </a><br>
+            <a href="Privacy/privacy.html" role="button" class="btn"> PRIVACY POLICY </a><br>
+        </ul>
+
+        <ul id="social">
+            <label> Facebook: WildFishing </label>
+            <br>
+            <label> Instagram: @wildfishing </label>
+            <br>
+            <label> Telefono: ********** </label>
+            <br>
+            <label> E-mail: wildfishing@hotmail.it </label>
+        </ul>
+    </footer>
+    <!---->
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title> Login </title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!--<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>-->
+        <link rel="stylesheet" type="text/css" href="login.css" />
+        <link rel="stylesheet" type="text/css" href="../aux.css"/>
+        <script type="text/javascript" lang="javascript" src="../js/bootstrap.min.js"> </script>
+        <script type="text/javascript" lang="javascript" src="login.js"> </script> 
+
+    </head>
+
+    <body class="text-center">
+         <!--LOADING SCREEN-->
+        <div id="loading_screen">
+            <div id="caricamento">
+                <div width="100" height="100" viewBox="0 0 24 24">
+                    <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
+                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                    -->
+                </div><br>
+                <h1>Loading...</h1>
+                <p>La pagina è in caricamento<br />
+                    Resta connesso e non cambiare sito!</p>
+            </div>
+          </div>
+          <!---->
+        
+        <header id="menu">
+            <ul id="menu-1">
+            <li> 
+                <a href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">   
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING   </a><br>
+                    <a href="../Store/store.html" role="button" class="btn"> NEGOZIO               </a><br>
+                    <a href="../Galleria/galleria.html" role="button" class="btn"> GALLERIA       </a><br>
+                    <a href="../Faq/faq.html" role="button" class="btn" > FAQ                     </a><br>
+                    <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO      </a>   
+                </div>
+            </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
+            </ul>  
+            <ul id="menu-2">
+                <a href="../index.html" role="button" class="btn"> HOME </a> 
+            </ul>
+        </header>
+
+        <div id="form" align="center">
+            <form action="login.php" class ="form-signin" method="POST" name="myForm" onsubmit="return validateForm()">
+                <div>
+                    <img class="mb-4" src="../img/White-logo.png" alt="" 
+                        style ="width:200px; height:200px;"/>
+                </div>
+                <div>
+                    <h1 class="h3 mb-3" style="color:whitesmoke;padding-bottom: 20px;"> 
+                        Accedi 
+                    </h1>
+                </div>
+                <div>
+                    <input type="email" name="inputEmail" required
+                            placeholder="Indirizzo Email" autofocus/>
+                    <input type="password" name="inputPassword" required 
+                            placeholder="Password" />
+                </div>
+                <div id="divRemember" class="checkbox mb-3">
+                    <input type="checkbox" name="remember" />
+                    <label for="remember" style="color:whitesmoke; padding:0;">
+                        Ricordami 
+                    </label>
+                </div >
+                <div>
+                    <button class="btn btn-lg btn-primary" name="loginButton" type="submit">
+                        Accedi
+                    </button>
+                </div><br>
+                <div>    
+                    <label > 
+                        Se non sei ancora registrato  
+                        <a href="../Registrazione/registrazione.html" role="button" class="btn"> Clicca qui </a>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../img/White-logo.png" >
+            </ul>
+            
+            <ul id="menufooter" >
+                <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+                <a href="../Store/store.html" role="button" class="btn"> NEGOZIO </a><br> 
+                <a href="../Privacy/privacy.html" role="button" class="btn" > PRIVACY POLICY </a><br>
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+html,
+
+body {
+    background-color:black;
+}
+
+
+#centro {
+    height: 100%;
+    width: 100%;    
+    display: block;
+    /*background: url(../img/angler-3308264_1920.jpg) no-repeat;*/
+    background-color: rgb(41, 41, 41);
+    font-family: 'Arial';
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 1%;
+    padding-bottom:5%;
+}
+
+#titolo {
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+}
+
+  
+#faq {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#faq a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#faq a:hover {
+    color:rgb(184, 47, 47);
+}
+  
+details {
+    background: rgb(221, 130, 11);
+    color: black;
+    padding: 15px;
+    margin-bottom: 3px;
+    border-radius: 25px;
+    border-color: black;
+    border-style: solid;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 23px;
+    color:black;
+}
+
+summary:hover {
+    color: rgb(184, 47, 47);
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Negozio </title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="../aux.css"/>
+        <link rel="stylesheet" type="text/css" href="store.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="store.js"> </script> 
+    </head>    
+    <body onscroll="scrollFunction()">
+         <!--LOADING SCREEN-->
+        <div id="loading_screen">
+            <div id="caricamento">
+                <div width="100" height="100" viewBox="0 0 24 24">
+                    <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
+                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3• Trota Iridea <br>V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                    -->
+                </div><br>
+                <h1>Loading...</h1>
+                <p>La pagina è in caricamento<br />
+                    Resta connesso e non cambiare sito!</p>
+            </div>
+          </div>
+          <!---->
+        
+        <header id="menu">
+            <ul id="menu-1">
+            <li></a> 
+                <a href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">   
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;    </a>
+                    <a href="../index.html" role="button" class="btn"> HOME                       </a><br>
+                    <a href="../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING   </a><br>
+                    <a href="../Galleria/galleria.html" role="button" class="btn"> GALLERIA       </a><br>
+                    <a href="../Faq/faq.html" role="button" class="btn" > FAQ                     </a><br>
+                    <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO      </a>   
+                </div>
+            </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
+            </ul>  
+            <ul id="menu-2">
+                <a href="../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a> 
+            </ul>
+        </header>
+        <div id="main">
+        <section id="centro">
+            <!--BARRA SUPERIORE DELLO SHOP-->
+            <div id="barra-shop" >
+                <ul class="sez"> 
+                    <label  onmouseover="apri1()">Attrezzatura </label>
+                    <div id="sottosez1" class="sottosez">
+                        <li class ="categoria"><a href='#'>Canne</a></li>
+                        <li class ="categoria"><a href="#">Mulinelli</a></li>
+                        <li class ="categoria"><a href="#">Piombi</a></li>
+                        <li class ="categoria"><a href="#">Ami e gallegianti</a></li>
+                        <li class ="categoria"><a href="#">Fili da pesca</a></li>
+                        <li class ="categoria"><a href="#">Guadini e nasse</a></li>
+                        <li class ="categoria"><a href="#">Belly boat e canoe</a></li>
+                    </div>
+                </ul> <hr>
+                <ul class="sez"> 
+                    <label  onmouseover="apri2()">Abbigliamento</label> 
+                    <div id="sottosez2" class="sottosez">
+                        <li class ="categoria"><a href="#">Giacche e magliette</a></li>
+                        <li class ="categoria"><a href="#">Pantaloni</a></li>
+                        <li class ="categoria"><a href="#">Cappelli</a></li>
+                        <li class ="categoria"><a href="#">Scarpe e stivali</a></li>
+                        <li class ="categoria"><a href="#">Guanti e ditali</a></li>
+                    </div>
+                </ul> <hr> 
+                <ul class="sez"> 
+                    <label  onmouseover="apri3()">Esche/Pasture</label> 
+                    <div id="sottosez3" class="sottosez">
+                        <li class ="categoria"><a href="#">Minnow</a></li>
+                        <li class ="categoria"><a href="#">Crank</a></li>
+                        <li class ="categoria"><a href="#">Ondulanti</a></li>
+                        <li class ="categoria"><a href="#">Vermi</a></li>
+                        <li class ="categoria"><a href="#">Gomme</a></li>
+                        <li class ="categoria"><a href="#">Jigs</a></li>
+                        <li class ="categoria"><a href="#">Mosche</a></li> 
+                        <li class ="categoria"><a href="#">Pasture</a></li> 
+                    </div>
+                </ul> <hr>
+                <ul class="sez"> 
+                    <label onmouseover="apri4()">Offerte</label>
+                    <div id="sottosez4" class="sottosez">
+                        <li class ="categoria"><a href="#">Sedie</a></li>
+                        <li class ="categoria"><a href="#">Poggiacanne</a></li>
+                        <li class ="categoria"><a href="#">Portacanne</a></li>
+                        <li class ="categoria"><a href="#">Torcie</a></li>
+                        <li class ="categoria"><a href="#">Borse</a></li>
+                        <li class ="categoria"><a href="#">Cassette</a></li> 
+                    </div>
+                </ul><hr>
+                <ul id="carrello">
+                    <img class="cart" src="../img/carrello.png" />
+                </ul>
+            </div>
+        <!--PRODOTTI PIU RICHIESTI-->
+            <div id="sx" class="lato">
+                <div id="img_sx">
+                  <img class="img-lato" src="../img/White-logo.png" />  
+                </div>
+            </div>
+            <div id="prodotti">
+                <div id="canne" class="prodotto" >
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Maglietta con logo WildFishing </p>
+                </div>
+                <div id="mulinelli" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Mulinello 3000, 6 cuscinetti ...</p>
+                </div>
+                <div id="Piombi" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Canna spinning a due pezzi ...</p>
+                </div>
+                
+                <div id="Ami" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Set di ami da pesca, 100pz  ...</p>
+                </div>
+                <div id="Gallegianti" class="prodotto" >
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Set da due piombi da 100gr ...</p>
+                </div>
+                <div id="Fili" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Guadino in gomma per trote ...</p>
+                </div>
+                <!--<div id="Guadini" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Set di ami da pesca, 100pz  ...</p>
+                </div>
+                <div id="Stivali" class="prodotto">
+                    <img src="../img/maglietta_front.jpg" class="img-prod">
+                    <p class="desc-prod"> Set di ami da pesca, 100pz  ...</p>
+                </div> -->
+            </div>
+            <div id="dx" class="lato">
+                <div id="img_dx">
+                    <img class="img-lato" src="../img/White-logo.png" /> 
+                </div>
+            </div>
+        </section>
+        </div>
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../img/White-logo.png" >
+            </ul>
+            
+            <ul id="menufooter">
+                <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+                <a href="../Store/store.html" role="button" class="btn"> NEGOZIO </a><br> 
+                <a href="../Privacy/privacy.html" role="button" class="btn" > PRIVACY POLICY </a><br>
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+    </body>
+    
+</html>

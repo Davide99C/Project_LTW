@@ -1,0 +1,220 @@
+
+/*CARICAMENTO*/
+.image-spin {
+	animation: rotate 2s linear infinite;
+}
+
+  @keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  #loading_screen {
+    height: 100%;
+    width: 100%;
+    margin-bottom: -100px;
+    background-color: #000;
+    background-color: rgb(0, 0, 0);
+    z-index:1;
+    position: fixed;
+  }
+  #caricamento {  
+    display: block;
+    position: fixed;
+    left: 0px;
+    margin-top:-100px;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);  
+    text-align: center;
+    padding: 5%;
+    background-color: #000;
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    z-index: 1;
+    background-size: cover;
+  }
+
+
+/* HEADER*/
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    padding: 0px;
+    display:inline-flex;
+}
+
+#menu-1, #menu-center, #menu-2 {
+    padding: 0;
+    display:flex;
+    list-style-type: none; /* Stile della lista */
+    }
+#menu-1 {
+    margin-left: 10px;
+}
+#menu-2 {
+    margin-right: 10px;
+}
+#menu-center {
+    margin: auto;
+}
+
+#menu li {
+    display:inline-block; 
+}
+#menu-center img {
+    display:inline-flex;
+    margin:0 auto;
+    height:70px;
+    width:90px;
+}
+
+#menu-2 a{
+    font-size: 10px;
+    color: white; /* Colore del testo */
+    text-decoration:none; /* Nessuna decorazione */
+    height: auto;
+    padding-top: 10px;
+   
+}
+
+#menu-2 .img-accedi {
+  float:left;
+  padding-top: 2px;
+  
+}
+#menu-2:hover img {
+  opacity: 0.5;
+}
+
+#menu-2 a.btn {
+  font-size: 20px;
+    float:left;
+    width:auto;
+   
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+
+}
+#menu-2 li {
+    margin:0 auto;
+    display:block;
+}
+
+#menu-2 a:hover {
+    color: #838383 ;/* Sfondo */
+}
+
+
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 50px;
+    height: 6px;
+    margin: 6px 0;
+    transition: 0.5s;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.men {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 50px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .men a {
+	padding: 5px 5px 5px 30px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #838383;
+	display: block;
+	transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .men a:hover {
+	color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .men .closebtn {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 45px;
+	margin-left: 45px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+	transition: margin-left .5s;
+	padding: 0;
+	background-color: #262626;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+
+  /*FOOTER*/
+
+  #footer {
+    background-color:rgb(0, 0, 0);
+    display: inline-flex;
+    width: 100%;
+    height: 200px;
+}
+
+#footer ul {
+    display: block;
+    padding: 0;
+    margin: auto;
+}
+#footer a {
+    font-size: 20px;
+    color:white; /* Colore del testo */
+    text-decoration:none; /* Nessuna decorazione */
+    background:rgb(0, 0, 0); /* Colore dello sfondo */
+    padding:5px 0px; /* Distanza tra le singole voci */ 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: auto;
+    float: left;
+}
+
+#footer a:hover {
+    color: rgb(160, 145, 145);
+}
+
+#imagefooter img {
+    height: 100px;
+    width: 100px;
+}
+
+#footer label {
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:5px 0px; /* Distanza tra le singole voci */
+}

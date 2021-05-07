@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Galleria </title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="../aux.css"/>
+        <link rel="stylesheet" type="text/css" href="galleria.css" />
+        <script type="text/javascript" lang="javascript" src="galleria.js"> </script> 
+    </head>    
+    <body onload="currentSlide(1)">
+         <!--LOADING SCREEN-->
+        <div id="loading_screen">
+            <div id="caricamento">
+                <div width="100" height="100" viewBox="0 0 24 24">
+                    <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
+                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                    -->
+                </div><br>
+                <h1>Loading...</h1>
+                <p>La pagina è in caricamento<br />
+                    Resta connesso e non cambiare sito!</p>
+            </div>
+          </div>
+          <!---->
+        
+        <header id="menu">
+            <ul id="menu-1">
+            <li> 
+                <a href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">   
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;  </a>
+                    <a href="../index.html" role="button" class="btn"> HOME                     </a><br>
+                    <a href="../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING </a><br>
+                    <a href="../Store/store.html" role="button" class="btn"> NEGOZIO            </a><br>
+                    <a href="../Faq/faq.html" role="button" class="btn"> FAQ                    </a><br>
+                    <a href="../ChiSiamo/chisiamo.html" role="button" class="btn" > CHI SIAMO   </a>
+                </div>
+            </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
+            </ul>  
+            <ul id="menu-2">
+                <a href="../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>  
+            </ul>
+        </header>
+        
+
+        <div id="main" align="center">
+
+            <label class="title" > GALLERIA </label>
+            
+            <div class="slideshow-container">
+                
+                <div class="mySlides fade" >
+                  <img src="../Gofishing/Fiumi_E_Laghi/temolo.jpg" style="width:100%">
+                    <div class="text">
+                        <p>
+                        Lorenzo: <br>
+                        Grazie per avermi consigliato questo spot stupendo della Dora Baltea! Fauna e paesaggio fantastici! <br>
+                        Questo salmerino è stata una grandissima soddisfazione, pesce difficile da insidiare ma ne è valsa la pena!
+                        </p>  
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  <img src="../Gofishing/Fiumi_E_Laghi/cavedano.jpg" style="width:100%">
+                  <div class="text">
+                      <p>
+                          Martina: <br>
+                          Bellissima giornata di pesca sul fiume Aniene! 
+                          Un fiume fantastico, spot complicati ma circondati dalla natura. 
+                          Ho visto trote e cavedani e alcuni sono riuscito ad insidiarli con piccoli artificiali.<br>
+                          Grazie Wild Fishing!
+                      </p>
+                  </div>
+                </div>
+                
+                <div class="mySlides fade">
+                  
+                  
+                  <img src="../img/fish.jpg" style="width:100%">
+                  <div class="text">
+                      <p>
+                      Federico: <br>
+                      Giornata di pesca fantastica al lago di Bracciano! <br> 
+                      Grazie a voi di Wild Fishing ho potuto pescare negli spot migliori che offre questo fantastico lago vulcanico,
+                      riuscendo a prendere tantissimi black bass come questo nella foto!
+                      </p> 
+                  </div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+             </div>   
+                
+        </div>
+
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../img/White-logo.png" >
+            </ul>
+            
+            <ul id="menufooter">
+                <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+                <a href="../Store/store.html" role="button" class="btn"> NEGOZIO </a><br> 
+                <a href="../Privacy/privacy.html" role="button" class="btn" > PRIVACY POLICY </a><br>
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+    </body>
+    
+</html>
