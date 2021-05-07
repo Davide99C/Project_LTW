@@ -66,7 +66,7 @@
                 Registrati qui 
             </h1>
             
-              <form action="/registrazione.php" class="reg-form" method="POST" name="myForm" onsubmit="return validateForm()"> 
+              <form action="../php/registrazione.php" class="reg-form" method="POST" name="myForm" onsubmit="return validateForm()"> 
                 <div class="row">
                   <div class="col-30">
                     <label for="cognome">Cognome:</label>
@@ -105,7 +105,7 @@
                         <label for="subject">Password:</label>
                     </div>
                     <div class="col-70">
-                        <input type="password" id="pass" name="pass1"  required>
+                        <input type="password" id="password1" name="pass1"  required>
                     </div>
                 </div>
                 <div class="row">
@@ -113,7 +113,7 @@
                         <label for="subject">Conferma password:</label>
                     </div>
                     <div class="col-70">
-                        <input type="password" id="pass" name="pass2" onchange="return controllaPsw()" required>
+                        <input type="password" id="password2" name="pass2" onchange="return controllaPsw()" required>
                     </div>
                 </div>
                     <br>

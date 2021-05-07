@@ -1,3 +1,5 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////
 function validateForm() {
     if (document.myForm.remember.checked) {
         alert("Hai deciso di essere ricordato per i prossimi accessi");
@@ -18,7 +20,7 @@ function openNav() {
     
   }
 
-  //CARICAMENTO
+/*CARICAMENTO
 window.addEventListener(
     "scroll",
     () => {
@@ -28,7 +30,7 @@ window.addEventListener(
       );
     },
     false
-  );
+  );*/
   //OPPURE 
   (function(){   
     if (window.addEventListener)

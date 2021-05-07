@@ -1,4 +1,5 @@
 
+// SPOSTA MAPPA
 $(document).ready(function() {
   $("#mappa").click(function() {
     $("#titolo").animate({marginLeft:"0%"});
@@ -44,27 +45,6 @@ function openNav() {
     document.getElementById("loading_screen").style.display = 'none';
   }
 
-
-// SPOSTA MAPPA
-/*
-function assegnaEventHandlers(){
-  var id=document.getElementById("box-btn1");
-  id.addEventListener("click", mostra, mostra);
-}
-
-function mostra(e) {
-     e.target.style.paddingTop="0";
-     e.target.style.height="auto";
-     e.target.style.display="none";
-     document.getElementById("titolo").style.display="block";
-}
-function mostra1() {
-  document.getElementById("box-btn1").style.paddingTop="0";
-  document.getElementById("box-btn1").style.height="auto";
-  document.getElementById("box-btn1").style.display="none";
-  document.getElementById("titolo").style.display="block";
-  document.getElementById("mappaItalia").style.backgroundColor="rgb(48, 48, 48)";
-}*/
 
 //MOSTRA INFO REGIONE
   function MM_findObj(n, d) {

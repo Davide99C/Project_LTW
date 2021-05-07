@@ -12,11 +12,13 @@ function openNav() {
 
   $(document).ready(function() { 
       $("#barra-shop").animate({left:"20%", right:"20%"});
-      $("#barra-shop").mouseover(function() {
-        $("#prodotti").animate({paddingTop:"18%"});
+      $(".tipo").mouseover(function() {
+        $("#prodotti").animate({paddingTop:"20%"});  
+        $("#barra-shop").css("borderBottom","none");
       });
       $("#barra-shop").mouseleave(function() {
          $(".sottosez").css("display","none");
+         $("#barra-shop").css("borderBottom","2px solid black");
          $("#prodotti").animate({paddingTop:"10%"});
       }); 
   });
@@ -69,7 +71,6 @@ function apri1() {
     document.getElementById("sottosez4").style.display="none";
     document.getElementById("sottosez3").style.display="none";
     document.getElementById("sottosez2").style.display="none";
-
   }
   else document.getElementById("sottosez1").style.display="none";
 }

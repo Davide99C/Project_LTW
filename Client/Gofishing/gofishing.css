@@ -7,35 +7,12 @@ body {
 
 /* Parte centrale */
 
-.box-btn1 {
+/*.box-btn1 {
     height:500px;
     text-align: center;
     padding-right: 100px;
-}
-/*
-.animated {
-    color: rgb(255, 136, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.btn1 {
-    position: relative;
-    padding: 30px;
-    background-color: rgb(0, 184, 55);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top:200px;
-}
-.btn1:hover {
-    background-color:rgb(0, 110, 33);
 }*/
+
 
 #mappaItalia {
     background-color: rgb(48, 48, 48);
@@ -47,18 +24,31 @@ body {
     padding-bottom: 180px;
 	visibility: visible;
     display: block;
-    padding-left: 100px;
+    padding-left: 2%;
 }
 
 #titolo {
     display: block;
-    text-shadow: 5px 5px 5px black;
     margin-left:33%;
 }
 
+#titolo h1 {
+    color: rgb(0, 207, 69); 
+    padding-bottom:50px; 
+    font-style: italic;
+    text-shadow: 5px 5px 5px black;
+}
 #cartaGeo {
     margin-left : 10%;
 }
+
+@media screen and (max-width: 450px){
+    #mappaItalia {
+        padding-left:0%;
+    }
+}
+
+
 
 #abbruzzo, #basilicata, #calabria, #campania, #emilia, #friuli, #lazio, 
 #liguria, #lombardia, #marche, #molise, #piemonte, #puglia, #sardegna, 
@@ -67,19 +57,23 @@ body {
 	z-index: 2;
 	left: 37%;
 	top: 100px;
-	width: 50%;
-	height: 77%;
+	width: 55%;
+	height: auto;
 	visibility: hidden;
     display: inline-block;
     border: solid rgb(255, 255, 255);
     color: white;
-    margin-left:5%;
+    margin-left:5% ;
     opacity: 0;
-    transition: opacity 1s ease;
+    /*transition: opacity 1s ease;*/
 }
 
-.regione {
-    width:300px; 
+.area_sx {
+    width: 60%;
+}
+
+.fiumi_e_laghi {
+    width:auto; 
     height:200px;
     padding-left: 20px;
     max-width: 60%;
@@ -98,7 +92,7 @@ p {
 }
 .laghi, .fiumi {
     display: inline-flex;
-    width: 70%;
+    width: 100%;
 }
 .laghi {
     padding-bottom: 20px;
