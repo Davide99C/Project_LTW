@@ -1,7 +1,6 @@
 function openNav() {
     document.getElementById("comparsa").style.width = "230px";
     document.getElementById("main").style.marginLeft = "230px";
-    
   }
   
   function closeNav() {
@@ -11,7 +10,13 @@ function openNav() {
   }
 
   $(document).ready(function() { 
-      $("#barra-shop").animate({left:"20%", right:"20%"});
+      $("#barra-shop").animate({left:"20%", right:"0%"});
+      $("#hamb").click(function() {
+        $("#barra-shop").animate({marginLeft:"230px"});
+      });
+      $(".closebtn").click(function() {
+        $("#barra-shop").animate({marginLeft:"0"});
+      });
       $(".tipo").mouseover(function() {
         $("#prodotti").animate({paddingTop:"20%"});  
         $("#barra-shop").css("borderBottom","none");
