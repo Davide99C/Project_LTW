@@ -1,0 +1,138 @@
+html,
+
+body {
+    background-color:black;
+}
+
+
+/* Parte centrale */
+
+.box-btn1 {
+    height:500px;
+    text-align: center;
+    padding-right: 100px;
+}
+/*
+.animated {
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.btn1 {
+    position: relative;
+    padding: 30px;
+    background-color: rgb(0, 184, 55);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top:200px;
+}
+.btn1:hover {
+    background-color:rgb(0, 110, 33);
+}*/
+
+#mappaItalia {
+    background-color: rgb(48, 48, 48);
+    opacity:1;
+	width: 100%-100px;
+	height: 100%;
+	position: relative;
+	padding-top: 80px;
+    padding-bottom: 180px;
+	visibility: visible;
+    display: block;
+    padding-left: 100px;
+}
+
+#titolo {
+    display: block;
+    text-shadow: 5px 5px 5px black;
+    margin-left:33%;
+}
+
+#cartaGeo {
+    margin-left : 10%;
+}
+
+#abbruzzo, #basilicata, #calabria, #campania, #emilia, #friuli, #lazio, 
+#liguria, #lombardia, #marche, #molise, #piemonte, #puglia, #sardegna, 
+#sicilia, #toscana, #trentino, #umbria, #valdaosta, #veneto {
+	position: absolute;
+	z-index: 2;
+	left: 37%;
+	top: 100px;
+	width: 50%;
+	height: 77%;
+	visibility: hidden;
+    display: inline-block;
+    border: solid rgb(255, 255, 255);
+    color: white;
+    margin-left:5%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.regione {
+    width:300px; 
+    height:200px;
+    padding-left: 20px;
+    max-width: 60%;
+}
+.pesce {
+    width:90%; 
+    height:200px;
+    padding-left: 5%;
+}
+h2,h3,p {
+    padding-left: 20px;
+    text-shadow: 2px 2px 4px black;
+}
+p {
+    font-style: italic;
+}
+.laghi, .fiumi {
+    display: inline-flex;
+    width: 70%;
+}
+.laghi {
+    padding-bottom: 20px;
+}
+.specie {
+    position: absolute;
+    left: 60%;
+    margin-left:5%;
+    top: 5%;
+    height: 90%;
+    width: 34%;
+    border-left: solid rgb(255, 255, 255);
+}
+.specie h3 {
+    padding-top: 20px;
+}
+.specie p {
+    display: inline-block;
+}
+/*.sx {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    width: 160px;
+}
+.dx {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width:160px;
+}*/
+
+
+
+

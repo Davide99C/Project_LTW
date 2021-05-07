@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Go Fishing </title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="../aux.css"/>
+        <link rel="stylesheet" type="text/css" href="gofishing.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="gofishing.js"> </script> 
+    </head>    
+    <body >
+        <!--LOADING SCREEN-->
+        <div id="loading_screen">
+          <div id="caricamento">
+              <div width="100" height="100" viewBox="0 0 24 24">
+                  <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
+                  <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                  -->
+              </div><br>
+              <h1>Loading...</h1>
+              <p>La pagina è in caricamento<br />
+                  Resta connesso e non cambiare sito!</p>
+          </div>
+        </div>
+        <!---->
+        
+        <!--MENU-->
+        <header id="menu">
+            <ul id="menu-1">
+            <li> 
+                <a href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">   
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;  </a>
+                    <a href="../index.html" role="button" class="btn"> HOME                     </a><br>
+                    <a href="../Store/store.html" role="button" class="btn"> NEGOZIO            </a><br>
+                    <a href="../Galleria/galleria.html" role="button" class="btn"> GALLERIA     </a><br>
+                    <a href="../Faq/faq.html" role="button" class="btn"> FAQ                    </a><br>
+                    <a href="../ChiSiamo/chisiamo.html" role="button" class="btn" > CHI SIAMO   </a>
+                </div>
+            </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
+            </ul>  
+            <ul id="menu-2">
+              <a href="../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>  
+            </ul>
+        </header>
+        
+        <div id="main">
+        <!--MAPPA-->
+        <div id="mappaItalia" >
+            <!--<div id="box-btn1" class="box-btn1">
+              <span class="animated bounce">&#10095;</span>
+              <button class="btn1" onclick="mostra1()"> Mostra Mappa </button>
+              <span class="animated bounce">&#10094;</span>
+            </div>-->
+            <div id="titolo">
+              <h1 style="color: rgb(0, 207, 69); padding-bottom:50px; font-style: italic;"> <strong> Clicca sulla regione d'interesse </strong></h1>
+              <img id="cartaGeo" src="../img/mappaItalia.png" alt="Italia" width="359" height="452" usemap="#mappature" />
+            </div>
+
+            <map name="mappature" id="mappa">
+                <area shape="poly" coords="42,39,14,44,17,56,39,54,39,43" href="#" alt="Val d'Aosta" onClick="chiudiRegioni(); MM_showHideLayers('valdaosta','','show')"/>
+                <area shape="poly" coords="60,27,47,42,45,56,22,61,17,72,6,75,9,83,8,97,10,111,31,117,42,102,67,100,70,92,61,83,59,71,64,66,60,51,65,37" href="#" alt="Piemonte" onClick="chiudiRegioni(); MM_showHideLayers('piemonte','','show')"/>
+                <area shape="poly" coords="23,128,32,129,45,118,55,108,64,110,78,116,92,125,97,123,86,112,75,105,63,105,54,105,44,108" href="#" alt="Liguria" onClick="chiudiRegioni(); MM_showHideLayers('liguria','','show')"/>
+                <area shape="poly" coords="66,74,66,80,73,87,75,95,79,84,90,78,101,79,108,86,119,89,130,88,139,90,124,75,123,61,126,55,118,48,121,38,123,25,116,23,115,32,105,30,93,30,93,23,82,43,78,53,71,43" href="#" alt="Lombardia" onClick="chiudiRegioni(); MM_showHideLayers('lombardia','','show')"/>
+                <area shape="poly" coords="128,14,128,34,124,45,135,54,159,37,164,24,178,17,174,5,154,7,142,13" href="#" alt="Trentino Alto Adige" onClick="chiudiRegioni(); MM_showHideLayers('trentino','','show')"/>
+                <area shape="poly" coords="169,28,166,40,142,57,130,59,127,69,133,77,148,89,164,87,173,92,172,79,176,69,183,68,196,59,181,54,175,43,177,32,184,26,185,20,173,22" href="#" alt="Veneto" onClick="chiudiRegioni(); MM_showHideLayers('veneto','','show')"/>
+                <area shape="poly" coords="183,43,186,51,194,51,203,59,214,54,213,47,208,43,210,36,216,29,207,26,195,26,187,29" href="#" alt="Friuli Venezia Giulia" onClick="chiudiRegioni(); MM_showHideLayers('friuli','','show')"/>
+                <area shape="poly" coords="92,85,101,86,109,92,121,94,133,94,150,97,166,96,169,121,179,137,171,137,159,140,148,134,143,124,127,127,107,112,96,107,89,110,80,102,84,88" href="#" alt="Emilia Romagna" onClick="chiudiRegioni(); MM_showHideLayers('emilia','','show')"/>
+                <area shape="poly" coords="94,114,103,129,111,171,127,188,129,203,151,181,151,167,157,161,165,149,140,130,121,130,105,117" href="#" alt="Toscana" onClick="chiudiRegioni(); MM_showHideLayers('toscana','','show')"/>
+                <area shape="poly" coords="168,142,174,146,171,152,183,157,186,174,196,187,212,180,205,155,187,142" href="#" alt="Marche" onClick="chiudiRegioni(); MM_showHideLayers('marche','','show')"/>
+                <area shape="poly" coords="163,160,164,166,156,173,156,187,167,198,188,185,180,173,178,161,168,156" href="#" alt="Umbria" onClick="chiudiRegioni(); MM_showHideLayers('umbria','','show')"/>
+                <area shape="poly" coords="150,190,167,205,190,193,186,206,188,211,182,215,188,227,211,237,201,253,176,248,139,204" href="#" alt="Lazio" onClick="chiudiRegioni(); MM_showHideLayers('lazio','','show')"/>
+                <area shape="poly" coords="193,199,213,186,221,202,238,218,232,224,220,227,212,231,198,227,189,216,194,210" href="#" alt="Abbruzzo" onClick="chiudiRegioni(); MM_showHideLayers('abbruzzo','','show')"/>
+                <area shape="poly" coords="215,241,224,230,234,230,243,222,248,226,246,234,240,243,231,247" href="#" alt="Molise" onClick="chiudiRegioni(); MM_showHideLayers('molise','','show')"/>
+                <area shape="poly" coords="218,247,209,251,215,271,224,270,228,280,236,278,243,296,253,306,262,304,263,295,255,274,258,263,246,250,232,250" href="#" alt="Campania" onClick="chiudiRegioni(); MM_showHideLayers('campania','','show')"/>
+                <area shape="poly" coords="248,242,254,229,281,228,275,238,279,248,312,263,354,293,351,312,339,295,329,291,321,291,316,283,304,285,302,275,288,270,280,261,274,257,265,257,257,257" href="#" alt="Puglia" onClick="chiudiRegioni(); MM_showHideLayers('puglia','','show')"/>
+                <area shape="poly" coords="265,265,274,263,285,275,292,277,300,288,295,299,289,300,283,308,273,305,267,305,270,299,261,279,259,272" href="#" alt="Basilicata" onClick="chiudiRegioni(); MM_showHideLayers('basilicata','','show')"/>
+                <area shape="poly" coords="271,311,282,316,291,307,294,307,290,321,312,336,306,350,299,352,290,357,288,375,280,379,271,391,262,393,260,387,270,375,268,369,278,364,280,355,268,319" href="#" alt="Calabria" onClick="chiudiRegioni(); MM_showHideLayers('calabria','','show')"/>
+                <area shape="poly" coords="220,392,231,386,253,384,247,395,236,414,241,433,232,447,208,430,197,428,170,408,156,405,152,397,159,389,168,391,177,385,185,387,189,395" href="#" alt="Sicilia" onClick="chiudiRegioni(); MM_showHideLayers('sicilia','','show')"/>
+                <area shape="poly" coords="25,260,37,261,46,256,57,247,64,251,64,260,68,263,70,275,63,284,64,302,55,329,45,327,34,338,25,332,21,327,24,313,30,307,26,296,30,284,23,268" href="#" alt="Sardegna" onClick="chiudiRegioni(); MM_showHideLayers('sardegna','','show')"/>
+            </m1p>
+        
+            <div class="area_regione" id="abbruzzo" >                     
+                <h2>Abbruzzo</h2>
+                <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/fiume-tronto.jpg" class="regione" /> 
+                    <p>
+                      • Liri<br>
+                      • Aterno-Pescara<br>
+                      • Sangro <br>
+                      • Tordino<br>
+                      • Trigno<br>
+                      • Tronto<br>
+                      • Vomano – Roseto degli Abruzzi
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/campotosto-332646_1920.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Campotosto <br>
+                      • Lago di Scanno <br>
+                      • Lago di Bomba <br>
+                      • Lago Lo Zar<br>
+                      • Lago Nicodemi <br>
+                      • Lago di Sant’Angelo <br>
+                      • Lago di Scaccia <br>
+                      • Lago Tre Ciminiere
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/rainbow-trout-117482_1920.jpg" class="pesce" />
+                    <p> 
+                      • Trota iridea<br>
+                      • Lucioperca <br>
+                      • Persico reale <br>
+                      • Luccio <br>
+                      • Carpa <br>
+                      • Ciprinidi minori
+                    </p>
+                  </div>
+              </div>
+        
+            <div class="area_regione" id="basilicata" >
+              <h2>Basilicata</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/valdagri-1-1-647x336.jpg" class="regione" /> 
+                    <p>
+                      • Agri <br>	
+                      • Bradano	<br>
+                      • Basento	<br>
+                      • Ofanto <br>	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lago-san-giuliano-matera.jpeg" class="regione" /> 
+                    <p>
+                      • Laghi di Monticchio <br>
+                      • Lago di Pietra del Pertusillo <br>
+                      • Laghi del San Giuliano <br>
+                      • Lago di Monte Cotugno 
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/carp-2457084_1920.jpg" class="pesce" />
+                    <p> 
+                      • Carpa <br>
+                      • Cavedano <br>
+                      • Alborella <br>
+                      • Scardola <br>
+                      • Pesce Gatto <br>
+                      • Trota Fario <br>
+                      • Luccio 
+                    </p>
+                    <p>
+                      • Persico reale <br>
+                      • Carassio <br>
+                      • Anguilla <br>
+                      • Persico Trota <br>
+                      • Trota <br>
+                      • Persico Sole
+                    </p>
+                  </div>
+            </div>
+          
+            <div class="area_regione" id="calabria" >
+              <h2>Calabria</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/river-lao-2056857_1920.jpg" class="regione" /> 
+                    <p>
+                      • Crati	<br>
+                      • Coscile	<br>
+                      • Lao	<br>
+                      • Mesima	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lake-2805552_1920.jpg" class="regione" /> 
+                    <p>
+                      • Lago Ampollino <br>
+                      • Lago Arvo <br> 
+                      • Lago Cecita <br>
+                      • Lago Passante
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/rainbow-trout-117482_1920.jpg" class="pesce" />
+                    <p> 
+                      • Trota <br>
+                      • Persico reale <br>
+                      • Cavedano <br>
+                      • Carpa <br>
+                      • Tinca <br>
+                      • Ciprinidi minori
+                    </p>
+                  </div>
+            </div>
+
+            <div class="area_regione" id="campania" >
+              <h2>Campania</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/sele (1).jpg" class="regione" /> 
+                    <p>
+                      • Fortore	<br>
+                      • Garigliano <br>
+                      • Ofanto	<br>
+                      • Sele	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/falciano.jpeg" class="regione" /> 
+                    <p>
+                      • Lago Falciano	<br>
+                      • Lago del Matese <br>
+                      • Laghi d'Averno <br>
+                      • Lago di Patria
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/aquarium-20531_1920.jpg" class="pesce" />
+                    <p> 
+                      • Trota fario <br>
+                      • Cavedano <br> 
+                      • Barbo <br> 
+                      • Carpa <br> 
+                      • Tinca <br> 
+                      • Persico <br>
+                      • Luccio <br>
+                      • Anquilla <br>
+                      • ciprinidi minori  
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="emilia" >
+              <h2>Emilia Romagna</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/trebbia.jpeg" class="regione" /> 
+                    <p>
+                      • Po <br>	 
+                      • Enza	 <br>
+                      • Panaro	 <br>
+                      • Parma	 <br>
+                      • Reno	 <br>
+                    </p>
+                    <p>  
+                      • Savio	 <br>
+                      • Secchia	 <br>
+                      • Taro	 <br>
+                      • Trebbia
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lago-di-suviana.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Suviana <br>
+                      • Lago del Brasimone <br>
+                      • Lago Santo Parmense <br>
+                      • Lago Santo Modenese 
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/pike-2111659_1920.jpg" class="pesce" />
+                    <p> 
+                      • Cavedano <br>
+                      • Trota <br> 
+                      • Carpa <br>
+                      • Barbo <br>
+                      • Persico reale <br>
+                      • Luccio <br> 
+                    </p>
+                    <p>  
+                      • Tinche <br> 
+                      • Amur <br> 
+                      • Gardons <br>
+                      • Trote fario <br> 
+                      • Vaironi
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="friuli" >
+              <h2>Friuli Venezia Giulia</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/river-tagliamento-1578543_1920.jpg" class="regione" /> 
+                    <p>
+                      • Isonzo <br>	
+                      • Tagliamento	<br>
+                      • Livenza 
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/fusine-4584941_1920.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Bordaglia <br>
+                      • Laghi di Fusine <br>
+                      • Lago di Cornino <br>
+                      • Lago di Cavazzo <br>
+                      • Lago di Ragogna <br>
+                      • Lago di Redona
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/natural-4620646_1920.jpg" class="pesce" />
+                    <p> 
+                      • Anguilla<br>	
+                      • Carpa	<br>		
+                      • Tinca	<br>		
+                      • Carpione	<br>			
+                      • Cavedano	<br>		
+                      • Luccio	<br>
+                    </p>
+                    <p>			
+                      • Persico trota	<br>		
+                      • Persico reale	<br>			
+                      • Salmone	<br>			
+                      • Temolo	<br>			
+                      • Trota	<br>			
+                      • Spigola
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="lazio" >
+              <h2>Lazio</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/tiber-bridge-2263361_1920.jpg" class="regione" /> 
+                    <p>
+                      • Tevere<br>	
+                      • Aniene	<br>	
+                      • Garigliano<br>	
+                      • Liri	<br>	
+                      • Tronto	<br>	
+                      • Velino	<br>
+                      • Salto	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lake-bracciano-2974552_1920.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Bolsena <br>	
+                      • Lago di Bracciano<br>	
+                      • Laghi del Vico<br>	
+                      • Lago di Albano<br>	
+                      • Lago del Salto<br>	
+                      • Lago del Turano<br>	
+                      • Lago di Ventina<br>
+                      • Lago di Scandarello
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/pike-2111659_1920.jpg" class="pesce" />
+                    <p> 
+                      • Luccio perca	 	<br>
+                      • Trota Fario <br>
+                      • Persico trota <br>
+                      • Pesce gatto <br>
+                      • Perisco sole  <br>    
+                      • Temolo	<br>
+                      • Coregone 	 <br>
+                      • Luccio <br>
+                     
+                    </p>
+                    <p>
+                      • Siluro<br>
+                      • Tinca	<br>
+                      • Carpa		 <br>
+                      • Cavedano	<br>
+                      • Barbo	<br>
+                      • Persico reale<br>
+                      • Ciprinidi minori
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="liguria" >
+              <h2>Liguria</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/scrivia.jpg" class="regione" /> 
+                    <p>
+                      • Scrivia	<br>
+                      • Trebbia <br>
+                      • Magra <br>
+                      • Vara <br>
+                      • Bormida
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lago-di-osiglia-01.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Osiglia <br>
+                      • Lago del Brugneto <br>
+                      • Lago delle Lame <br>
+                      • Laghi del Gorzente <br>
+                      • Lago di Giacopiane <br>
+                      • Lago di Tenarda <br>
+                      • Lago di Vobbietta
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/storione.jpg" class="pesce" />
+                    <p> 
+                      • Storione <br>
+                      • Trota <br>
+                      • Anguilla <br>
+                      • Tinca <br> 
+                      • Carpa <br>
+                      • Ciprinidi minori
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="lombardia" >
+              <h2>Lombardia</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/adda-river-4734102_1920.jpg" class="regione" /> 
+                    <p>
+                      • Adda	<br>
+                      • Oglio	<br>
+                      • Ticino	<br>
+                      • Mincio	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/garda.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Garda   <br>
+                      • Lago Maggiore <br>
+                      • Laghi di Como <br>
+                      • Lago d'Iseo
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/temolo.jpg" class="pesce" />
+                    <p> 
+                      • Anguilla <br>
+                      • Barbo	<br>
+                      • Carpa	<br>
+                      • Carpione<br>
+                      • Luccio	<br>
+                      • Pesce persico<br>	
+                      </p>
+                      <p>
+                      • Persico trota	<br>
+                      • Pigo	<br>
+                      • Temolo	<br>
+                      • Tinca	<br>
+                      • Trota 
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="marche" >
+              <h2>Marche</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/cesano.jpg" class="regione" /> 
+                    <p>
+                      • Cesano <br>
+                      • Esino <br>
+                      • Giano <br> 
+                      • Misa <br>
+                      • Musone   <br>                  
+                      • Nevola <br>
+                      • Tronto <br>
+                      • Aso                 
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/mariotti1.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Morrovalle <br>
+                      • Lago di Gerosa <br>
+                      • Lago Talvacchia <br>
+                      • Lago "Hiberna Gallorum"
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/cavedano.jpg" class="pesce" />
+                    <p> 
+                      • Luccio <br>
+                      • Luccio perca <br>
+                      • Cavedano <br> 
+                      • Black bass <br> 
+                      • Persico reale
+                      • Trota <br> 
+                      • Carpa <br> 
+                      • Ciprinidi minori
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="molise" >
+              <h2>Molise</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/biferno.jpg" class="regione" /> 
+                    <p>
+                      • Volturno	<br>
+                      • Biferno	<br>
+                      • Fortore	<br>
+                      • Trigno 
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/guardialfiera.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Guardialfiera <br>
+                      • Lago di Occhito
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/temolo.jpg" class="pesce" />
+                    <p> 
+                      • Barbo <br>
+                      • Carpa <br>
+                      • Cavedano <br>
+                      • Luccio <br>
+                      • Persico reale <br>
+                      • Persico trota
+                    </p>
+                    <p>
+                      • Temolo   <br>
+                      • Tinca<br>
+                      • Trota<br>
+                      • Salmerino<br>
+                      • Gheppia<br>
+                      • Anguilla
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="piemonte" >
+              <h2>Piemonte</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/po.jpg" class="regione" /> 
+                    <p>
+                      • Po	<br>
+                      • Dora <br> 
+                      • Tànaro <br>
+                      • Ticino <br>
+                      • Sesia <br>
+                      • Forzo <br>
+                      • Egua
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lago-maggiore-2156768_1920.jpg" class="regione" /> 
+                    <p>
+                      • Lago Maggiore <br>
+                      • Baltea Lago d’Orta <br>
+                      • Laghi della Val d’Ossola <br>
+                      • Lago del Mucrone <br>
+                      • Lago di Viverone <br>
+                      • Lago di Candia <br>
+                      • Laghi di Avigliana <br>
+                      • Laghi del Monviso
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/salmerino.jpg" class="pesce" />
+                    <p> 
+                      • Agone <br>		
+                      • Barbo	<br>	
+                      • Bondella	<br>	
+                      • Carpa	<br>	
+                      • Cavedano	<br>	
+                      • Coregone	<br>	
+                      • Luccio	
+                    </p>
+                    <p>
+                      • Persico Reale	<br>	
+                      • Savetta	<br>	
+                      • Tinca	<br>	
+                      • Salmerino alpino	<br>	
+                      • Trota fario	<br>	
+                      • Trota iridea	<br>	
+                      • Trota marmorata<br>	
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="puglia" >
+              <h2>Puglia</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/brenta.jpg" class="regione" /> 
+                    <p>
+                      • Fortore	<br>
+                      • Ofanto	<br>
+                      • Brenta	<br>
+                      • Candelaro	<br>
+                      • Carapelle	<br>
+                      • Cervaro
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lesina.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Lesina <br>
+                      • Lago di Varano <br>
+                      • Laghi Salso
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/barbo.jpg" class="pesce" />
+                    <p> 
+                      • Barbo <br>
+                      • Luccio <br>
+                      • Persico <br>
+                      • Tinca <br>   
+                      • Carpa <br>
+                      • Cavedano <br>
+                      • Ciprinidi minori 
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="sardegna" >
+              <h2>Sardegna</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/tirso.jpg" class="regione" /> 
+                    <p>
+                      • Tirso  <br>
+                      • Flumendosa<br>
+                      • temo Bosa
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/mulargia.jpg" class="regione" /> 
+                    <p>
+                      • Lago Mulargia<br>
+                      • Lago Cucchinandorza<br>
+                      • Lago Gusana <br>
+                      • Lago Omodeo<br>
+                      • Lago di Baratz
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/persico_reale.jpg" class="pesce" />
+                    <p> 
+                      • Black bass<br>
+                      • Persico Reale <br>
+                      • Trota <br>
+                      • Anguilla <br>
+                      • Tinca <br>
+                      • Cavedano
+                    </p>
+                    <p>
+                      • Pesce Gatto<br>
+                      • Carpa<br>
+                      • Luccio <br>
+                      • Agone <br>
+                      • Siluro
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="sicilia" >
+              <h2>Sicilia</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/simeto-river-645732_1920.jpg" class="regione" /> 
+                    <p>
+                      • Simeto <br>	
+                      • Anapo	<br>
+                      • Belice	<br>
+                      • Dittaino	<br>
+                      • Gornalunga	<br>
+                      • Platani	<br>
+                      • Imera meridionale
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/pergusa.jpg" class="regione" /> 
+                    <p>
+                      • Lago Pergusa<br>
+                      • Lago di Lentini<br>
+                      • Lago Santa Rosalia<br>
+                      • Lago Dirillo<br>
+                      • Lago Rosamarina<br>
+                      • Lago Ancipa<br>
+                      • Lago Nicoletti<br>
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/pike-2111659_1920.jpg" class="pesce" />
+                    <p> 
+                      • Carpa <br>
+                      • Black Bass <br>
+                      • Luccio <br>
+                      • Trota <br>
+                      • Anguilla <br>
+                      • Pesce gatto <br>
+                      • Tinca <br>
+                      • Cavedano <br>
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="toscana" >
+              <h2>Toscana</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/arno-river-1066307_1920.jpg" class="regione" /> 
+                    <p>
+                      • Arno	<br>
+                      • Tevere	<br>
+                      • Ombrone	<br>
+                      • Reno	<br>
+                      • Serchio	 <br>
+                      • Piave
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/bilancino.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Bilancino<br>
+                      • Lago di Chiusi<br>
+                      • Lago di San Casciano<br>
+                      • Lago di Montepulciano
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/barbo.jpg" class="pesce" />
+                    <p> 
+                      • Salmonidi	<br>
+                      • Luccio	<br>
+                      • Tinca	<br>
+                      • Carpa	<br>
+                      • Persico trota<br>	
+                      • Persico reale	<br>
+                      • Anguilla		 	 <br>
+                      • Barbo		 	 <br>
+                      • Storione
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="trentino" >
+              <h2>Trentino</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/noce.jpg" class="regione" /> 
+                    <p>
+                      • Noce <br>
+                      • Sporeggio <br>
+                      • Chiese <br>
+                      • Rio Vallenisella <br>
+                      • Adige <br>
+                      • Avisio <br>
+                      • Travignolo
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/garzonè.jpeg" class="regione" /> 
+                    <p>
+                      • Lago Nembia <br>
+                      • Lago di Roncone <br>
+                      • Lago Lagorai <br>
+                      • Lago di Nambino <br>
+                      • Lago Garzonè <br>
+                      • Lago di Molveno
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/salmerino.jpg" class="pesce" />
+                    <p> 
+                      • Trota marmorata <br>
+                      • Trota fario<br>
+                      • Trota iridea<br>
+                      • Salmerino alpino<br>
+                      • Salmerino di fonte<br>
+                      • Temolo
+                     </p>
+                     <p> 
+                      • Coregone<br>
+                      • Luccio<br>
+                      • Persico reale<br>
+                      • Black bass<br>
+                      • Cavedano<br>
+                      • Barbo
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="umbria" >
+              <h2>Umbria</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/nera.jpg" class="regione" /> 
+                    <p>
+                      • Tevere	<br>
+                      • Nera	<br>
+                      • Velino	<br>
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/firenzuola.jpg" class="regione" /> 
+                    <p>
+                      • Lago Trasimeno <br>
+                      • Lago Piediluco <br>
+                      • Lago di Corbara <br>
+                      • Lago di Firenzuola
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/carp-2457084_1920.jpg" class="pesce" />
+                    <p> 
+                      • Trota <br>
+                      • Storione <br>
+                      • Carpa <br>
+                      • Coregone <br>
+                      • Luccio <br>
+                      • Barbo <br>
+                      • Ciprinidi minori 
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="valdaosta" >
+              <h2>Valle d'Aosta </h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/cogne.jpg" class="regione" /> 
+                    <p>
+                      • Dora Baltea <br>
+                      • Dora di La Thuile<br>
+                      • Cogne<br>
+                      • Torrente Vertosan<br>
+                      • Torrente Evançon<br>
+                      • Torrente Marmore<br>
+                      • Torrente Buthier
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/lago-di-brusson.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Brusson<br>
+                      • Lago Maen<br>
+                      • Lago Verney
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/temolo.jpg" class="pesce" />
+                    <p> 
+                      • Salmerino	<br>
+                      • Salmerino alpino<br>			
+                      • Trota Fario			<br>
+                      • Trota iridea	<br>
+                      • Trota marmorata	  <br>		
+                      • Temolo
+                    </p>
+                  </div>
+            </div>
+            <div class="area_regione" id="veneto" >
+              <h2>Veneto</h2>
+              <h3>Fiumi:</h3>
+                   <div class="fiumi">
+                    <img src="Fiumi_E_Laghi/adige.jpg" class="regione" /> 
+                    <p>
+                      • Po	<br>
+                      • Àdige<br>
+                      • Brenta	<br>
+                      • Mincio  <br>
+                      • Ticino	<br>
+                      • Piave	<br>
+                      • Tagliamento	
+                    </p>
+                  </div>
+                <h3>Laghi:</h3>
+                   <div class="laghi">
+                    <img src="Fiumi_E_Laghi/garda.jpg" class="regione" /> 
+                    <p>
+                      • Lago di Garda<br>
+                      • Laghi del Cadore<br>
+                      • Lago di Alleghe<br>
+                      • Laghi di Revine<br>
+                      • Lago del Mis<br>
+                      • Lago del Corlo<br>
+                      • Lago di Fimon
+                    </p>
+                  </div>
+                  <div class="specie">
+                    <h3> Specie ittiche:</h3>
+                    <img src="Fiumi_E_Laghi/persico_reale.jpg" class="pesce" />
+                    <p> 
+                      • Carpione
+                      • Coregone lavarello	 
+                      • Trota fario e lacustre
+                      • Carpa	 
+                      • Tinca	
+                      • Cavedano	 
+                      • Luccio	 
+                      • Anguilla	
+                      • Persico reale
+                      • Persico Trota
+                      • Agone
+                    </p>
+                  </div>
+            </div>
+        
+        </div>
+       
+
+        <!--FOOTER-->
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../img/White-logo.png" >
+            </ul>
+            
+            <ul id="menufooter">
+                <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+                <a href="../Store/store.html" role="button" class="btn"> NEGOZIO </a><br> 
+                <a href="../Privacy/privacy.html" role="button" class="btn" > PRIVACY POLICY </a><br>
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+    </body>
+    
+</html>
