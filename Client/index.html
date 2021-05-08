@@ -14,6 +14,7 @@
 </head>
 
 <body onload="chat()">
+
     <!--HEADER-->
     <header id="menu">
         <ul id="menu-1">
@@ -38,8 +39,7 @@
             <a href="index.html" role="button" class="img"> <img src="img/logo.png"> </a>
         </ul>
         <ul id="menu-2">
-            <a href="Login/login.html" role="button" class="btn"><img class="img-accedi" src="img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>
-                 
+            <a href="Login/login.html" role="button" id="accesso" class="btn" ><img class="img-accedi" src="img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>
         </ul>
     </header>
     <!---->
@@ -195,7 +195,16 @@
         </ul>
     </footer>
     <!---->
-
+    
+    <script>
+        var x = new URLSearchParams(window.location.search);
+        var username = x.get('nome');console.log(username);
+        var surname = x.get('cognome');console.log(surname);
+        if (username && surname) {
+            document.getElementById("accesso").innerHTML = "<img class='img-accedi' src='img/44948.png' style='height:20px; width:20px;'>"+username+' '+surname;
+        }
+        else document.getElementById("accesso").innerHTML = "<img class='img-accedi' src='img/44948.png' style='height:20px; width:20px;'>&nbspACCEDI";
+    </script>
 </body>
 
 </html>

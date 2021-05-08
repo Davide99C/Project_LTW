@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title> Prodotto in vendita </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="aux.css" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        </head>
+    <body>
+        <div class=”nav-bar”></div>
+        <div id=”app”>
+        <div class=”cart”>
+        <p>Carrello ({{cart}})</p>
+        </div>
+        <magliatta v-on:add-to-cart=”updateCart”></maglietta>
+        </div>
+        <script type=”text/javascript” src=”maglietta.js”>
+        </script>
+    </body>
+</html>

@@ -38,9 +38,15 @@ function nascondi_loading_screen() {
     var input = document.getElementsByClassName('sign_error');
     input[1].innerHTML = "<h5 style='color:red'>Le password non corrispondono</h5>";
     input[2].innerHTML = "<h5 style='color:red'>Le password non corrispondono</h5>";
+    document.getElementById("password1").style.borderColor="red";
+    document.getElementById("password2").style.borderColor="red";
+    
     setTimeout(() => {
         input[1].innerHTML = "";
-        input[2].innerHTML = "";},5000);
+        input[2].innerHTML = "";
+        document.getElementById("password1").style.borderColor="#ccc";
+        document.getElementById("password2").style.borderColor="#ccc"; 
+      },5000);
     console.log("fatto");
 }
 

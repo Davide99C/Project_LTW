@@ -8,6 +8,7 @@ function validateForm() {
         alert("Hai deciso di NON essere ricordato per i prossimi accessi");
     }
 }
+
 function openNav() {
     document.getElementById("comparsa").style.width = "230px";
     document.getElementById("main").style.marginLeft = "230px";

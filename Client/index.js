@@ -70,7 +70,19 @@ function nascondi_loading_screen()
   document.getElementById("loading_screen").style.display = 'none';
 }
 
+
 //CHAT POP-UP
 function chat() {
   document.getElementById("img email").style.visibility="visible";
 }
+
+//CONTROLLO SE L'ACCESSO È STATO EFFETTUATO O MENO  //DIRETAMENTE DAL FILE HTML
+/*function caricaLogin() {
+  var x = new URLSearchParams(window.location.search);
+  var username = x.get('nome');console.log(username);
+  var surname = x.get('cognome');console.log(surname);
+  if (username && surname) {
+      document.getElementById("accesso").innerHTML = "<img class='img-accedi' src='img/44948.png' style='height:20px; width:20px;'>"+' '+username+' '+surname;
+  }
+  else document.getElementById("accesso").innerHTML = "<img class='img-accedi' src='img/44948.png' style='height:20px; width:20px;'>&nbspACCEDI";
+}*/
