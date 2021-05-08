@@ -65,7 +65,7 @@ body {
     padding: 12px;
     display: inline-block;
     color: white;
-    float: left;
+    
   }
 
   .checkbox {
@@ -89,6 +89,8 @@ body {
     background-color: rgb(180, 48, 48);
     border-color:rgb(180, 48, 48);
   }
+
+
   
   .container {
     width:35%;

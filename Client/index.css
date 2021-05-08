@@ -430,7 +430,7 @@ body.anim .scroll-arrow-box {
 .box1 image {
     opacity: 1;
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -482,10 +482,12 @@ body.anim .scroll-arrow-box {
 }
 
 .right {
-	margin-right:20%;
+	margin-right:auto;
+	margin-left: 2%;
 }
 .left {
-	margin-left:20%;
+	margin-left:auto;
+	margin-right: 2%;
 }
 
 .newsletter h1 {
@@ -504,7 +506,7 @@ body.anim .scroll-arrow-box {
     width: 400px;
     border: 3px solid;
     border-radius: 5px;
-    margin-left : 0;
+    margin-left : 10px;
     margin-top:30px;
     font-size: 20px;
 }
@@ -516,7 +518,6 @@ body.anim .scroll-arrow-box {
     cursor: pointer;
     background-color: #740000;
 	color: white;
-	
 }
 .newsletter button:hover {
     background-color:#490000;
