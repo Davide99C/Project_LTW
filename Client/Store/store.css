@@ -147,8 +147,9 @@ body {
     width:30%;
     display: inline-block;
     /*border: 1px solid black;*/
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin-bottom:5%;
+    color: black;
 }
 
 .prodotto img {
