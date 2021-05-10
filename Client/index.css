@@ -77,7 +77,7 @@ body {
 	font-weight: bold;
 	font-size: 15px;
   }
-  
+
   /* Add a red background color to the cancel button */
   .form-container .cancel {
 	background-color: rgb(0, 0, 0);

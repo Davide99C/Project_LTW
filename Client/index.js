@@ -5,6 +5,9 @@ $(document).ready(function() {
   $(".cancel").click(function() {
     $("#myForm").animate({opacity:0});
   });
+  $("#invia").click(function() {
+    $("#invia").attr('href','mailto:davidechiarabini@hotmail.it?subject=WildFishing&body='+document.getElementsByTagName("msg").innerText);
+  })
 });
 
 function openNav() {
