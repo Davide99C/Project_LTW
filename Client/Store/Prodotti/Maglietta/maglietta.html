@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="../../../aux.css" />
-        <link rel="stylesheet" type="text/css" href="maglietta.css" />
+        <link rel="stylesheet" type="text/css" href="../prodotti.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         </head>
     <body>
@@ -41,17 +41,59 @@
         
         <div id="app">
           <div class="cart" align="right">
-            <p>Carrello ({{cart}})</p>
+            <button href="../../carello.html"><p >Carrello ({{cart}})</p></button>
+                
             </div>  
         
-            <maglietta v-on:add-to-cart="updateCart"></maglietta>
+            <maglietta v-on:add-to-cart="updateCart"></maglietta> 
+            
+            
         </div>
-       
-        
-        <script type="text/javascript" src="maglietta.js"> </script>
         
         
+        <div id="interesse">
+            <hr width="100%">
+            <h3>POTREBBE INTERESSARTI ANCHE: </h3>
+            <br>
+            <div class="prodotti">
+            <a href="../Canna/canna.html"><div class="card">
+                <img src="white.png" style="width:100px; height: 100px" >
+                <h1>Canna da pesca</h1>
+                <p class="price">19.99€</p>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                <p><button>Aggiungi al carrello</button></p>
+              </div></a>
+              </div>
+              <div class="prodotti">
+               <a href="../Canna/canna.html"><div class="card">
+               <img src="black.png"  style="width:100px; height: 100px;">
+                <h1>Maglietta </h1>
+                <p class="price">19.99€</p>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                <p><button>Aggiungi al carrello</button></p>
+              </div></a>
+            </div>
+            <div class="prodotti">
+                <a href="../Canna/canna.html"><div class="card">
+                  <img src="black.png"  style="width:100px; height: 100px;">
+                  <h1>Maglietta </h1>
+                  <p class="price">19.99€</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Aggiungi al carrello</button></p>
+                </div></a>
+              </div>
+              <a href="../Canna/canna.html"><div class="prodotti">
+                <div class="card">
+                  <img src="black.png"  style="width:100px; height: 100px;">
+                  <h1>Maglietta </h1>
+                  <p class="price">19.99€</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Aggiungi al carrello</button></p>
+                </div></a>
+              </div>
+        </div>
 
+        <script type="text/javascript" src="maglietta.js"> </script>
 
         <!--FOOTER-->
         <footer id="footer">

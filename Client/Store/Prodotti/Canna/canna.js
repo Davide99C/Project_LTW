@@ -1,5 +1,3 @@
-
-
 Vue.component('maglietta', {
     template : `<div class="product">
                     
