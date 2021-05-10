@@ -112,14 +112,22 @@
                 $("#invia").click(function() {
                     var testo = $("#area-email").val();
                     var email = $("#input-email").val();
-                    if (testo == ""){
-                        $("#invia").attr('href',"#");
-                        $("#errore").text("Impossibile inviare un testo vuoto!");
-                        return false;
-                    }
+                    var atpos = email.indexOf("@");
+                    var dotpos = email.lastIndexOf(".");
+
                     if (email == "") {
                         $("#invia").attr('href',"#");
                         $("#errore").text("Ricordati di inserire l'email!");
+                        return false;
+                    }
+                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+                        $("#invia").attr('href',"#");
+                        $("#errore").text("Indirizzo e-mail non valido!");
+                        return false;
+                    }
+                    if (testo == ""){
+                        $("#invia").attr('href',"#");
+                        $("#errore").text("Impossibile inviare un testo vuoto!");
                         return false;
                     }
                     else {
@@ -136,6 +144,16 @@
                 alert("la virgola non è ammessa");
                 //$("#area-email").val(testo);
                 return false;
+                }
+            }
+            //VERIFICA E-MAIL
+            function controllaEmail() {
+                var testo=$("#input-email").val();
+                var atpos = testo.indexOf("@");
+                var dotpos = testo.lastIndexOf(".");
+                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=testo.length) {
+                    alert("Indirizzo email non valido");
+                    return false;
                 }
             }
         </script>
