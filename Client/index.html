@@ -88,24 +88,57 @@
             class="open-button" onclick="openForm()">
 
         <div class="chat-popup" id="myForm">
-            <form action="#" class="form-container">
+            <div class="form-container">
                 <h1>Chat</h1>
 
                 <label class="email"><b>Email: </b></label>
-                <input type="email" placeholder="Inserisci la tua email" name="usrmail" required></input>
+                <input id="input-email" type="email" placeholder="Inserisci la tua email" name="usrmail" ></input>
                 <br><br>
                 <label for="msg"><b>Messaggio</b></label><br>
 
-                <textarea placeholder="Scrivi il tuo messaggio.." name="msg" required></textarea>
+                <textarea id="area-email" placeholder="Scrivi il tuo messaggio.." name="msg" onkeypress="return verifyInput(event)" ></textarea>
+                <span id="errore" style="font-size: 18px; color:rgb(153, 0, 0);"></span>
 
-                <a id="invia" href="mailto:davidechiarabini@hotmail.it?subject=WildFishing&body=">
+                <a id="invia" class="invia-email" >
                     <button type="button" class="btn" >
                         Invia
                     </button>
                 </a>
                 <button type="button" class="btn cancel" onclick="closeForm()">Chiudi</button>
-            </form>
+            </div>
         </div>
+        <script>
+            $(document).ready(function() {
+                $("#invia").click(function() {
+                    var testo = $("#area-email").val();
+                    var email = $("#input-email").val();
+                    if (testo == ""){
+                        $("#invia").attr('href',"#");
+                        $("#errore").text("Impossibile inviare un testo vuoto!");
+                        return false;
+                    }
+                    if (email == "") {
+                        $("#invia").attr('href',"#");
+                        $("#errore").text("Ricordati di inserire l'email!");
+                        return false;
+                    }
+                    else {
+                        $("#invia").attr('href',"mailto:davidechiarabini@hotmail.it?subject=WildFishing&body="+testo);
+                        $("#errore").text("");
+                }
+                });
+            });
+            //VERIFICA TEXT-AREA
+            function verifyInput( objEvent ){
+            // il 44 e\' il codice della virgola
+            if( objEvent.keyCode==44 ) {
+                //var testo=$("#area-email").val();
+                alert("la virgola non è ammessa");
+                //$("#area-email").val(testo);
+                return false;
+                }
+            }
+        </script>
         <!---->
 
         <!--OBIETTIVO-->

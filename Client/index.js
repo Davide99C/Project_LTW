@@ -1,3 +1,4 @@
+  
 $(document).ready(function() {
   $(".open-button").click(function() {
     $("#myForm").animate({opacity:1});
@@ -5,9 +6,6 @@ $(document).ready(function() {
   $(".cancel").click(function() {
     $("#myForm").animate({opacity:0});
   });
-  $("#invia").click(function() {
-    $("#invia").attr('href','mailto:davidechiarabini@hotmail.it?subject=WildFishing&body='+document.getElementsByTagName("msg").innerText);
-  })
 });
 
 function openNav() {
@@ -21,6 +19,8 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
   
 }
+
+
 
 //CHAT
 
