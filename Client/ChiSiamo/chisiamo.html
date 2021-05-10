@@ -107,21 +107,27 @@
                 
                 <div class="row2" align="center">
                     <div class="column2">
-                      <a href="../Store/store.html"><img src="../img/Schermata 2021-04-27 alle 18.41.14.png" style="width: 120px; height: 100px;  "></a>
+                      <div id="link1">
+                          <a href="../Store/store.html"><img src="../img/Schermata 2021-04-27 alle 18.41.14.png" style="width: 120px; height: 100px;  "></a>
+                      </div>  
                       <h2>Shop</h2>
                       <p>Uno shop fornito della<br> migliore attrezzatura<br> da pesca 
                           ideale per tutte<br> le tue esigenze.
                       </p>
                     </div>
                     <div class="column2" >
-                    <a href="../Gofishing/gofishing.html"><img src="../img/Schermata 2021-04-27 alle 19.05.49.png" style="width: 110px; height: 100px;  "  ></a>
+                        <div id="link2">
+                            <a href="../Gofishing/gofishing.html"><img src="../img/Schermata 2021-04-27 alle 19.05.49.png" style="width: 110px; height: 100px;  "  ></a>
+                        </div>
                       <h2>GoFishing</h2>
                       <p>Vogliamo trasmettervi <br>le migliori strategie<br> e nozioni tecnico-scientifiche <br>
                           indispensabili per capire<br> l’ambiente di pesca del territorio.
                       </p>
                     </div>
                     <div class="column2" >
-                        <a href="../Galleria/galleria.html"><img src="../img/Schermata 2021-04-27 alle 19.09.33.png" style="width: 110px; height: 100px;  "  ></a>
+                        <div id="link3">
+                            <a href="../Galleria/galleria.html"><img src="../img/Schermata 2021-04-27 alle 19.09.33.png" style="width: 110px; height: 100px;  "  ></a>
+                        </div>
                         <h2>Galleria</h2>
                         <p>Tante esperienze condivise in una raccolta di foto <br>e video esclusive dei nostri <br>
                             membri della community. <br>Unisciti a noi!
@@ -131,33 +137,34 @@
                   
                 </div>
 
-                <div class="section2" align="center">
+                <div class="section2">
                     <label id="team"><strong> Il nostro team</strong></label>
-                        <br>
-                    <div class="colonna">
-                        <div class="card">
-                          <img id="elisa" src="../img/depositphotos_169265766-stock-illustration-young-caucasian-woman-fishing-on.jpg">
-                          <div class="container">
-                            <h2>Elisa De Bellis</h2>
-                            <p class="title">Art Director</p>
-                            <p></p>
-                            <p>17elisa99@live.it</p>
-                            <p><button class="button">Contact</button></p>
-                          </div>
+                    <div id="contatti" align="center" >   
+                        <div class="colonna" id="sx" >
+                            <div class="card">
+                            <img id="elisa" src="../img/depositphotos_169265766-stock-illustration-young-caucasian-woman-fishing-on.jpg">
+                            <div class="container">
+                                <h2>Elisa De Bellis</h2>
+                                <p class="title">Art Director</p>
+                                <p></p>
+                                <p>17elisa99@live.it</p>
+                                <p><button class="button">Contact</button></p>
+                            </div>
+                            </div>
                         </div>
-                    </div>
-                      
-                    <div class="colonna">
-                        <div class="card">
-                          <img id="davide" src="../img/pesca-dell-uomo-sull-illustrazione-di-vettore-del-molo-79701282.jpg">
-                          <div class="container">
-                            <h2>Davide Chiarabini</h2>
-                            <p class="title">Designer</p>
-                            <p></p>
-                            <p>john@example.com</p>
-                            <p><button class="button">Contact</button></p>
-                          </div>
                         
+                        <div class="colonna" id="dx">
+                            <div class="card">
+                            <img id="davide" src="../img/pesca-dell-uomo-sull-illustrazione-di-vettore-del-molo-79701282.jpg">
+                            <div class="container">
+                                <h2>Davide Chiarabini</h2>
+                                <p class="title">Designer</p>
+                                <p></p>
+                                <p>chiarabini.1844615@studenti.uniroma1.it</p>
+                                <p><button class="button">Contact</button></p>
+                            </div>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,6 +196,22 @@
             </ul>
         </footer>
 
+        <!-- CONTROLLO LOGIN UTENTE -->
+        <script>
+            var x = new URLSearchParams(window.location.search);
+            var username = x.get('nome');console.log(username);
+            var surname = x.get('cognome');console.log(surname);
+            if (username && surname) {
+                document.getElementById("menu-2").innerHTML = "<a href='../Profilo/profilo.html?nome="+username+'&cognome='+surname+"' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../img/44948.png' style='height:20px; width:20px;'>"+username+' '+surname+"</a>";
+                document.getElementById("menu-center").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' class='img'> <img src='../img/logo.png'> </a>";
+                document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> HOME  </a><br><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GO FISHING </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> FAQ </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GALLERIA </a>";
+                document.getElementById("link1").innerHTML = "<a href='../Store/store.html?nome="+username+'&cognome='+surname+"'><img src='../img/Schermata 2021-04-27 alle 18.41.14.png' style='width: 120px; height: 100px; '></a>";
+                document.getElementById("link2").innerHTML = "<a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+"'><img src='../img/Schermata 2021-04-27 alle 19.05.49.png' style='width: 110px; height: 100px; '></a>";
+                document.getElementById("link3").innerHTML = "<a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+"'><img src='../img/Schermata 2021-04-27 alle 19.09.33.png' style='width: 110px; height: 100px; '></a>";
+
+            }
+            else document.getElementById("menu-2").innerHTML = "<a href='../Login/login.html' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../img/44948.png' style='height:20px; width:20px;'>&nbspACCEDI</a>";
+        </script>   
     </body>
     
 </html>

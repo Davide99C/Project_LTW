@@ -116,5 +116,19 @@
                 <label> E-mail: wildfishing@hotmail.it </label>
             </ul>
         </footer>
+
+        <!-- CONTROLLO LOGIN UTENTE -->
+        <script>
+            var x = new URLSearchParams(window.location.search);
+            var username = x.get('nome');console.log(username);
+            var surname = x.get('cognome');console.log(surname);
+            if (username && surname) {
+                document.getElementById("menu-2").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' class='btn' >HOME</a>";
+                document.getElementById("menu-center").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' class='img'> <img src='../img/logo.png'> </a>";
+                document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Store/store.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> NEGOZIO  </a><br><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GO FISHING </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> CHI SIAMO </a>";
+                document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> NEGOZIO </a><br> <a href='../Faq/faq.html?nome="+username+'&cognome='+surname+"' role='button' class='btn' > FAQ </a><br>";
+            }
+            else document.getElementById("menu-2").innerHTML = "<a href='../Login/login.html' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../img/44948.png' style='height:20px; width:20px;'>&nbspACCEDI</a>";
+        </script>
     </body>
 </html>

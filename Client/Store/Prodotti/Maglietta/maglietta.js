@@ -32,8 +32,8 @@ Vue.component('maglietta', {
                 { text: 'Utilizzo ad uso civile, non medicale' }
                 ],
             variants : [
-                { id:2241 , color: 'FRONTE' , disp:9 , onSale : true ,
-                image:'../../../../img/maglietta_front.jpg'  } ,
+                { id:2241 , color:'FRONTE', disp:9 , onSale:true ,
+                image:'../../../img/maglietta_front.jpg' } ,
                 { id:2242, color:'RETRO', disp:11, onSale:false ,
                 image:'../../../img/maglietta_back.jpg' } ,
                 ],
@@ -76,3 +76,15 @@ var app = new Vue ({
         }
     }
 });
+
+
+function openNav() {
+    document.getElementById("comparsa").style.width = "230px";
+    document.getElementById("main").style.marginLeft = "230px";
+  }
+  
+  function closeNav() {
+    document.getElementById("comparsa").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    
+  }

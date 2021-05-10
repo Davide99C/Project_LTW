@@ -20,10 +20,9 @@ body {
 #centro #title {
     font-size: 40px;
     color:#a50520;
-	font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-	font-weight: bold;
-	text-shadow: 2px 2px 4px black;
-   
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
     padding-top: 20px;
 
 }
@@ -122,9 +121,12 @@ body {
     background-color: rgb(37, 37, 37);
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 50%;
+    padding-bottom: 5%; 
     
+}
 
+#contatti {
+  display: inline-flex;
 }
 
 .section2 #team {
@@ -132,62 +134,75 @@ body {
 	  font-family:Georgia, 'Times New Roman', Times, serif;
     color: white;
     text-align: center;
-    
-      
 }
 
 .colonna {
-    float: left;
     width: 30%;
     margin-bottom: 16px;
-    padding: 0 8px;
     padding-top: 50px;
-    padding-left: 180px;
-    
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-    background-color:rgb(206, 206, 206);
-    padding-top: 15px;
+    /*padding-left: 180px;*/
+    height: 100%;
   }
 
-  .card #elisa{
-    width: 70%;
-  }
+#sx {
+  margin-left: 20%;
+  margin-right: 10px;
+}
+#dx {
+  margin-right: 20%;
+  margin-left: 10px;
+}
+  
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color:rgb(206, 206, 206);
+  padding-top: 15px;
+}
 
-  .card #davide{
-    width: 76%;
-  }
-  
-  .container {
-    padding: 0;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
+.card #elisa{
+  width: 70%;
+  height: 60%;
+}
+
+.card #davide{
+  width: 76%;
+  height: 60%;
+}
+
+.container {
+  padding: 0;
+  width: 90%;
+}
+
+
+.container p{
+  font-size: 1.2vw;  /*ADATTIVO PER QUALSIASI LUNGHEZZA DELL' E-MAIL*/
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
 
