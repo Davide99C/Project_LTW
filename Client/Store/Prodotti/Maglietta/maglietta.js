@@ -1,7 +1,25 @@
 
 
 Vue.component('maglietta', {
-    template : '<div class="product"><div class="product-image "><img v-bind:src="image"/></div><div class="product-info"><h1>Prodotto in vendita:{{product}}</h1>Descrizione:{{description}}<p v-if="disp>10 && onSale">Disponibile</p><p v-else-if="disp>0 && onSale">Ultime scorte!</p><p v-else>Non disponibile</p><ul><li v-for="x in details">{{x.text}}</li></ul><div v-for="(x,index) in variants" :key="x.id" class="color=box"v-bind:style="{backgroundColor: x.htmlColor}"><p v-on:click="updateProduct(index)">{{x.color}}</p></div><button v-on:click="addToCart()"v-bind:disabled="!onSale || disp==0"v-bind:class="{disabledButton: !onSale || disp==0}">Aggiungi al carrello</button></div></div>'
+    template : `<div class="product">
+                    
+                    <img v-bind:src="image" align="left"/>
+                <div class="product-info" >    
+                    <h1>{{product}}</h1>
+                    Descrizione:{{description}}
+                    <p v-if="disp>10 && onSale">Disponibile</p>
+                    <p v-else-if="disp>0 && onSale">Ultime scorte!</p>
+                    <p v-else>Non disponibile</p>
+                    <li v-for="x in details">{{x.text}}</li>
+                    <br>
+                    <div v-for="(x,index) in variants" :key="x.id" class="colorbox" >
+                        <button id="f-r" v-on:click="updateProduct(index)">{{x.color}}</button>
+                    </div>
+                    <div id="button">
+                    <button id="cart" v-on:click="addToCart()"v-bind:disabled="!onSale || disp==0"v-bind:class="{disabledButton: !onSale || disp==0}">Aggiungi al carrello</button>
+                    </div>
+                    </div>
+                </div>`
     ,
     data: function(){
         return {
@@ -14,11 +32,13 @@ Vue.component('maglietta', {
                 { text: 'Utilizzo ad uso civile, non medicale' }
                 ],
             variants : [
-                { id:2241 , color: "nera" , disp:9 , onSale : true ,
-                image:"../../../../img/maglietta_front" , htmlColor: "white" } ,
-                { id:2242, color:"nera", disp:11, onSale:false ,
-                image:"../../../img/maglietta_back",htmlColor:"black" } ,
-                ]
+                { id:2241 , color: 'FRONTE' , disp:9 , onSale : true ,
+                image:'../../../../img/maglietta_front.jpg'  } ,
+                { id:2242, color:'RETRO', disp:11, onSale:false ,
+                image:'../../../img/maglietta_back.jpg' } ,
+                ],
+            
+            
         } ;
     } ,
     methods: {
