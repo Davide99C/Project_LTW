@@ -79,7 +79,19 @@ function chat() {
   document.getElementById("img email").style.visibility="visible";
 }
 
-//CONTROLLO SE L'ACCESSO È STATO EFFETTUATO O MENO  //DIRETAMENTE DAL FILE HTML
+
+//VERIFICA TEXT-AREA
+function verifyInput( objEvent ){
+// il 44 e\' il codice della virgola
+if( objEvent.keyCode==44 ) {
+  //var testo=$("#area-email").val();
+  alert("la virgola non è ammessa");
+  //$("#area-email").val(testo);
+  return false;
+  }
+}
+
+//CONTROLLO SE L'ACCESSO È STATO EFFETTUATO O MENO  //DIRETAMENTE DAL FILE HTML 
 /*function caricaLogin() {
   var x = new URLSearchParams(window.location.search);
   var username = x.get('nome');console.log(username);

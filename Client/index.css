@@ -152,7 +152,7 @@ body {
 }
 #goal {
    	padding:10%;
-    font-size: 25px;
+    font-size: 1.3vw;
     height: auto;
 	background-color: rgb(37, 37, 37);
 	color: #e7e7e7;
@@ -168,7 +168,7 @@ body {
 	text-shadow: 5px 5px 5px black;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: #a50520;
-	font-size: 40px;
+	font-size: 2.5vw;
 	text-align: center;
 	font-weight: bold;
 }
@@ -421,10 +421,10 @@ body.anim .scroll-arrow-box {
 
 .box1 {
     position: relative;
-    width: 400px;
+    width: auto;
 	border-radius: 50%;
-	margin-left:30%;
-	margin-right:30%;
+	margin-left:auto;
+	margin-right:auto;
 }
       
 .box1 image {
@@ -491,30 +491,30 @@ body.anim .scroll-arrow-box {
 }
 
 .newsletter h1 {
-    margin-bottom: -10px;
+    margin-bottom: 0px;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	font-size: 30px;
+	font-size: 1.6vw;
 	color: #a50520;;
 }
 .newsletter p {
-	font-size: 23px;
+	font-size: 1.3vw;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .newsletter input[type="email"] {
-    height: 50px;
-    width: 400px;
+    height: 8vh;
+    width: 26vw;
     border: 3px solid;
     border-radius: 5px;
-    margin-left : 10px;
-    margin-top:30px;
-    font-size: 20px;
+    margin-left : 2vw;
+    margin-top: 5vh;
+    font-size: 1.3vw;
 }
 .newsletter button {
-    height: 60px;
-    width: 100px;
+    height: 8vh;
+    width: 8vw;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 1.3vw;
     cursor: pointer;
     background-color: #740000;
 	color: white;

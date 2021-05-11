@@ -26,18 +26,18 @@
 
     if($count == 1){
         echo "<script language=javascript> alert('Login effettuato con successo. Clicca ok per continuare')</script> ";
-        $ok = "<h1 style='color:red'> Login effettuato con successo</h1><h2>Attendi un instante e verrai reinderizzato alla pagina principale</h2>";
-        echo "$ok";
+        //$ok = "<h1 style='color:red'> Login effettuato con successo</h1><h2>Attendi un instante e verrai reinderizzato alla pagina principale</h2>";
+        //echo "$ok";
         $row = $result->fetch_array();
         $nome = $row[0];
         $cognome = $row[1];
-        $stringa_url = "refresh:2; url = ../index.html?"."nome=".$nome."&cognome=".$cognome;
+        $stringa_url = "refresh:0; url = ../index.html?"."nome=".$nome."&cognome=".$cognome;
         header($stringa_url);
     }else{
         echo "<script language=javascript> alert('Email o password non corretta. Clicca ok per tornare alla pagina di login')</script> ";
-        $error = "<h1 style='color:red'>Email o password non corretta </h1><h2>Attendi un instante e verrai reinderizzato alla pagina di login</h2>";
-        echo "$error";
-        header("refresh:2; url = ../Login/login.html  ");
+        //$error = "<h1 style='color:red'>Email o password non corretta </h1><h2>Attendi un instante e verrai reinderizzato alla pagina di login</h2>";
+        //echo "$error";
+        header("refresh:0; url = ../Login/login.html  ");
     }
      
     

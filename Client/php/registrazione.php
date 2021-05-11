@@ -31,13 +31,13 @@
         exit();
         }
         echo "<script language=javascript> alert('Account creato correttamente. Clicca ok per continuare')</script> ";
-        $ok = "<h1 style='color:red'>Account creato correttamente</h1><h2>Attendi un istante e verrai reinderizzato alla pagina di login</h2>";
-        echo "$ok";
-        header("refresh:2; url = ../Login/login.html " );
+        //$ok = "<h1 style='color:red'>Account creato correttamente</h1><h2>Attendi un istante e verrai reinderizzato alla pagina di login</h2>";
+        //echo "$ok";
+        header("refresh:0; url = ../Login/login.html " );
    }else{
         echo "<script language=javascript> alert('Account gia esistente!. Clicca ok per tornare alla pagina di registrazione')</script> ";
-       $error = "<h1 style='color:red'>Account gia esistente!</h1><h2>Attendi un istante e verrai reinderizzato alla pagina di registrazione</h2>";
-       echo"$error";
-       header("refresh:2; url = ../Registrazione/registrazione.html " );
+        //$error = "<h1 style='color:red'>Account gia esistente!</h1><h2>Attendi un istante e verrai reinderizzato alla pagina di registrazione</h2>";
+        //echo"$error";
+        header("refresh:0; url = ../Registrazione/registrazione.html " );
    }
 ?>

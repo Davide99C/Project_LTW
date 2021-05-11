@@ -2,7 +2,8 @@
 // SPOSTA MAPPA
 $(document).ready(function() {
   $("#mappa").click(function() {
-    $("#titolo").animate({marginLeft:"0%"});
+    $("#titolo").animate({marginLeft:'1%', marginRight:'65%'});
+    $("#closeMap").animate({opacity:1});
     $(".area_regione").animate({opacity:1});
   });
 });
@@ -45,13 +46,20 @@ function openNav() {
     document.getElementById("loading_screen").style.display = 'none';
   }
 
+//CHIUDI MAPPA
+function closeMap(){
+    var regioni = document.getElementsByClassName("area_regione");
+    for (var i=0; i<regioni.length; i++) {
+      var id = regioni[i].getAttribute("id");
+      document.getElementById(id).style.visibility="hidden";
+    }
+    $("#titolo").animate({marginLeft:"33%",marginRight:'33%'});
+    $("#closeMap").animate({opacity:0});
+}
 
 //MOSTRA INFO REGIONE
   function MM_findObj(n, d) {
-    //v4.01
-    var p,
-        i,
-        x;
+    var p,i,x;
     if (!d)
         d = document;
     if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
@@ -70,12 +78,7 @@ function openNav() {
 }
 
 function MM_showHideLayers() {
-    //v3.0
-    var i,
-        p,
-        v,
-        obj,
-        args = MM_showHideLayers.arguments;
+    var i,p,v,obj,args = MM_showHideLayers.arguments;
     for (i = 0; i < (args.length - 2); i += 3)
         if ((obj = MM_findObj(args[i])) != null) {
             v = args[i + 2];

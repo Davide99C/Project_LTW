@@ -24,12 +24,15 @@ body {
     padding-bottom: 180px;
 	visibility: visible;
     display: block;
-    padding-left: 2%;
+    /*padding-left: 0%;*/
 }
 
 #titolo {
     display: block;
     margin-left:33%;
+    margin-right:33%;
+    /*border: 1px solid white;*/
+    text-align: center;
 }
 
 #titolo h1 {
@@ -42,9 +45,24 @@ body {
     margin-left : 10%;
 }
 
-@media screen and (max-width: 450px){
-    #mappaItalia {
-        padding-left:0%;
+h6 {
+    margin-top: -50px;
+}
+#closeMap {
+    padding:10px;
+    color:white;
+    background-color: rgb(150, 0, 0);
+    border-radius: 5px;
+    opacity: 0;
+}
+
+@media screen and (max-width: 450){
+    #titolo {
+        margin-left:2%;
+    }
+    .area_regione {
+        left:2%;
+        top: 580px;
     }
 }
 
@@ -56,7 +74,7 @@ body {
 	z-index: 2;
 	left: 37%;
 	top: 100px;
-	width: 55%;
+	width: 55vw;
 	height: auto;
 	visibility: hidden;
     display: inline-block;
@@ -85,9 +103,11 @@ body {
 h2,h3,p {
     padding-left: 20px;
     text-shadow: 2px 2px 4px black;
+    font-size: 1.3vw;
 }
 p {
     font-style: italic;
+    font-size: 1.1vw;
 }
 .laghi, .fiumi {
     display: inline-flex;

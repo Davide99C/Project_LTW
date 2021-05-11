@@ -13,7 +13,7 @@ body {
     margin-right:20%;
     /*left:20%;*/
     top: 88px;
-    height: 50px;
+    height: 6vh;
     display: inline-flex;
     position: absolute;
     z-index: 1;
@@ -38,7 +38,7 @@ body {
 .sez label {
     cursor:pointer;
     width:auto;
-    font-size:18px;
+    font-size:1.1vw;
     font-weight:500;
 }
 
@@ -47,7 +47,7 @@ body {
     text-align: left;
     background-color: #a6a6a6;
     width:auto;
-    font-size:17px;
+    font-size:1vw;
     font-weight:500;
 }
 .sez a {
@@ -61,7 +61,7 @@ body {
     display: none;
     background-color: #a6a6a6;
     width:100%;
-    margin-top: -2px;
+    margin-top: -8px;
     padding-bottom: 3px;
     margin-left: -2px;
     /*padding-right: 60px;*/
@@ -158,7 +158,7 @@ body {
 }
 
 .desc-prod {
-    font-size: 25px;
+    font-size: 1.5vw;
     margin-top: 2px;
 }
 

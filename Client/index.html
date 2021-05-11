@@ -108,6 +108,7 @@
             </div>
         </div>
         <script>
+            //CONTROLLO CHAT POP-UP
             $(document).ready(function() {
                 $("#invia").click(function() {
                     var testo = $("#area-email").val();
@@ -116,17 +117,17 @@
                     var dotpos = email.lastIndexOf(".");
 
                     if (email == "") {
-                        $("#invia").attr('href',"#");
+                        $("#invia").attr('href',"javascript:void(0)");
                         $("#errore").text("Ricordati di inserire l'email!");
                         return false;
                     }
                     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-                        $("#invia").attr('href',"#");
+                        $("#invia").attr('href',"javascript:void(0)");
                         $("#errore").text("Indirizzo e-mail non valido!");
                         return false;
                     }
                     if (testo == ""){
-                        $("#invia").attr('href',"#");
+                        $("#invia").attr('href',"javascript:void(0)");
                         $("#errore").text("Impossibile inviare un testo vuoto!");
                         return false;
                     }
@@ -136,26 +137,6 @@
                 }
                 });
             });
-            //VERIFICA TEXT-AREA
-            function verifyInput( objEvent ){
-            // il 44 e\' il codice della virgola
-            if( objEvent.keyCode==44 ) {
-                //var testo=$("#area-email").val();
-                alert("la virgola non è ammessa");
-                //$("#area-email").val(testo);
-                return false;
-                }
-            }
-            //VERIFICA E-MAIL
-            function controllaEmail() {
-                var testo=$("#input-email").val();
-                var atpos = testo.indexOf("@");
-                var dotpos = testo.lastIndexOf(".");
-                if (atpos<1 || dotpos<atpos+2 || dotpos+2>=testo.length) {
-                    alert("Indirizzo email non valido");
-                    return false;
-                }
-            }
         </script>
         <!---->
 
@@ -186,8 +167,8 @@
         <section id="foto">
 
             <ul id="gof">
-                <div class="box1" align="center">
-                    <img src="img/fish.jpg" class="image" style="width:400px; height: 400px;">
+                <div class="box1" >
+                    <img src="img/fish.jpg" class="image" style="width:22vw; height: 47vh;">
                     <div id ="link1" class="middle">
                         <a class="text" href="Gofishing/gofishing.html">GO FISHING</a>
                     </div>
@@ -195,8 +176,8 @@
             </ul>
 
             <ul id="store">
-                <div class="box1" align="center">
-                    <img src="img/fishing-rod-5277293_1920.jpg" class="image" style="width:400px; height: 400px;">
+                <div class="box1" >
+                    <img src="img/fishing-rod-5277293_1920.jpg" class="image" style="width:22vw; height: 47vh;">
                     <div id="link2" class="middle">
                         <a class="text" href="Store/store.html">NEGOZIO</a>
                     </div>
