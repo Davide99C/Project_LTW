@@ -162,5 +162,48 @@ body {
     margin-top: 2px;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 290px;
+    min-height: 400px;
+    text-align: center;
+    font-family: arial;
+    padding:6px 6px;
+    
+}
 
+.card:hover {
+    opacity:0.8;
+}
 
+.card button{
+    border:none;
+    margin-top: 20px;
+    background-color:rgb(109, 0, 0);
+    color: white;
+    border-radius: 5%;
+    padding: 15px;
+    font-size: medium;
+    border: 1px solid #f3f3f3;
+}
+
+.card button:hover {
+    border: 1px solid #350000;
+    background-color: #380000;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.title {
+   
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 3.6vw;
+	color: #a50520;
+    padding: 20px;
+}
+
+#prodotti p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:7px;
+    font-size: 15px;
+}

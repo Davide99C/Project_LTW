@@ -1,4 +1,4 @@
-Vue.component('canna', {
+Vue.component('ami', {
     template : `<div class="product">
                     
                     <img v-bind:src="image" align="left"/>
@@ -20,8 +20,8 @@ Vue.component('canna', {
     ,
     data: function(){
         return {
-            product : 'Canna spinning a due pezzi' ,
-            description: 'Canna spinning a due pezzi' ,
+            product : 'Set di ami ' ,
+            description: 'Set di ami da pesca da 100pz' ,
             selectedVariant : 0,
             details : [
                 { text: '95% Cotone - 5% Elastan' } ,
@@ -30,7 +30,7 @@ Vue.component('canna', {
                 ],
             variants : [
                 { id:2241 , color:'NERA', disp:20 , onSale:true ,
-                image:'canna.png' } 
+                image:'ami.png' } 
             ]
                 
             

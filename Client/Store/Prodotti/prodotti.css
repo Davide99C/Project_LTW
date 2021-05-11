@@ -2,13 +2,13 @@ html,
 body{
     background-color: black;
 }
-#app {
-    background-color: rgb(211, 211, 211);
-    
 
+.center{
+    background-color: rgb(211, 211, 211);
 }
+
 .product{
-   background-color: rgb(211, 211, 211);
+  
    float: left;
    width: 100%;
    font-size: 20px;
@@ -21,11 +21,11 @@ body{
    
 }
 .cart{
-    background-color: rgb(212, 212, 212);
+    
     width: 100%;
     padding-top: 20px;
     padding-bottom: 30px;
-    padding-right: 20px;
+    
     
 
 }
@@ -43,6 +43,7 @@ body{
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5%;
+  margin-right: 20px;
 }
 img{
     width: 35%;
@@ -50,8 +51,8 @@ img{
 }
 
 .product-info{
-    padding-left: 30%;
-   text-align: left;
+   
+    text-align: left;
    
 }
 
@@ -72,7 +73,7 @@ button#f-r {
     
 }
 button#f-r:hover {
-border: 1px solid #6e6e6e;
+    border: 1px solid #6e6e6e;
   background-color: #808080;
   color: #ffffff;
   padding: 5px 10px;
@@ -102,7 +103,7 @@ button#cart:hover {
     padding: 30px;
     padding-top: 80px;
     margin-top: 30px;
-    width: 100%;
+    
       
 }
 
@@ -118,7 +119,7 @@ button#cart:hover {
     
     text-align: center;
     font-family: arial;
-    padding:10px 10px;
+    padding:8px 8px;
 }
   
 .price {
@@ -127,14 +128,14 @@ button#cart:hover {
 }
   
 .card button {
-border:none;
-margin-top: 20px;
-background-color:rgb(109, 0, 0);
-color: white;
-border-radius: 5%;
-padding: 20px;
-font-size: medium;
-border: 1px solid #f3f3f3;
+    border:none;
+    margin-top: 20px;
+    background-color:rgb(109, 0, 0);
+    color: white;
+    border-radius: 5%;
+    padding: 20px;
+    font-size: medium;
+    border: 1px solid #f3f3f3;
 }
   
 .card button:hover {

@@ -1,4 +1,4 @@
-Vue.component('canna', {
+Vue.component('piombi', {
     template : `<div class="product">
                     
                     <img v-bind:src="image" align="left"/>
@@ -20,7 +20,7 @@ Vue.component('canna', {
     ,
     data: function(){
         return {
-            product : 'Canna spinning a due pezzi' ,
+            product : 'Set da due piombi' ,
             description: 'Canna spinning a due pezzi' ,
             selectedVariant : 0,
             details : [
@@ -30,7 +30,7 @@ Vue.component('canna', {
                 ],
             variants : [
                 { id:2241 , color:'NERA', disp:20 , onSale:true ,
-                image:'canna.png' } 
+                image:'piombi.png' } 
             ]
                 
             
