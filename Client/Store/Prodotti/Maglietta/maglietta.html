@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../prodotti.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         </head>
-    <body>
+    <body >
 
         <!--HEADER-->
         <header id="menu">
@@ -25,7 +25,8 @@
                         <a href="../../../Store/store.html" role="button" class="btn"> NEGOZIO </a><br>
                         <a href="../../../Galleria/galleria.html" role="button" class="btn"> GALLERIA </a><br>
                         <a href="../../../Faq/faq.html" role="button" class="btn"> FAQ </a><br>
-                        <a href="../../../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a>
+                        <a href="../../../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a> <br>
+                        <a href="../../store.html" role="button" class="btn" id="negozio"> NEGOZIO </a>
                     </div>
                 </li>
             </ul>
@@ -37,10 +38,10 @@
             </ul>
         </header>
     <!---->
-
+        <div id="main">
         <div class="center">
         <div id="app">
-          <div class="cart" align="right">
+          <div id="carr" class="cart" align="right">
             <button href="../../carrello.html"><p >Carrello ({{cart}})</p></button>
                 
             </div>  
@@ -95,6 +96,7 @@
 
         <script type="text/javascript" src="maglietta.js"> </script>
     </div>
+    </div>
         <!--FOOTER-->
         <footer id="footer">
             <ul id="imagefooter">
@@ -118,5 +120,20 @@
             </ul>
         </footer>
      <!---->
+
+     <script>
+        var x = new URLSearchParams(window.location.search);
+        var username = x.get('nome');
+        var surname = x.get('cognome');
+        var email = x.get('email');
+        var numero = x.get('carrello');
+        if (username && surname) {
+            document.getElementById("menu-2").innerHTML = "<a href='../../../Profilo/profilo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../../../img/44948.png' style='height:20px; width:20px;'>"+username+' '+surname+"</a>";
+            document.getElementById("menu-center").innerHTML = "<a href='../../../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='img'> <img src='../../../img/logo.png'> </a>";
+            document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../../../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> HOME  </a><br><a href='../../../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../../../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../../../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../../../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../../store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' id='negozio'> NEGOZIO </a>";
+            document.getElementById("menufooter").innerHTML = "<a href='../../../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../../../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br><a href='../../../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br>";
+            document.getElementById('carr').innerHTML = "<button href='../../carrello.html'><p >Carrello ("+numero+")</p></button>";
+        }
+     </script>
     </body>
 </html>

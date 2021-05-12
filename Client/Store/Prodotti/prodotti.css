@@ -39,13 +39,17 @@ body{
 .cart button{
      
     border: 1px solid #949494;
-  background-color: #8a8a8a;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5%;
-  margin-right: 20px;
-  cursor: pointer;
+    background-color: #8a8a8a;
+    color: #ffffff;
+    padding: 0px 10px 0px;
+    border-radius: 5%;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: bold;
+
 }
+
 .product img{
     width: 35%;
     margin-left:10%;

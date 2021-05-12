@@ -150,12 +150,12 @@ body {
     /*cursor: pointer;*/
     margin-bottom:5%;
     color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding:6px 6px;
     max-height: 30%;
 }
 .prodotto:hover {
     opacity:0.8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .prodotto img {

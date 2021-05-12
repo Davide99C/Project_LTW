@@ -1,3 +1,9 @@
+//PARAMETRI GLOBALI
+var x = new URLSearchParams(window.location.search);
+var carr= parseInt(x.get('carrello'));
+var username = x.get('nome');
+var surname = x.get('cognome');
+var email = x.get('email');
 
 
 Vue.component('maglietta', {
@@ -73,7 +79,11 @@ var app = new Vue ({
     } ,
     methods : {
         updateCart:function() {
-            this.cart += 1 ;
+            //this.cart += 1 ;
+            carr=carr+1;
+            document.getElementById("carr").innerHTML = "<button href='../../carrello.html'><p >Carrello ("+carr+")</p></button>";
+            document.getElementById("negozio").href = "../../store.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+carr;
+            console.log(carr);
         }
     }
 });
