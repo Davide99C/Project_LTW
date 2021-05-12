@@ -4,10 +4,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="../aux.css" />
+        <script type="text/javascript" lang="javascript" src="profilo.js"> </script>
         <link rel="stylesheet" type="text/css" href="profilo.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body >
         <!--HEADER-->
         <header id="menu">
             <ul id="menu-1">
@@ -32,7 +33,7 @@
                 <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
             </ul>
             <ul id="menu-2">
-                <a href="../index.html" role="button" id="accesso" class="btn" ><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspHOME </a>
+                <a href="../index.html" role="button" id="accesso" class="btn" > HOME </a>
             </ul>
         </header>
         <!---->
@@ -42,7 +43,7 @@
             <div id="caricamento">
                 <div width="100" height="100" viewBox="0 0 24 24">
                     <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
-                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                    <!--<path d="M21,9H15V22H13V16H11V22H9V9pV7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
                     -->
                 </div><br>
                 <h1>Loading...</h1>
@@ -53,7 +54,39 @@
 
         <!-- GESTIONE PROFILO -->
         <div id="main">
-            <h1>PROFILO</h1>
+            <section id="centro">
+                <div id="funzioni">
+                  <button type="button" class="btn-profilo" id="btn-gestione" onclick="apriGestione()" >Gestione Profilo</button>  <br>
+                  <button type="button" class="btn-profilo" id="btn-password" onclick="apriPassword()" >Cambia Password</button>  <br>
+                  <button type="button" class="btn-profilo" id="btn-email" onclick="apriEmail()" >Cambia E-mail</button>  <br>
+                  <button type="button" class="btn-profilo" id="btn-usernane" onclick="apriUsername()" >Cambia Username</button>    <br>
+                </div>
+                <div id="gestione">
+                    <div id="img-profilo">
+                        <img src="../img/44948.png" >
+                        <p><button id="change-img" type="button">Cambia immagine del profilo</button></p><br>
+                    </div>
+                    <div id="info">
+                        <p >Nome: </p>
+                        <p>Cognome: </p>
+                        <p>E-mail: </p>
+                        <p>Bio: &nbsp;<textarea id="bio" ></textarea></p>
+                         
+                    </div>
+                </div>
+                <div id="change-password">
+                    <p>Vecchia Password: &nbsp;<textarea id="old-password" ></textarea></p>
+                    <p>Nuova Password: &nbsp;<textarea id="new-password" ></textarea></p>
+                </div>
+                <div id="change-email">
+                    <p>Vecchia Email: &nbsp;<textarea id="old-email" ></textarea></p>
+                    <p>Nuova Email: &nbsp;<textarea id="new-email" ></textarea></p>
+                </div>
+                <div id="change-username">
+                    <p>Nuovo Nome: &nbsp;<textarea id="new-name" ></textarea></p>
+                    <p>Nuovo Cognome: &nbsp;<textarea id="new-surname" ></textarea></p>
+                </div>
+            </section>   
         </div>
 
          <!--FOOTER-->
@@ -79,5 +112,22 @@
             </ul>
         </footer>
         <!---->
+        <script>
+            var x = new URLSearchParams(window.location.search);
+            var username = x.get('nome');console.log(username);
+            var surname = x.get('cognome');console.log(surname);
+            var email = x.get('email');console.log(email);
+            if (username && surname) {
+                document.getElementById("menu-2").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' id='accesso' class='btn' >HOME</a>";
+                document.getElementById("menu-center").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+"' role='button' class='img'> <img src='../img/logo.png'> </a>";
+                document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GO FISHING </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> CHI SIAMO </a>"
+                document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+"' role='button' class='btn' > PRIVACY POLICY </a><br>";
+            
+                document.getElementById("info").innerHTML = "<p >Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p>Bio: &nbsp;<textarea id='bio'></textarea></p>";
+            }else {
+                alert("ERRORE: non puoi accedere all'area di gestione del profilo senza aver effettuato l'accesso");
+                window.location.href = '../index.html';
+            }
+        </script>
     </body>
 </html>

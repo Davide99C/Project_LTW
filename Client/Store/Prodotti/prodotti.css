@@ -55,7 +55,7 @@ body{
 .product-info{
     margin-right: 20%;
     text-align: left;
-   
+    font-size: 1.2vw;
 }
 
 h1 {
@@ -73,6 +73,9 @@ button#f-r {
     color: #ffffff;
     padding: 5px 10px;
     cursor: pointer;
+    font-size: 1.2vw;
+    border-radius: 5%;
+    margin-left:2px;
 }
 button#f-r:hover {
     border: 1px solid #6e6e6e;
@@ -88,7 +91,7 @@ button#cart{
     color: white;
     border-radius: 5%;
     padding: 20px;
-    font-size: medium;
+    font-size: 1.2vw;
     border: 1px solid #f3f3f3;
     cursor: pointer;
 

@@ -1,0 +1,139 @@
+html,
+
+body {
+    background-color:rgb(0, 0, 0);
+}
+
+#centro {
+    width:50%;
+    height:100%;
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 0px 4px 4px 0px grey;
+    display: flex;
+    text-align: center;
+    background-color: rgb(201, 201, 201);
+    background-size: cover;
+}
+
+#funzioni{
+    display:inline-block;
+    margin: 20px;
+    height:90%;
+    width:20%;
+    border-right:1px solid grey;
+}
+
+#funzioni button {
+    color:white;
+    background-color:rgb(150, 0, 0);
+    padding:5px;
+    border-radius: 5px;
+    margin-top:20px;
+    width:90%;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+}
+
+#funzioni button:hover{
+    background-color:rgba(150, 0, 0, 0.555);
+}
+
+#gestione {
+    margin-top:5%;
+    margin-left:18%;
+    margin-right:20%;
+    position:absolute;
+}
+#gestione button {
+    color:white;
+    background-color:rgb(0, 0, 0);
+    padding:5px;
+    border-radius: 5px;
+    margin-top:20px;
+    width:90%;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+}
+
+#gestione button:hover {
+    background-color:rgba(0, 0, 0, 0.705);
+}
+
+#gestione img{
+    width:100px;
+    height:100px;
+}
+
+#info p {
+    font-weight:bold;
+}
+
+#info{
+    box-shadow: 0 4px 4px 2px grey;
+    text-align: left;
+    padding:20px;
+}
+
+#info textarea{
+    height:100px;
+    width:18vw;
+    overflow-y:scroll ;    
+}
+
+#change-password {
+    margin-top:5%;
+    margin-left:15%;
+    margin-right:auto;
+    position:absolute;
+    width:30vw;
+    display: none;
+}
+
+#change-password textarea{
+    height:40px;
+    width:18vw;    
+}
+
+#change-password p {
+    font-weight:bold;
+}
+
+#change-email {
+    margin-top:5%;
+    margin-left:15%;
+    margin-right:auto;
+    position:absolute;
+    width:30vw;
+    display: none;
+}
+
+#change-email textarea{
+    height:40px;
+    width:18vw;    
+}
+
+#change-email p {
+    font-weight:bold;
+}
+
+#change-username {
+    margin-top:5%;
+    margin-left:15%;
+    margin-right:auto;
+    position:absolute;
+    width:30vw;
+    display: none;
+}
+
+#change-username textarea{
+    height:40px;
+    width:18vw;    
+}
+
+#change-username p {
+    font-weight:bold;
+}
+
