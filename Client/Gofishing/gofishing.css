@@ -36,7 +36,7 @@ body {
 }
 
 #titolo h1 {
-    color: rgb(0, 207, 69); 
+    color:rgb(214, 0, 0); 
     padding-bottom:50px; 
     font-style: italic;
     text-shadow: 5px 5px 5px black;
@@ -59,6 +59,9 @@ h6 {
     margin-top: 130px;
     z-index: 3;
     cursor: pointer;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgb(119, 119, 119);
+    border:none;
 }
 
 @media screen and (max-width: 450){
@@ -83,11 +86,12 @@ h6 {
 	height: auto;
 	visibility: hidden;
     display: inline-block;
-    border: solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px rgb(158, 158, 158);
     color: white;
     margin-left:5% ;
     opacity: 0;
     /*transition: opacity 1s ease;*/
+    background-color: rgb(66, 66, 66);
 }
 
 .area_sx {
@@ -128,7 +132,7 @@ p {
     top: 5%;
     height: 90%;
     width: 34%;
-    border-left: solid rgb(255, 255, 255);
+    border-left: 1px solid rgba(201, 201, 201, 0.534);
 }
 .specie h3 {
     padding-top: 20px;
