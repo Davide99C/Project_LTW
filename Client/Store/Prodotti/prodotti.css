@@ -10,7 +10,7 @@ body{
 .product{
   
    float: left;
-   width: 100%;
+   width: 98%;
    font-size: 20px;
    height: auto;
    color: black;
@@ -44,14 +44,16 @@ body{
   padding: 5px 10px;
   border-radius: 5%;
   margin-right: 20px;
+  cursor: pointer;
 }
-img{
+.product img{
     width: 35%;
-    padding-right:30px;
+    margin-left:10%;
+    padding-right: 2%;
 }
 
 .product-info{
-   
+    margin-right: 20%;
     text-align: left;
    
 }
@@ -67,10 +69,10 @@ h1 {
 button#f-r {
     
     border: 1px solid #949494;
-  background-color: #8a8a8a;
-  color: #ffffff;
-  padding: 5px 10px;
-    
+    background-color: #8a8a8a;
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 button#f-r:hover {
     border: 1px solid #6e6e6e;
@@ -88,6 +90,7 @@ button#cart{
     padding: 20px;
     font-size: medium;
     border: 1px solid #f3f3f3;
+    cursor: pointer;
 
 }
 
@@ -134,8 +137,9 @@ button#cart:hover {
     color: white;
     border-radius: 5%;
     padding: 20px;
-    font-size: medium;
+    font-size: 1.2vw;
     border: 1px solid #f3f3f3;
+    cursor: pointer;
 }
   
 .card button:hover {
@@ -148,6 +152,13 @@ border: 1px solid #350000;
 h3 {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
     color: #5a0000;
+}
+
+.card h1 {
+    font-size: 2vw;
+}
+.card p {
+    font-size: 1.1vw;
 }
 
 a{

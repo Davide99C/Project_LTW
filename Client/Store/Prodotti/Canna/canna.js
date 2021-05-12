@@ -30,7 +30,7 @@ Vue.component('canna', {
                 ],
             variants : [
                 { id:2241 , color:'NERA', disp:20 , onSale:true ,
-                image:'canna.png' } 
+                image:'Canna.png' } 
             ]
                 
             
