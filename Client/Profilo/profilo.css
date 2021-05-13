@@ -46,7 +46,7 @@ body {
     margin-right:20%;
     position:absolute;
 }
-#gestione button {
+#gestione button{
     color:white;
     background-color:rgb(0, 0, 0);
     padding:5px;
@@ -74,12 +74,26 @@ body {
 #info{
     box-shadow: 0 4px 4px 2px grey;
     text-align: left;
-    padding:20px;
+    padding:10px 0px 20px 30px;
+}
+input[type="reset"], input[type="submit"]{
+    color:white;
+    background-color:rgb(100, 100, 100);
+    padding:5px;
+    border-radius: 5px;
+    color:white;
+    padding:5px;
+    cursor:pointer;
+    border-radius: 5px;
+    width:45%;
+    margin-left: 2px;
 }
 
 #info textarea{
-    height:100px;
-    width:18vw;
+    height:50px;
+    max-height:100px;
+    width:17vw;
+    max-width:18vw;
     overflow-y:scroll ;    
 }
 
