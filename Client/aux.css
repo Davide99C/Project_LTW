@@ -173,12 +173,7 @@ header {
 	background-color: #262626;
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 18px;}
-  }
-
+  
   /*FOOTER*/
 
   #footer {
@@ -217,4 +212,15 @@ header {
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding:5px 0px; /* Distanza tra le singole voci */
+}
+
+@media screen and  (max-width:400px) {
+  #imagefooter img {
+    height: 70px;
+    width: 70px;
+  }
+  #footer label, #footer a {
+    font-size: 10px;
+  }
+
 }

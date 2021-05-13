@@ -14,6 +14,12 @@ body {
   padding:5%;
 }
 
+@media  screen and (max-width:480px) {
+    #form {
+      padding:10px 0px 10px 0px;
+    }
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -71,9 +77,6 @@ body {
   
 }
 
-#divRemember {
-  padding-bottom: 20px;
-}
 
 .form-signin label , .form-signin a{
     font-weight: bold;

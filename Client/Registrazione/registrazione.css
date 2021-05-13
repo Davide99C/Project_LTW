@@ -17,6 +17,7 @@ body {
     background-size: cover;
 }
 
+
 .h3 {
   margin: 20px;
   font-style: italic;
@@ -91,7 +92,6 @@ body {
   }
 
 
-  
   .container {
     width:35%;
     border-radius: 5px;
@@ -119,6 +119,13 @@ body {
     
   }
   
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  /* Responsive layout - when the screen is less than 480px wide, make the two columns stack on top of each other instead of next to each other */
 
-  
+  @media  screen and (max-width:480px) {
+    #form {
+      padding:10px 0px 10px 0px;
+    }
+    .container {
+      width:100%;
+    }
+  }

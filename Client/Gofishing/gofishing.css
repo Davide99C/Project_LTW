@@ -56,13 +56,32 @@ body {
     border:none;
 }
 
-@media screen and (max-width: 450){
-    #titolo {
-        margin-left:2%;
+@media screen and (max-width: 480px){
+    #closeMap {
+        margin-left: 45%;
+        top:100%;
     }
-    .area_regione {
-        left:2%;
-        top: 580px;
+    #titolo {
+        margin-left:-30px;
+        margin-right: 0;
+        font-size:14px;
+    }
+    #scritta-titolo {
+        margin-left:30px;
+    }
+}
+@media screen and (max-width: 700px){
+    #closeMap {
+        margin-left: 45%;
+        top:170%;
+    }
+    #titolo {
+        margin-left:-30px;
+        margin-right: 0;
+        font-size:14px;
+    }
+    #scritta-titolo {
+        margin-left:30px;
     }
 }
 
@@ -86,6 +105,7 @@ body {
     background-color: rgb(66, 66, 66);
 }
 
+
 .area_sx {
     width: 60%;
 }
@@ -104,11 +124,11 @@ body {
 h2,h3,p {
     padding-left: 20px;
     text-shadow: 2px 2px 4px black;
-    font-size: 1.3vw;
+    font-size: 18px;
 }
 p {
     font-style: italic;
-    font-size: 1.1vw;
+    font-size: 16px;
 }
 .laghi, .fiumi {
     display: inline-flex;
@@ -132,21 +152,41 @@ p {
 .specie p {
     display: inline-block;
 }
-/*.sx {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 55%;
-    width: 160px;
+
+
+@media screen and (max-width: 480px) {
+    #abbruzzo, #basilicata, #calabria, #campania, #emilia, #friuli, #lazio, 
+    #liguria, #lombardia, #marche, #molise, #piemonte, #puglia, #sardegna, 
+    #sicilia, #toscana, #trentino, #umbria, #valdaosta, #veneto {
+        left:0%;
+        margin-top: 200%;
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    h2.h3 {
+        font-size:10px;
+    }
+    p {
+        font-size: 8px;
+    }
+    
 }
-.dx {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 25%;
-    width:160px;
-}*/
-
-
-
-
+@media screen and (max-width: 700px) {
+    #abbruzzo, #basilicata, #calabria, #campania, #emilia, #friuli, #lazio, 
+    #liguria, #lombardia, #marche, #molise, #piemonte, #puglia, #sardegna, 
+    #sicilia, #toscana, #trentino, #umbria, #valdaosta, #veneto {
+        left:0%;
+        margin-top: 100%;
+        width: 100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    h2.h3 {
+        font-size:10px;
+    }
+    p {
+        font-size: 8px;
+    }
+    
+}

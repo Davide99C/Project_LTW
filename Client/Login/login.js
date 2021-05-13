@@ -1,19 +1,18 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-function validateForm() {
-    if (document.myForm.remember.checked) {
-        alert("Hai deciso di essere ricordato per i prossimi accessi");
-    } 
-    else {
-        alert("Hai deciso di NON essere ricordato per i prossimi accessi");
-    }
-}
 
 function openNav() {
+  if(window.matchMedia("(max-width: 700px)").matches) {
+    document.getElementById("comparsa").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "100%";
+    document.getElementById("comparsa").style.zIndex='4';
+  }
+  else {
     document.getElementById("comparsa").style.width = "230px";
     document.getElementById("main").style.marginLeft = "230px";
-    
   }
+  
+}
   
   function closeNav() {
     document.getElementById("comparsa").style.width = "0";

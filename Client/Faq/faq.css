@@ -62,3 +62,15 @@ summary:hover {
     color: rgb(255, 255, 255);
 }
 
+@media  screen and (max-width:480px) {
+    #faq {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    summary {
+        font-size: 18px;
+    }
+    #centro {
+        font-size: 18px;
+    }
+  }

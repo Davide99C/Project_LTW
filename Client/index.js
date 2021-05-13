@@ -8,11 +8,21 @@ $(document).ready(function() {
   });
 });
 
+
 function openNav() {
-  document.getElementById("comparsa").style.width = "230px";
-  document.getElementById("main").style.marginLeft = "230px";
+  if(window.matchMedia("(max-width: 700px)").matches) {
+    document.getElementById("comparsa").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "100%";
+    document.getElementById("comparsa").style.zIndex='4';
+  }
+  else {
+    document.getElementById("comparsa").style.width = "230px";
+    document.getElementById("main").style.marginLeft = "230px";
+  }
   
 }
+
+
 
 function closeNav() {
   document.getElementById("comparsa").style.width = "0";

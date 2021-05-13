@@ -30,7 +30,7 @@ body {
     
 }
 
-img {
+#main img {
     vertical-align: middle;
     height:100%;
 }
@@ -91,6 +91,15 @@ img {
   font-size: auto;
 }
 
+@media  screen and (max-width:480px) {
+  .text {
+    font-size: 10px;
+    padding: 0;
+  }
+  #main img {
+    height: 50vh;
+  }
+}
 
 
 /* The dots/bullets/indicators */

@@ -152,7 +152,7 @@ body {
 }
 #goal {
    	padding:10%;
-    font-size: 1.3vw;
+    font-size: 24px;
     height: auto;
 	background-color: rgb(37, 37, 37);
 	color: #e7e7e7;
@@ -168,7 +168,7 @@ body {
 	text-shadow: 5px 5px 5px black;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: #a50520;
-	font-size: 2.5vw;
+	font-size: 40px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -176,6 +176,31 @@ body {
 #goal .image-goal {
 	padding-top: 0;
 	margin-top: -2%;
+	height:400px;
+	width: 400px;
+}
+
+@media screen and (max-width:480px) {
+	#goal .image-goal {
+		height: 200px;
+		width: 200px;
+	}
+	#goal .title {
+		font-size: 20px;
+	}
+	#scritta label {
+		font-size: 12px;
+	}
+	#video-logo img {
+		height: 200px;
+		width: 200px;
+	}
+	#image #titolo {
+		font-size: 50px;	
+	}
+	#image label {
+		font-size:15px;
+	}
 }
 
 /*parte centrale scroll
@@ -224,6 +249,12 @@ body.anim .scroll-btn-flip-box {
 	margin-right: -3px;
     font-weight: bold;
     font-style: italic;
+}
+
+@media screen and (min-width:400px) {
+	.scroll-btn-flip {
+		font-size: 10px;
+	}
 }
 
 .scroll-btn-flip:before,
@@ -353,31 +384,8 @@ body.anim .scroll-arrow-box {
 	    -ms-transform: translateX(-50%) scaleY(1);
 	        transform: translateX(-50%) scaleY(1);
 }
-/*
-@media only screen and (max-width: 999px) {
-	
-	.scroll-btn {
-		left: 50%;
-	}
-	
-}
 
-@media only screen and (min-width: 1000px) {
-	
-	.red-bg .scroll-btn-flip:after {
-		color: #262626;
-	}
-	
-	.red-bg .scroll-btn:hover .scroll-arrow:before{
-		border-right: 2px solid #262626;
-		border-bottom: 2px solid #262626;
-	}
-	
-	.red-bg .scroll-arrow:after {
-		background: #262626;
-	}
-	
-}*/
+
 
 /*foto GOFISHING e STORE*/
 
@@ -414,8 +422,9 @@ body.anim .scroll-arrow-box {
     width: 100%;
 }
 
-#foto .image{
-	height: 100%;
+.image{
+	width: 300px; 
+	height: 300px;
 	border-radius: 50%;
 }
 
@@ -493,34 +502,74 @@ body.anim .scroll-arrow-box {
 .newsletter h1 {
     margin-bottom: 0px;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	font-size: 1.6vw;
+	font-size: 30px;
 	color: #a50520;;
 }
 .newsletter p {
-	font-size: 1.3vw;
+	font-size: 20px;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .newsletter input[type="email"] {
-    height: 8vh;
-    width: 26vw;
+    height: 60px;
+    width: 400px;
     border: 3px solid;
     border-radius: 5px;
-    margin-left : 2vw;
-    margin-top: 5vh;
-    font-size: 1.3vw;
+    margin-left : 0;
+    margin-top: 5%;
+    font-size: 18px;
 }
 .newsletter button {
-    height: 8vh;
-    width: 8vw;
+    height: 60px;
+    width: 90px;
     border-radius: 5px;
-    font-size: 1.3vw;
+    font-size: 18px;
     cursor: pointer;
     background-color: #740000;
 	color: white;
 }
 .newsletter button:hover {
     background-color:#490000;
+}
+
+
+@media screen and (max-width:700px) {
+	.image {
+		height: 140px;
+		width: 140px;
+		margin-left: -40px;
+	}
+	.text {
+		font-size: 14px;
+		padding: 5px 8px;
+		margin-left:-40px;
+	}
+	#sezione3 label {
+		font-size:25px;
+	}
+	.newsletter h1 {
+		font-size:15px;
+	}
+	.newsletter p {
+		font-size:12px;
+	}
+	.newsletter input[type="email"] {
+		font-size:12px;
+		width: 150px;
+		height: 40px;
+	}
+	.newsletter button {
+		height: 40px;
+		width: 60px;
+		font-size: 12px;
+	}
+
+}
+
+@media  screen and (max-width:480px) {
+	.newsletter {
+		display: block;
+	}
 }
 
 

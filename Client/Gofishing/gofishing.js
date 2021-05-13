@@ -2,17 +2,30 @@
 // SPOSTA MAPPA
 $(document).ready(function() {
   $("#mappa").click(function() {
-    $("#titolo").animate({marginLeft:'1%', marginRight:'65%'});
+    if(window.matchMedia("(max-width: 700px)").matches) {
+      $("#titolo").animate({marginLeft:'-30px', marginRight:'0'});
+      document.getElementById('main').style.height="1200px";
+    }
+    else {
+      $("#titolo").animate({marginLeft:'1%', marginRight:'65%'});
+    }
     $("#closeMap").animate({opacity:1});
     $(".area_regione").animate({opacity:1});
   });
 });
 
 function openNav() {
+  if(window.matchMedia("(max-width: 700px)").matches) {
+    document.getElementById("comparsa").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "100%";
+    document.getElementById("comparsa").style.zIndex='4';
+  }
+  else {
     document.getElementById("comparsa").style.width = "230px";
     document.getElementById("main").style.marginLeft = "230px";
-    
   }
+  
+}
   
   function closeNav() {
     document.getElementById("comparsa").style.width = "0";
@@ -53,8 +66,17 @@ function closeMap(){
       var id = regioni[i].getAttribute("id");
       document.getElementById(id).style.visibility="hidden";
     }
-    $("#titolo").animate({marginLeft:"33%",marginRight:'33%'});
+    if (window.matchMedia("(max-width: 700px)").matches){
+      $("#titolo").animate({marginLeft:"-30px",marginRight:'0%'});
+      $("#scritta-titolo").animate({marginLeft:"30px"});  
+      $("#closeMap").animate({opacity:0});
+      document.getElementById('main').style.height="auto";
+    }
+    else{
+      $("#titolo").animate({marginLeft:"33%",marginRight:'33%'});
     $("#closeMap").animate({opacity:0});
+    }
+    
 }
 
 //MOSTRA INFO REGIONE
