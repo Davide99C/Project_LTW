@@ -64,22 +64,32 @@
                 <div id="gestione">
                     <div id="img-profilo">
                         <img src="../img/44948.png" ><br><br>
-                        <form action='' method="POST" enctype="multipart/form-data" id="info">
-                            <!--JAVASCRIPT-->
+                        <form action='../php/profilo.php' method="POST" enctype="multipart/form-data" id="info">
+                                <p>Nome: </p>
+                                <p>Cognome: </p>
+                                <p>E-mail: </p>
+                                <p id="Data">Data di nascita:  </p>
+                                <p>Codice Fiscale:<input type="text" name="CF" id="CF" maxlength="16" pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]" ></p>
+                                <p>Telefono:<input type="text" name="Tel" id="Tel" maxlength="40" pattern="([0-9]{10})" ></p>
+                                <p>Cambia immagine del profilo:<button id="change-img" type="file" multiple="multiple" name="foto[]">Carica l'immagine</button></p>
+                                <p>Bio: &nbsp;<textarea id="bio" ></textarea></p>
+                                <input type="submit" value="Invia">
+                                <input type="reset" value="Reset">
+                                <br>
                         </form>
                     </div>
                 </div>
                 <div id="change-password">
-                    <p>Vecchia Password: &nbsp;<textarea id="old-password" ></textarea></p>
-                    <p>Nuova Password: &nbsp;<textarea id="new-password" ></textarea></p>
+                    <p>Vecchia Password: <input type='text' id="old-password" ></input></p>
+                    <p>Nuova Password: <input type='text' id="new-password" ></input></p>
                 </div>
                 <div id="change-email">
-                    <p>Vecchia Email: &nbsp;<textarea id="old-email" ></textarea></p>
-                    <p>Nuova Email: &nbsp;<textarea id="new-email" ></textarea></p>
+                    <p>Vecchia Email: <input type='text' id="old-email" ></input></p>
+                    <p>Nuova Email: <input type='text' id="new-email" ></input></p>
                 </div>
                 <div id="change-username">
-                    <p>Nuovo Nome: &nbsp;<textarea id="new-name" ></textarea></p>
-                    <p>Nuovo Cognome: &nbsp;<textarea id="new-surname" ></textarea></p>
+                    <p>Nuovo Nome: <input type='text' id="new-name" ></input></p>
+                    <p>Nuovo Cognome: <input type='text' id="new-surname" ></input></p>
                 </div>
             </section>   
         </div>
@@ -117,12 +127,44 @@
                 document.getElementById("menu-center").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='img'> <img src='../img/logo.png'> </a>";
                 document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a>"
                 document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br>";
-            
-                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p>Data di nascita: <input type='Data' name='Data' pattern='[0-9]{2}[/][0-9]{2}[/][0-9]{4}'></p><p>Codice Fiscale: <input type='text' name='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel'  maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo:<button id='change-img' type='file' multiple='multiple' name='foto[]'>Carica l'immagine</button></p><p>Bio: &nbsp;<textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
+                document.getElementById("info").action = "../php/profilo.php?nome="+username+'&cognome='+surname+'&email='+email;
+                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <button id='change-img' type='file' multiple='multiple' name='foto[]'>Carica l'immagine</button></p><p>Bio: <textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
             }else {
                 alert("ERRORE: non puoi accedere all'area di gestione del profilo senza aver effettuato l'accesso");
                 window.location.href = '../index.html';
             }
         </script>
+        <?php
+            include "../php/connection.php";
+            $mysqli = dbConnection();
+            $email = $_GET['email'];
+            
+            $result = $mysqli -> query("SELECT data_di_nascita FROM Utenti where email = '$email'");
+            if (!$result) {
+                echo "Query failed";
+                exit();
+                }
+            $data = $result->fetch_assoc()['data_di_nascita'];
+            
+            echo "<script> document.getElementById('Data').innerHTML='Data di nascita: ".$data."' </script>";
+            
+            $result = $mysqli -> query("SELECT CF FROM Utenti where email = '$email'");
+            if (!$result) {
+                echo "Query failed";
+                exit();
+            }
+            $CF = $result->fetch_assoc()['CF'];
+            echo "<script> document.getElementById('CF').value='".$CF."'</script>";
+            $result = $mysqli -> query("SELECT telefono FROM Utenti where email = '$email'");
+            
+            if (!$result) {
+                echo "Query failed";
+                exit();
+            }
+             echo "<script>console.log('AIUTO '".$CF.")</script>";
+            $telefono = $result->fetch_assoc()['telefono'];
+            echo "<script>document.getElementById('Tel').value='".$telefono."' </script>";
+            
+        ?>
     </body>
 </html>

@@ -22,7 +22,7 @@
             var username = x.get('nome');console.log(username);
             var surname = x.get('cognome');console.log(surname);
             if (username && surname) {
-                window.location.href = '../index.html?nome=".$username."&cognome=".$surname."';
+                window.location.href = '../index.html?nome=".$username."&cognome=".$surname."&email=".$email."';
             }
             alert('Grazie per esserti iscritto alla nostra Newsletter!. Clicca ok per tornare alla pagina principale')</script> 
             ";
@@ -34,7 +34,7 @@
             var username = x.get('nome');console.log(username);
             var surname = x.get('cognome');console.log(surname);
             if (username && surname) {
-                window.location.href = '../index.html?nome=".$username."&cognome=".$surname."';
+                window.location.href = '../index.html?nome=".$username."&cognome=".$surname."&email=".$email."';
             }
             alert('Ti sei gia iscritto alla nostra Newsletter!. Clicca ok per tornare alla pagina principale')</script> 
             ";
