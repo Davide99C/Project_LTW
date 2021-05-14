@@ -63,7 +63,7 @@
                 </div>
                 <div id="gestione">
                     <div id="img-profilo">
-                        <img src="../img/44948.png" ><br><br>
+                        <img id="image-utente" src="img_utenti/44948.png" ><br><br>
                         <form action='../php/profilo.php' method="POST" enctype="multipart/form-data" id="info">
                                 <p>Nome: </p>
                                 <p>Cognome: </p>
@@ -71,7 +71,7 @@
                                 <p id="Data">Data di nascita:  </p>
                                 <p>Codice Fiscale:<input type="text" name="CF" id="CF" maxlength="16" pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]" ></p>
                                 <p>Telefono:<input type="text" name="Tel" id="Tel" maxlength="40" pattern="([0-9]{10})" ></p>
-                                <p>Cambia immagine del profilo:<button id="change-img" type="file" multiple="multiple" name="foto[]">Carica l'immagine</button></p>
+                                <p>Cambia immagine del profilo:<input id="change-img" type="file" name="immagine"></input></p>
                                 <p>Bio: &nbsp;<textarea id="bio" ></textarea></p>
                                 <input type="submit" value="Invia">
                                 <input type="reset" value="Reset">
@@ -128,7 +128,7 @@
                 document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a>"
                 document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br>";
                 document.getElementById("info").action = "../php/profilo.php?nome="+username+'&cognome='+surname+'&email='+email;
-                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <button id='change-img' type='file' multiple='multiple' name='foto[]'>Carica l'immagine</button></p><p>Bio: <textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
+                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <input id='change-img' type='file'  name='immagine'></input></p><p>Bio: <textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
             }else {
                 alert("ERRORE: non puoi accedere all'area di gestione del profilo senza aver effettuato l'accesso");
                 window.location.href = '../index.html';
@@ -155,15 +155,23 @@
             }
             $CF = $result->fetch_assoc()['CF'];
             echo "<script> document.getElementById('CF').value='".$CF."'</script>";
+
             $result = $mysqli -> query("SELECT telefono FROM Utenti where email = '$email'");
-            
             if (!$result) {
                 echo "Query failed";
                 exit();
             }
-             echo "<script>console.log('AIUTO '".$CF.")</script>";
             $telefono = $result->fetch_assoc()['telefono'];
             echo "<script>document.getElementById('Tel').value='".$telefono."' </script>";
+
+            $result = $mysqli -> query("SELECT immagine FROM Utenti where email = '$email'");
+            if (!$result) {
+                echo "Query failed";
+                exit();
+            }
+             echo "<script>console.log('AIUTO '".$immagine.")</script>";
+            $immagine = $result->fetch_assoc()['immagine'];
+            if ($immagine!=NULL) echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/".$immagine."' </script>";
             
         ?>
     </body>
