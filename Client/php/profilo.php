@@ -27,9 +27,14 @@
         //upload del file
         if(is_uploaded_file($_FILES["immagine"]["tmp_name"])) {
             //sposto il file nella cartella desiderata
-            if (move_uploaded_file($_FILES["immagine"]["name"], $target_file)) {
+            if (move_uploaded_file($_FILES["immagine"]["tmp_name"], $target_file)) {
+            //if( copy($_FILES['immagine']['tmp_name'], $target_file) ) {
                 echo "The file ". htmlspecialchars( basename( $_FILES["immagine"]["name"])). " has been uploaded.";
               } 
+            else {
+                echo "FAILED";
+                exit();
+            }
          }
          echo "<script>alert('Informazioni aggiornate con successo')</script>";
          header("refresh:0; url = ../Profilo/profilo.php?nome=".$username."&cognome=".$surname."&email=".$email);

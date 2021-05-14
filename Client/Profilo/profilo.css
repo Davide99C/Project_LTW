@@ -39,6 +39,19 @@ body {
     background-color:rgba(150, 0, 0, 0.555);
 }
 
+#image-utente {
+    border-radius: 50%;
+    height:200px;
+    width:200px;
+}
+
+@media screen and (min-width:900px) {
+    #image-utente {
+        height:100px;
+        width:100px;
+    }
+}
+
 #gestione {
     margin-top:5%;
     margin-left:auto;
