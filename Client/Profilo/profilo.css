@@ -136,3 +136,21 @@ input[type="text"], input[type="data"] {
     height:3vh;
     
 }
+
+@media screen and (min-width:900px) { 
+    #centro {
+        width:100%;
+        height:100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    p {
+        font-size:10px;
+    }
+    input[type="reset"], input[type="submit"]{
+        font-size: 10px;
+    }
+    #funzioni button {
+        font-size: 10px;
+    }
+}
