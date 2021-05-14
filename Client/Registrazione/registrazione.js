@@ -54,9 +54,9 @@ function nascondi_loading_screen() {
 //////////////////////////////////////////////////////////////////////////////////
 
 function openNav() {
-  if(window.matchMedia("(max-width: 700px)").matches) {
+  if(window.matchMedia("(max-width: 900px)").matches) {
     document.getElementById("comparsa").style.width = "100%";
-    document.getElementById("main").style.marginLeft = "100%";
+    document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("comparsa").style.zIndex='4';
   }
   else {

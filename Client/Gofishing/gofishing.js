@@ -2,7 +2,7 @@
 // SPOSTA MAPPA
 $(document).ready(function() {
   $("#mappa").click(function() {
-    if(window.matchMedia("(max-width: 700px)").matches) {
+    if(window.matchMedia("(max-width: 900px)").matches) {
       $("#titolo").animate({marginLeft:'-30px', marginRight:'0'});
       document.getElementById('main').style.height="1200px";
     }
@@ -15,9 +15,9 @@ $(document).ready(function() {
 });
 
 function openNav() {
-  if(window.matchMedia("(max-width: 700px)").matches) {
+  if(window.matchMedia("(max-width: 900px)").matches) {
     document.getElementById("comparsa").style.width = "100%";
-    document.getElementById("main").style.marginLeft = "100%";
+    document.getElementById("main").style.marginLeft = "0%";
     document.getElementById("comparsa").style.zIndex='4';
   }
   else {
