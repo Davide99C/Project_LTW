@@ -131,9 +131,10 @@
                 document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <input id='change-img' type='file'  name='immagine'></input></p><p>Bio: <textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
             }else {
                 alert("ERRORE: non puoi accedere all'area di gestione del profilo senza aver effettuato l'accesso");
-                window.location.href = '../index.html';
+                //window.location.href = '../index.html';
             }
         </script>
+        <!--
         <?php
             include "../php/connection.php";
             $mysqli = dbConnection();
@@ -174,5 +175,6 @@
             if ($immagine!=NULL) echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/".$immagine."' </script>";
             
         ?>
+        -->
     </body>
 </html>

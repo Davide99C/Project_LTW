@@ -137,14 +137,14 @@ input[type="text"], input[type="data"] {
     
 }
 
-@media screen and (min-width:900px) { 
+@media screen and (max-width:900px) { 
     #centro {
         width:100%;
         height:100%;
         margin-left: 0%;
         margin-right: 0%;
     }
-    p {
+    #change-username p, #change-email p, #change-password p, #info p{
         font-size:10px;
     }
     input[type="reset"], input[type="submit"]{
@@ -152,5 +152,16 @@ input[type="text"], input[type="data"] {
     }
     #funzioni button {
         font-size: 10px;
+    }
+    input[type="text"], input[type="data"] {
+        width:100px;
+        height:20px;   
+    }
+    #gestione {
+        margin-top:5%;
+        margin-left:auto;
+        margin-right:auto;
+        position:relative;
+        width:50vw;
     }
 }
