@@ -134,7 +134,7 @@
                 //window.location.href = '../index.html';
             }
         </script>
-        <!--
+        
         <?php
             include "../php/connection.php";
             $mysqli = dbConnection();
@@ -175,6 +175,6 @@
             if ($immagine!=NULL) echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/".$immagine."' </script>";
             
         ?>
-        -->
+        
     </body>
 </html>
