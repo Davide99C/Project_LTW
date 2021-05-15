@@ -31,7 +31,8 @@
         $row = $result->fetch_array();
         $nome = $row[0];
         $cognome = $row[1];
-        $stringa_url = "refresh:0; url = ../index.html?"."nome=".$nome."&cognome=".$cognome."&email=".$email;
+        $immagine = $row[7];
+        $stringa_url = "refresh:0; url = ../index.html?"."nome=".$nome."&cognome=".$cognome."&email=".$email."&immagine=".$immagine;
         header($stringa_url);
     }else{
         echo "<script language=javascript> alert('Email o password non corretta. Clicca ok per tornare alla pagina di login')</script> ";

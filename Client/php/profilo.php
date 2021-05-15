@@ -39,7 +39,7 @@
             }
          }
          echo "<script>alert('Informazioni aggiornate con successo')</script>";
-         header("refresh:0; url = ../Profilo/profilo.php?nome=".$username."&cognome=".$surname."&email=".$email);
+         header("refresh:0; url = ../Profilo/profilo.php?nome=".$username."&cognome=".$surname."&email=".$email."&immagine=".$immagine);
     }else {
         echo 'Cambio credenziali fallito';
         header("refresh:0; url = ../Profilo/profilo.php?nome=".$username."&cognome=".$surname."&email=".$email);

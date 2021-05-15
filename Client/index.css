@@ -43,6 +43,18 @@ body {
 	background-color: #aaaaaa;
 	border-radius: 5%;
   }
+
+  @media screen and (max-width:700px) {
+	.form-container {
+		max-width: 100vw;
+		width: 90vw;
+		height: 95vh;
+	}
+	.chat-popup {
+		right: 0;
+	}
+  }
+
   
   /* Full-width textarea */
   .form-container textarea {
@@ -55,6 +67,12 @@ body {
 	min-height: 200px;
 	font-size: 15px;
 	margin-bottom:5px;
+  }
+
+  @media screen and (max-height:480px) {
+	.form-container textarea {
+		min-height: 10px;
+	}
   }
   
   /* When the textarea gets focus, do something */
@@ -251,7 +269,7 @@ body.anim .scroll-btn-flip-box {
     font-style: italic;
 }
 
-@media screen and (min-width:400px) {
+@media screen and (max-width:700px) {
 	.scroll-btn-flip {
 		font-size: 10px;
 	}
@@ -563,6 +581,7 @@ body.anim .scroll-arrow-box {
 		width: 60px;
 		font-size: 12px;
 	}
+	
 
 }
 
