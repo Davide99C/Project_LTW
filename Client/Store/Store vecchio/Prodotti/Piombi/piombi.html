@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title> Prodotto in vendita </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../../../aux.css" />
+        <link rel="stylesheet" type="text/css" href="../prodotti.css" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        </head>
+    <body>
+
+        <!--HEADER-->
+        <header id="menu">
+            <ul id="menu-1">
+                <li>
+                    <a href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        </div>
+                    </a>
+                    <div id="comparsa" class="men">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="../../../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING </a><br>
+                        <a href="../../../Store/store.html" role="button" class="btn"> NEGOZIO </a><br>
+                        <a href="../../../Galleria/galleria.html" role="button" class="btn"> GALLERIA </a><br>
+                        <a href="../../../Faq/faq.html" role="button" class="btn"> FAQ </a><br>
+                        <a href="../../../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a>
+                    </div>
+                </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../../../index.html" role="button" class="img"> <img src="../../../img/logo.png"> </a>
+            </ul>
+            <ul id="menu-2">
+                <a href="../../../Login/login.html" role="button" id="accesso" class="btn" ><img class="img-accedi" src="../../../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a>
+            </ul>
+        </header>
+    <!---->
+
+        <div class="center">
+        <div id="app">
+            <a href="../../store.html"><p class="back"> &#8592; Torna al negozio</p></a>
+          <div class="cart" align="right">
+            <button href="../../carrello.html"><p >Carrello ({{cart}})</p></button>
+                
+            </div>  
+        
+            <piombi v-on:add-to-cart="updateCart"></piombi> 
+            
+            
+        </div>
+        
+        
+        <div id="interesse">
+            <hr width="100%">
+            <h3>POTREBBE INTERESSARTI ANCHE: </h3>
+            <br>
+            <div class="prodotti">
+            <a href="../Mulinello/mulinello.png"><div class="card">
+                <img src="../Mulinello/mulinello.png" style="width:100px; height: 100px" >
+                <h1>Mulinello 6000</h1>
+                <p class="price">19.99€</p>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                <p><button>Vai al prodotto</button></p>
+              </div></a>
+              </div>
+              <div class="prodotti">
+               <a href="../Canna/canna.html"><div class="card">
+               <img src="../Canna/Canna.png"  style="width:100px; height: 100px;">
+                <h1>Maglietta </h1>
+                <p class="price">19.99€</p>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                <p><button>Vai al prodotto</button></p>
+              </div></a>
+            </div>
+            <div class="prodotti">
+                <a href="../Ami/ami.html"><div class="card">
+                  <img src="../Ami/ami.png"  style="width:100px; height: 100px;">
+                  <h1>Set di ami </h1>
+                  <p class="price">19.99€</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Vai al prodotto</button></p>
+                </div></a>
+              </div>
+              <a href="../Maglietta/maglietta.html"><div class="prodotti">
+                <div class="card">
+                  <img src="../Maglietta/black.png"  style="width:100px; height: 100px;">
+                  <h1>Maglietta </h1>
+                  <p class="price">19.99€</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button>Vai al prodotto</button></p>
+                </div></a>
+              </div>
+        </div>
+
+        <script type="text/javascript" src="piombi.js"> </script>
+        
+    </div>
+        <!--FOOTER-->
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../../../img/White-logo.png">
+            </ul>
+
+            <ul id="menufooter">
+                <a href="../../../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO </a><br>
+                <a href="../../../Store/store.html" role="button" class="btn"> NEGOZIO </a><br>
+                <a href="../../../Privacy/privacy.html" role="button" class="btn"> PRIVACY POLICY </a><br>
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+     <!---->
+    </body>
+</html>

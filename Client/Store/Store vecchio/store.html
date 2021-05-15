@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Negozio </title>
+
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="../aux.css"/>
+        <link rel="stylesheet" type="text/css" href="store.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="store.js"> </script> 
+    </head>    
+    <body onscroll="scrollFunction()">
+         <!--LOADING SCREEN-->
+        <div id="loading_screen">
+            <div id="caricamento">
+                <div width="100" height="100" viewBox="0 0 24 24">
+                    <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
+                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3• Trota Iridea <br>V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                    -->
+                </div><br>
+                <h1>Loading ...</h1>
+                <p>La pagina è in caricamento<br />
+                    Resta connesso e non cambiare sito!</p>
+            </div>
+          </div>
+          <!---->
+        
+        <header id="menu">
+            <ul id="menu-1">
+            <li></a> 
+                <a id="hamb" href="#" onclick="openNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+                <div id="comparsa" class="men">   
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;    </a>
+                    <a href="../index.html" role="button" class="btn"> HOME                       </a><br>
+                    <a href="../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING   </a><br>
+                    <a href="../Galleria/galleria.html" role="button" class="btn"> GALLERIA       </a><br>
+                    <a href="../Faq/faq.html" role="button" class="btn" > FAQ                     </a><br>
+                    <a href="../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO      </a>   
+                </div>
+            </li>
+            </ul>
+            <ul id="menu-center">
+                <a href="../index.html" role="button" class="img"> <img src="../img/logo.png"> </a>
+            </ul>  
+            <ul id="menu-2">
+                <a href="../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a> 
+            </ul>
+        </header>
+        <div id="main">
+        <section id="centro">
+            <!--BARRA SUPERIORE DELLO SHOP-->
+            <div id="barra-shop" >
+                <ul class='sez'> 
+                    <div class='tipo'><label  onmouseover='apri1()'>Attrezzatura </label></div>
+                    <div id='sottosez1' class='sottosez'>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Canne</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Mulinelli</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Piombi</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Ami e gallegianti</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Fili da pesca</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Guadini e nasse</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Belly boat e canoe</a></p>
+                    </div>
+                </ul>   
+                <ul class='sez'> 
+                    <div class='tipo'><label  onmouseover='apri2()'>Abbigliamento</label></div> 
+                    <div id="sottosez2" class="sottosez">
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Giacche e magliette</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Pantaloni</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Cappelli</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Scarpe e stivali</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Guanti e ditali</a></p>
+                    </div>
+                </ul>  
+                <ul class='sez'> 
+                    <div class='tipo'><label  onmouseover='apri3()'>Esche/Pasture</label> </div>
+                    <div id="sottosez3" class="sottosez">
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Minnow</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Crank</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Ondulanti</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Vermi</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Gomme</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Jigs</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Mosche</a></p> 
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Pasture</a></p> 
+                    </div>
+                </ul> 
+                <ul class='sez'> 
+                    <div class='tipo'><label onmouseover='apri4()'>Offerte</label></div>
+                    <div id="sottosez4" class="sottosez">
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Sedie</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Poggiacanne</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Portacanne</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Torcie</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Borse</a></p>
+                        <p class ='categoria'><a href='NonDisp.html' class='link'>Cassette</a></p> 
+                    </div>
+                </ul>
+                <ul id='carrello'>
+                    <a href="carrello.html"><img class='cart' src='../img/carrello.png' /></a>
+                    <div style='margin-top:10px;'><label>(0)</label></div>
+                </ul>
+            </div>
+        <!--PRODOTTI PIU RICHIESTI-->
+        
+            <div id="sx" class="lato">
+                <div class="img_sx">
+                  <img class="img-lato" src="../img/White-logo.png" />  
+                </div>
+                <div class="img_sx">
+                    <img class="img-lato" src="../img/White-logo.png" />  
+                </div>
+                <div class="img_sx">
+                    <img class="img-lato" src="../img/White-logo.png" />  
+                </div>
+            </div>
+            
+            <div id="prodotti">
+                <div class="title">
+                    <label> STORE</label>
+                </div>
+                <a href="Prodotti/Maglietta/maglietta.html" id="maglia" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Maglietta/black.png" class="img-prod" >
+                    <p class="desc-prod"> Maglietta con logo WildFishing .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+                <a href="Prodotti/Mulinello/mulinello.html" id="mulinello" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Mulinello/mulinello.png" class="img-prod" >
+                    <p class="desc-prod"> Mulinello 3000, 6 cuscinetti  .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+                <a href="Prodotti/Canna/canna.html" id="canna" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Canna/Canna.png" class="img-prod">
+                    <p class="desc-prod"> Canna spinning a due pezzi  .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+                
+                <a href="Prodotti/Ami/ami.html" id="ami" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Ami/ami.png" class="img-prod">
+                    <p class="desc-prod"> Set di ami da pesca, 100pz   .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+                <a href="Prodotti/Piombi/piombi.html" id="piombi" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Piombi/piombi.png" class="img-prod">
+                    <p class="desc-prod"> Set da due piombi da 100gr  .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+                <a href="Prodotti/Guadino/guadino.html" id="guadino" class="prodotto" style="text-decoration: none;color:black">
+                    <div class="card">
+                    <img src="Prodotti/Guadino/guadino.png" class="img-prod">
+                    <p class="desc-prod"> Guadino in gomma per trote  .........................................</p>
+                    <button>Vai al prodotto</button>
+                    </div>
+                </a>
+            </div>
+            <div id="dx" class="lato">
+                <div class="img_dx">
+                    <img class="img-lato" src="../img/White-logo.png" /> 
+                </div>
+                <div class="img_dx">
+                    <img class="img-lato" src="../img/White-logo.png" /> 
+                </div>
+                <div class="img_dx">
+                    <img class="img-lato" src="../img/White-logo.png" /> 
+                </div>
+            </div>
+        </section>
+        </div>
+        <footer id="footer">
+            <ul id="imagefooter">
+                <img src="../img/White-logo.png" >
+            </ul>
+            
+            <ul id="menufooter">
+                <a href='../ChiSiamo/chisiamo.html' role='button' class='btn'> CHI SIAMO </a><br>
+                <a href='../Privacy/privacy.html' role='button' class='btn' > PRIVACY POLICY </a><br>
+                <a href='../Faq/faq.html' role='button' class='btn'> FAQ </a><br> 
+            </ul>
+
+            <ul id="social">
+                <label> Facebook: WildFishing </label>
+                <br>
+                <label> Instagram: @wildfishing </label>
+                <br>
+                <label> Telefono: ********** </label>
+                <br>
+                <label> E-mail: wildfishing@hotmail.it </label>
+            </ul>
+        </footer>
+
+        <!-- CONTROLLO LOGIN UTENTE -->
+        <script>
+            var x = new URLSearchParams(window.location.search);
+            var username = x.get('nome');console.log(username);
+            var surname = x.get('cognome');console.log(surname);
+            var email = x.get('email');console.log(email);
+            var numero = x.get('carrello');
+            if (username && surname) {
+                document.getElementById("menu-2").innerHTML = "<a href='../Profilo/profilo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../img/44948.png' style='height:20px; width:20px;'>"+username+' '+surname+"</a>";
+                document.getElementById("menu-center").innerHTML = "<a href='../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='img'> <img src='../img/logo.png'> </a>";
+                document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> HOME  </a><br><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a>";
+                document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br>";
+                var cat = document.getElementsByClassName("categoria");
+                var link = document.getElementsByClassName("link");
+                for (var i=0;i<cat.length;i++) {
+                    var testo = link[i].textContent;
+                    cat[i].innerHTML = "<a href='NonDisp.html?nome="+username+'&cognome='+surname+'&email='+email+"' class='link'>"+testo+"</a>";
+                }
+                document.getElementById('carrello').innerHTML = "<img class='cart' src='../img/carrello.png' /><div style='margin-top:10px;'><label>("+numero+")</label></div>";
+                document.getElementById("maglia").href = "Prodotti/Maglietta/maglietta.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+                document.getElementById("mulinello").href = "Prodotti/Mulinello/mulinello.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+                document.getElementById("canna").href = "Prodotti/Canna/canna.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+                document.getElementById("ami").href = "Prodotti/Ami/ami.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+                document.getElementById("piombi").href = "Prodotti/Piombi/piombi.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+                document.getElementById("guadino").href = "Prodotti/Guadino/guadino.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+numero;
+            }
+           </script>
+    </body>
+    
+</html>

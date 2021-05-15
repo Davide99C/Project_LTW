@@ -1,0 +1,80 @@
+.cart-centro {
+    background-color: rgb(204, 204, 204);
+    padding-bottom: 8%;
+    
+}
+
+.titolo {
+    width: 100%;
+    text-align: center;
+}
+
+.cart-product {
+    width: 100%;
+    padding-top: 5%;
+    
+    
+    
+}
+
+
+
+.name {
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5a0000;
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-flex;
+}
+
+.bottoni {
+    text-align: center;
+}
+
+.prezzo {
+    font-weight: bold;
+    text-align: right;
+}
+
+.quantity {
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #020202;
+    
+    font-size: 15px;
+}
+
+table {
+    border: 2px solid black;
+    width: 80%;
+    margin:auto;
+    
+    
+}
+
+td {
+    border-bottom: 2px solid black;
+    padding:20px;
+}
+
+#int, .totale{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.Registrazione {
+    border: 1px solid #949494;
+  background-color: #8a8a8a;
+  color: #ffffff;
+  padding: 10px 20px 10px;
+  border-radius: 5%;
+  float: right;
+  margin-top: 2%;
+  margin-right: 5%;
+  cursor: pointer;
+  font-size: 1vw;
+  font-weight: bold;
+  text-decoration: none;
+}

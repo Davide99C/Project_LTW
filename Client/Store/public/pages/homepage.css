@@ -1,0 +1,163 @@
+/*HOMEPAGE*/
+
+body {
+  background-color: black;
+}
+
+
+.centro {
+  height: 100%;
+    width: 100%;
+    display: inline-flex;
+    /*background-color: white;
+    background-size: cover;*/
+    background-color: rgb(99, 0, 0);
+    background-size: cover;
+    text-align: center;
+  
+  
+}
+h1 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 3.6vw;
+	color: #a50520;
+  padding: 20px;
+  text-shadow: 2px 4px 2px rgb(110, 110, 110);
+}
+
+
+.row {
+  position: relative;
+  display: inline-block;
+  
+  width: 100%;
+  padding-top: 0;
+  left: 0;
+  right: 0;
+  
+  background-color:rgb(212, 212, 212);
+  /*border: 1px solid black;*/
+}
+
+.product-card {
+  
+  width:30%;
+  display: inline-block;
+  /*border: 1px solid black;
+  /*cursor: pointer;*/
+  margin-bottom:5%;
+  color: black;
+  padding:6px 6px;
+  max-height: 30%;
+}
+.product-card:hover {
+  opacity:0.8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.product-name {
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5a0000;
+    font-weight: bold;
+}
+
+.product-description {
+  font-size: 1.5vw;
+  margin-top: 2px;
+  padding: 5px;
+}
+
+.price {
+  color: #262626;
+  font-weight: bold;
+}
+
+
+.vedi {
+  border:none;
+  margin-top: 20px;
+  background-color:rgb(97, 97, 97);
+  color: white;
+  border-radius: 5%;
+  padding: 5px;
+  font-size: 1.2vw;
+  border: 1px solid #f3f3f3;
+}
+.vedi:hover {
+  border: 1px solid #303030;
+  background-color: #303030;
+  color: #ffffff;
+  padding: 5px;
+}
+.add_to_cart{
+  border:none;
+  margin-top: 20px;
+  background-color:rgb(109, 0, 0);
+  color: white;
+  border-radius: 5%;
+  padding: 15px;
+  font-size: 1.2vw;
+  border: 1px solid #f3f3f3;
+}
+
+.add_to_cart:hover {
+  border: 1px solid #350000;
+  background-color: #380000;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.title {
+ 
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3.6vw;
+  color: #a50520;
+  padding: 20px;
+  text-shadow: 2px 4px 2px rgb(110, 110, 110);
+}
+
+.cart{
+     
+  border: 1px solid #949494;
+  background-color: #8a8a8a;
+  color: #ffffff;
+  padding: 10px 20px 10px;
+  border-radius: 5%;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.carrello {
+  
+  float:right;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.lato {
+  height: 100%;
+  width: 14%;
+  /*background: url(../img/sfondo_verticale.jpg) no-repeat;
+  background-size: cover;
+  border: 1px solid black;*/
+  position: relative;  
+}
+
+.img_sx, .img_dx {
+  position: relative;
+  margin-top:30vh;
+  width:13vw;
+  opacity: 0.7;
+}
+
+.img-lato {
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+

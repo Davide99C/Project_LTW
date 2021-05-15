@@ -1,0 +1,199 @@
+html,
+
+body {
+    background-color:black;
+}
+
+
+/*barra superiore dello store*/
+
+#barra-shop {
+    background-color:#a6a6a6;
+    width:auto;
+    margin-right:20%;
+    /*left:20%;*/
+    top: 88px;
+    height: 6vh;
+    display: inline-flex;
+    position: absolute;
+    z-index: 1;
+    border: 2px solid black;
+    border-top:none;
+}
+
+.sez {
+    text-align: center;
+    margin-left: -40px;
+    margin-top: 2px;
+    height: 90%;
+    width: 20%;
+    border-right:2px solid black;
+    
+}
+
+.tipo {
+    margin-top:10px;
+    display: inline-flex;
+}
+.sez label {
+    cursor:pointer;
+    width:auto;
+    font-size:1.1vw;
+    font-weight:500;
+}
+
+.sez p {
+    padding-left: 5px;
+    text-align: left;
+    background-color: #a6a6a6;
+    width:auto;
+    font-size:1vw;
+    font-weight:500;
+}
+.sez a {
+    text-decoration: none;
+    color: black;
+    width:100%;
+}
+
+.sottosez{
+    position:relative;
+    display: none;
+    background-color: #a6a6a6;
+    width:100%;
+    margin-top: -8px;
+    padding-bottom: 3px;
+    margin-left: -2px;
+    /*padding-right: 60px;*/
+    border: 2px solid black;
+    border-top: none ;
+}
+
+.sez a:hover {
+    color:rgb(190, 0, 0);
+}
+
+/*hr {
+    height:30px;
+    border:1px solid;
+    width:0.5px;
+}*/
+
+
+#carrello {
+    margin-top: 0px;
+    height:90%;
+    width:15%;
+    display:inline-flex;
+    margin-left:-7px;
+}
+.cart {
+    height: 100% ;
+    width: auto;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+/* Parte centrale */
+
+#centro {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    /*background-color: white;
+    background-size: cover;*/
+    background-color: rgb(99, 0, 0);
+    background-size: cover;
+    text-align: center;
+}
+
+.lato {
+    height: 100;
+    width: 14%;
+    /*background: url(../img/sfondo_verticale.jpg) no-repeat;
+    background-size: cover;
+    border: 1px solid black;*/
+    position: relative;   
+}
+
+.img_sx, .img_dx {
+    position: relative;
+    margin-top:30vh;
+    width:13vw;
+    opacity: 0.7;
+}
+
+.img-lato {
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+
+#prodotti {
+    position: relative;
+    display: inline-block;
+    height:100%;
+    width: 80%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    padding-top: 10%;
+    background-color: white;
+    /*border: 1px solid black;*/
+}
+
+.prodotto {
+    
+    width:30%;
+    display: inline-block;
+    /*border: 1px solid black;
+    /*cursor: pointer;*/
+    margin-bottom:5%;
+    color: black;
+    padding:6px 6px;
+    max-height: 30%;
+}
+.prodotto:hover {
+    opacity:0.8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.prodotto img {
+    height:80%;
+    width:80%;
+}
+
+.desc-prod {
+    font-size: 1.5vw;
+    margin-top: 2px;
+}
+
+
+
+.card button{
+    border:none;
+    margin-top: 20px;
+    background-color:rgb(109, 0, 0);
+    color: white;
+    border-radius: 5%;
+    padding: 15px;
+    font-size: 1.2vw;
+    border: 1px solid #f3f3f3;
+}
+
+.card button:hover {
+    border: 1px solid #350000;
+    background-color: #380000;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.title {
+   
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 3.6vw;
+	color: #a50520;
+    padding: 20px;
+    text-shadow: 2px 4px 2px rgb(110, 110, 110);
+}
+
