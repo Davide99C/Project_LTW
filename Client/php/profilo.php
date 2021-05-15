@@ -8,12 +8,14 @@
     $email = $_GET['email'];
     $CF = $_POST['CF'];
     $telefono = $_POST['Tel'];
+    $bio = $_POST['bio'];
     $immagine = $_FILES['immagine']['name'];
 
     $result = $mysqli -> query("SELECT * FROM Utenti where email = '$email'");
     $count = mysqli_num_rows($result);
     if($count == 1){
-        $result = $mysqli->query("UPDATE Utenti SET CF = '$CF', telefono = '$telefono', immagine = '$immagine' WHERE Utenti.email = '$email'");
+        $result = $mysqli->query("UPDATE Utenti SET CF = '$CF', telefono = '$telefono', bio = '$bio' WHERE Utenti.email = '$email'");
+        if ($immagine != NULL) $result = $mysqli->query("UPDATE Utenti SET immagine = '$immagine' WHERE Utenti.email = '$email'");
         if (!$result) {
          echo "Query failed";
          exit();

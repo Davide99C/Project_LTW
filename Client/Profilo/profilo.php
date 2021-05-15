@@ -60,10 +60,11 @@
                   <button type="button" class="btn-profilo" id="btn-password" onclick="apriPassword()" >Cambia Password</button>  <br>
                   <button type="button" class="btn-profilo" id="btn-email" onclick="apriEmail()" >Cambia E-mail</button>  <br>
                   <button type="button" class="btn-profilo" id="btn-usernane" onclick="apriUsername()" >Cambia Username</button>    <br>
+                  <a href="../index.html" ><button type="button" class="btn-profilo" id="btn-logout" > Log out</button> </a><br>
                 </div>
                 <div id="gestione">
                     <div id="img-profilo">
-                        <img id="image-utente" src="img_utenti/44948.png" ><br><br>
+                        <img id="image-utente" src="img_utenti/44948.png" style="height:200px; width:200px;" ><br><br>
                         <form action='../php/profilo.php' method="POST" enctype="multipart/form-data" id="info">
                                 <p>Nome: </p>
                                 <p>Cognome: </p>
@@ -72,7 +73,7 @@
                                 <p>Codice Fiscale:<input type="text" name="CF" id="CF" maxlength="16" pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]" ></p>
                                 <p>Telefono:<input type="text" name="Tel" id="Tel" maxlength="40" pattern="([0-9]{10})" ></p>
                                 <p>Cambia immagine del profilo:<input id="change-img" type="file" name="immagine"></input></p>
-                                <p>Bio: &nbsp;<textarea id="bio" ></textarea></p>
+                                <p>Bio: &nbsp;<textarea id="bio" name="bio"></textarea></p>
                                 <input type="submit" value="Invia">
                                 <input type="reset" value="Reset">
                                 <br>
@@ -80,16 +81,28 @@
                     </div>
                 </div>
                 <div id="change-password">
-                    <p>Vecchia Password: <input type='text' id="old-password" ></input></p>
-                    <p>Nuova Password: <input type='text' id="new-password" ></input></p>
+                    <form action='../php/modifica_Psw.php' method="POST" id="info1" onsubmit="validatePassword()">
+                        <p>Vecchia Password: <input type='text' id="old-password" name="old-psw"></input></p>
+                        <p>Nuova Password: <input type='text' id="new-password" name="new-psw"></input></p>
+                        <input type="submit" value="Invia">
+                        <input type="reset" value="Reset">
+                    </form>
                 </div>
                 <div id="change-email">
-                    <p>Vecchia Email: <input type='text' id="old-email" ></input></p>
-                    <p>Nuova Email: <input type='text' id="new-email" ></input></p>
+                    <form action='../php/modifica_Email.php' method="POST" id="info2" onsubmit="validateEmail()">
+                        <p>Vecchia Email: <input type='text' id="old-email" name="old-email"></input></p>
+                        <p>Nuova Email: <input type='text' id="new-email" name="new-email"></input></p>
+                        <input type="submit" value="Invia">
+                        <input type="reset" value="Reset">
+                    </form>
                 </div>
                 <div id="change-username">
-                    <p>Nuovo Nome: <input type='text' id="new-name" ></input></p>
-                    <p>Nuovo Cognome: <input type='text' id="new-surname" ></input></p>
+                    <form action='../php/modifica_User.php' method="POST" id="info3">
+                        <p>Nuovo Nome: <input type='text' id="new-name" name="new-name"></input></p>
+                        <p>Nuovo Cognome: <input type='text' id="new-surname" name="new-surname"></input></p>
+                        <input type="submit" value="Invia">
+                        <input type="reset" value="Reset">
+                    </form>
                 </div>
             </section>   
         </div>
@@ -128,13 +141,16 @@
                 document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a>"
                 document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Store/store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> NEGOZIO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br>";
                 document.getElementById("info").action = "../php/profilo.php?nome="+username+'&cognome='+surname+'&email='+email;
-                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <input id='change-img' type='file'  name='immagine'></input></p><p>Bio: <textarea id='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
+                document.getElementById("info").innerHTML = "<p>Nome: "+username+"</p><p>Cognome: "+surname+"</p><p>E-mail: "+email+"</p><p id='Data'>Data di nascita: </p><p>Codice Fiscale: <input type='text' name='CF' id='CF' maxlength='16' pattern='[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]' ></p><p>Telefono: <input type='text' name='Tel' id='Tel' maxlength='40' pattern='([0-9]{10})' ></p><p>Cambia immagine del profilo: <input id='change-img' type='file'  name='immagine'></input></p><p>Bio: <textarea id='bio' name='bio' ></textarea></p><input type='submit' value='Invia'><input type='reset' value='Reset'><br>";
+                document.getElementById("info1").action = "../php/modifica_Psw.php?nome="+username+"&cognome="+surname+"&email="+email;
+                document.getElementById("info2").action = "../php/modifica_Email.php?nome="+username+"&cognome="+surname+"&email="+email;
+                document.getElementById("info3").action = "../php/modifica_User.php?nome="+username+"&cognome="+surname+"&email="+email;
             }else {
                 alert("ERRORE: non puoi accedere all'area di gestione del profilo senza aver effettuato l'accesso");
-                //window.location.href = '../index.html';
+                window.location.href = '../index.html';
             }
         </script>
-        
+  
         <?php
             include "../php/connection.php";
             $mysqli = dbConnection();
@@ -170,11 +186,18 @@
                 echo "Query failed";
                 exit();
             }
-             echo "<script>console.log('AIUTO '".$immagine.")</script>";
             $immagine = $result->fetch_assoc()['immagine'];
-            if ($immagine!=NULL) echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/".$immagine."' </script>";
-            
-        ?>
-        
+            echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/".$immagine."' </script>";
+            if ($immagine==NULL) echo "<script>document.getElementById('image-utente').src='../Profilo/img_utenti/44948.png' </script>";
+
+            $result = $mysqli -> query("SELECT bio FROM Utenti where email = '$email'");
+            if (!$result) {
+                echo "Query failed";
+                exit();
+            }
+            $bio = $result->fetch_assoc()['bio'];
+            echo "<script>document.getElementById('bio').value='".$bio."' </script>";
+
+        ?> 
     </body>
 </html>
