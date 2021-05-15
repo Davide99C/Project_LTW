@@ -4,10 +4,11 @@ $(document).ready(function() {
   $("#mappa").click(function() {
     if(window.matchMedia("(max-width: 900px)").matches) {
       $("#titolo").animate({marginLeft:'-30px', marginRight:'0'});
-      document.getElementById('main').style.height="1200px";
+      document.getElementById('main').style.height="200vh";
     }
     else {
       $("#titolo").animate({marginLeft:'1%', marginRight:'65%'});
+      document.getElementById('main').style.height="auto";
     }
     $("#closeMap").animate({opacity:1});
     $(".area_regione").animate({opacity:1});
