@@ -41,10 +41,8 @@
         <div id="main">
         <div class="center">
         <div id="app">
-            <a href="../../store.html"><p class="back"> &#8592; Torna al negozio</p></a>
-            <div id="carr" class="cart" align="right">
-            
-            <button onclick="location.href='../../carrello.html'"><p >Carrello ({{carr}})</p></button>
+          <div id="carr" class="cart" align="right">
+            <button href="../../carrello.html"><p >Carrello ({{cart}})</p></button>
                 
             </div>  
         
@@ -134,8 +132,7 @@
             document.getElementById("menu-center").innerHTML = "<a href='../../../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='img'> <img src='../../../img/logo.png'> </a>";
             document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../../../index.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> HOME  </a><br><a href='../../../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GO FISHING </a><br><a href='../../../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> GALLERIA </a><br><a href='../../../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br><a href='../../../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../../store.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' id='negozio'> NEGOZIO </a>";
             document.getElementById("menufooter").innerHTML = "<a href='../../../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../../../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn' > PRIVACY POLICY </a><br><a href='../../../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+"' role='button' class='btn'> FAQ </a><br>";
-            document.getElementById('carr').innerHTML = "<button onclick='location.href='../../carrello.html''><p >Carrello ("+numero+")</p></button>";
-            document.getElementById('carr').innerHTML = "<button href='../../store.html'><p >Carrello ("+numero+")</p></button>";
+            document.getElementById('carr').innerHTML = "<button href='../../carrello.html'><p >Carrello ("+numero+")</p></button>";
         }
      </script>
     </body>

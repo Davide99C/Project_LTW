@@ -74,17 +74,16 @@ Vue.component('maglietta', {
 var app = new Vue ({
     el:'#app' ,
     data : {
-        carr : 0,
+        cart : 0,
         
     } ,
     methods : {
         updateCart:function() {
-            //this.cart += 1;
+            //this.cart += 1 ;
             carr=carr+1;
             document.getElementById("carr").innerHTML = "<button href='../../carrello.html'><p >Carrello ("+carr+")</p></button>";
             document.getElementById("negozio").href = "../../store.html?nome="+username+'&cognome='+surname+'&email='+email+'&carrello='+carr;
             console.log(carr);
-            
         }
     }
 });

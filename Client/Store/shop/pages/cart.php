@@ -80,16 +80,33 @@
   
    
 <hr class="mb-4">
-<?php
-global $loggedInUser;
-?>
-<?php if ($loggedInUser) : ?>
-  <a onclick="return confirm('Confermi invio ordine?');" class="btn btn-primary btn-block" href="<?php echo ROOT_URL . 'shop?page=checkout' ?>">Invia Ordine</a>
-<?php else : ?>
-  <a class="Registrazione" href="<?php echo '../../Registrazione/registrazione.html' ?>">Registrati per effettuare ordine</a>
-<?php endif ; ?>
+
+<div id="bottone"></div>
+
+
+
+
 <?php else : ?>
 <p class="lead">Nessun elemento nel carrello...</p>
 <a href="<?php echo ROOT_URL . 'public?pages=homepage'; ?>" class="btn btn-primary btn-lg mb-5 mt-3">Vai allo Shopping &raquo;</a>
 <?php endif ; ?>
- </div> 
+
+ 
+ 
+ <script> 
+  var x= new URLSearchParams(window.location.search);
+  var username = x.get('nome');console.log(username);
+        var surname = x.get('cognome');console.log(surname);
+        var email = x.get('email');console.log(email);
+        var immagine = x.get('immagine');
+        if (username && surname) {
+          
+          document.getElementById('bottone').innerHTML="<a onclick='return confirm('Confermi invio ordine?');' class='btn btn-primary btn-block' href='<?php echo ROOT_URL . 'shop?page=checkout' ?>''>Invia Ordine</a>";
+        }
+        else {
+          document.getElementById('bottone').innerHTML="<a class='Registrazione' href='<?php echo '../../Registrazione/registrazione.html' ?>''>Registrati per effettuare ordine</a>";
+        }
+
+</script> 
+
+</div>

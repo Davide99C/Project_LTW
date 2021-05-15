@@ -7,11 +7,6 @@ body{
     background-color: rgb(211, 211, 211);
 }
 
-.back {
-    padding-left: 2%;
-    padding-top: 2%;
-    font-weight: bold;
-}
 .product{
   
    float: left;
