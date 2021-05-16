@@ -12,14 +12,14 @@ class DB {
     if (mysqli_connect_errno()) {
       echo 'Failed to connect to MySql ' . mysqli_connect_errno();
     }
-    try {
+    //try {
       $this->pdo = new PDO('mysql:dbname='. DB_NAME .';host=' . DB_HOST, DB_USER, DB_PASS);
       // set the PDO error mode to exception
-      $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      //$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       //echo "Connected successfully";
-    } catch(PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
-    }
+    //} catch(PDOException $e) {
+      //echo "Connection failed: " . $e->getMessage();
+    //}
   }
 
   public function query($sql) {

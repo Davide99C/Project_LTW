@@ -18,4 +18,3 @@ if(isset($_GET['page'])) {
 
 
 <?php include '../public/template-parts/footer.php'; ?>
-<?php// include ROOT_PATH . 'public/template-parts/footer.php'; ?>

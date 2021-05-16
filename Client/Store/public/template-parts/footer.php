@@ -10,23 +10,23 @@
   $totCartItems = !$totCartItems ? 0 : $totCartItems;
   
   //VARIABILI GLOBALI
-  $nome = $_GET['nome'];
+  /*$nome = $_GET['nome'];
   $cognome = $_GET['cognome'];
   $email = $_GET['email'];
   $immagine = $_GET['immagine'];
 
   $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
-  
+  */
 ?>
   <footer id="footer">
             <ul id="imagefooter">
                 <img src="../../img/logo.png" style="width:150px;height:150px;">
             </ul>
-            <h5 style="color:white;"><?php echo $_GLOBALS['URL_USER'].'ciao'?></h5>
+            
             <ul id="menufooter">
                 <a href="../../ChiSiamo/chisiamo.html<?php echo $_GLOBALS['URL_USER']?>" role='button' class='btn'> CHI SIAMO </a><br>
-                <a href='../../Privacy/privacy.html' role='button' class='btn' > PRIVACY POLICY </a><br>
-                <a href='../../Faq/faq.html' role='button' class='btn'> FAQ </a><br> 
+                <a href='../../Privacy/privacy.html<?php echo $_GLOBALS['URL_USER']?>' role='button' class='btn' > PRIVACY POLICY </a><br>
+                <a href='../../Faq/faq.html<?php echo $_GLOBALS['URL_USER']?>' role='button' class='btn'> FAQ </a><br> 
             </ul>
 
             <ul id="social">

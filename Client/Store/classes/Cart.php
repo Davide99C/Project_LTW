@@ -97,11 +97,11 @@
       return $result;
     }
 
-    public function getUserAddress($userId){
+    /*public function getUserAddress($userId){
       $result = $this->db->query("SELECT street, city, cap FROM address WHERE user_id = $userId");
       //var_dump($result); die;
       return $result ? $result[0] : null;
-    }
+    }*/
     
     public function getAllOrders($status){
       $result = $this->db->query("CALL all_orders ('$status')");
@@ -122,9 +122,9 @@
     public function __construct(){
       parent::__construct();
 
-      //global $loggedInUser;
+      global $loggedInUser;
 
-      $this->userId = isset($_SESSION['user']) ? unserialize($_SESSION['user'])->id : 0;
+      $this->userId = isset($_SESSION['Utenti']) ? unserialize($_SESSION['Utenti'])->email : 0;
       // $this->clientId = isset($_COOKIE['client_id']) ? $_COOKIE['client_id'] : random_string();
       $this->clientId = isset($_SESSION['client_id']) ? $_SESSION['client_id'] : random_string();
 

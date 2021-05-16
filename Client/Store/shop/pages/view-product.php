@@ -26,9 +26,8 @@
     //var_dump($cartId); die;
     $cm->addToCart($productId, $cartId);
 
-    $alertMsg = 'add_to_cart';
-    echo "<script>location.href='".ROOT_URL."public?pages=homepage&msg=add_to_cart';</script>";
-    exit;
+    
+    
   }
 
   $id = esc_html(trim($_GET['id']));
@@ -37,10 +36,7 @@
   $pm = new ProductManager();
   $product = $pm->get($id);
   
-  if ($product->id == 0) {
-    echo "<script>location.href='".ROOT_URL."public?pages=homepage&msg=not_found';</script>";
-    exit;
-  }
+  
 ?>
 
 <!DOCTYPE html>
@@ -54,13 +50,13 @@
 
 <body>
 <div class="center">
-  <a class="back" href="<?php echo ROOT_URL; ?>public?pages=homepage">&laquo; Lista Prodotti</a>
+  <a class="back" href="<?php echo ROOT_URL; ?>public<?php echo $_GLOBALS['URL_USER']?>&pages=homepage">&laquo; Lista Prodotti</a>
 
   
 
   <div class="prodotto">
      <div class="carrello">
-      <a class="cart" href="<?php echo ROOT_URL; ?>shop?page=cart">Carrello
+      <a class="cart" href="<?php echo ROOT_URL; ?>shop<?php echo $_GLOBALS['URL_USER']?>&page=cart">Carrello
       <span class="badge badge-primary badge-pill js-totCartItems"></span>
       </a>
     </div>

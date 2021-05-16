@@ -4,10 +4,10 @@
     die;
   }
 
-  if (!$loggedInUser) {
-    echo "<script>location.href='".ROOT_URL."auth?page=login';</script>";
-    exit;
-  }
+  //if (!$loggedInUser) {
+  //  echo "<script>location.href='".ROOT_URL."auth?page=login';</script>";
+  //  exit;
+  //}
 
 
   if (!isset($_GET['id'])){

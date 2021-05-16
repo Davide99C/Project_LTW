@@ -4,10 +4,10 @@
     die;
   }
 
-  if (!$loggedInUser) {
-    echo "<script>location.href='".ROOT_URL."auth?page=login&msg=login_for_checkout';</script>";
-    exit;
-  }
+  //if (!$loggedInUser) {
+   // echo "<script>location.href='".ROOT_URL."auth?page=login&msg=login_for_checkout';</script>";
+   // exit;
+  //}
 ?>
 
 <?php
@@ -24,12 +24,12 @@
     $error = true;
   }
   
-  $address = $orderMgr->getUserAddress($loggedInUser->id);
-  if(!$error && !$address) {
+  //$address = $orderMgr->getUserAddress($loggedInUser->id);
+  //if(!$error && !$address) {
     
-    $alertMsg = 'address_not_found';
-    $error = true;
-  }
+  //  $alertMsg = 'address_not_found';
+  //  $error = true;
+  //}
 
   if(!$error){
     
@@ -61,9 +61,9 @@
     $txt .= $mailBody . $br ;
     $txt.= $br . "<h3>Indirizzo di spedizione:</h3>";
 
-    $shippingAddressStr = "<strong>Indirizzo: </strong>" . $address['street'] . $br;
-    $shippingAddressStr .= "<strong>Città: </strong>" . $address['city'] . $br;
-    $shippingAddressStr .= "<strong>CAP: </strong>" . $address['cap'] . $br;
+    //$shippingAddressStr = "<strong>Indirizzo: </strong>" . $address['street'] . $br;
+    //$shippingAddressStr .= "<strong>Città: </strong>" . $address['city'] . $br;
+    //$shippingAddressStr .= "<strong>CAP: </strong>" . $address['cap'] . $br;
 
     $txt .= $shippingAddressStr . $br;
     $txt .= $br . "Riceverà una mail quando l'ordine sarà spedito.";
@@ -77,7 +77,7 @@
 
     mail($to,$subject,$txt,$headers);
   } else {
-    echo "<script>location.href='".ROOT_URL."shop?page=cart&msg=$alertMsg';</script>";
+    echo "<script>location.href='".ROOT_URL."shop?page=cart';</script>";
     exit;
   }
 

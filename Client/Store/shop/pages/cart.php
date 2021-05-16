@@ -36,7 +36,7 @@
 
 <div class="cart-centro">
   <?php if (count($cart_items) > 0) : ?>
-    <a href="<?php echo ROOT_URL . 'public?pages=homepage'; ?>" class="back"> &#8592; Vai allo Shopping </a>
+    <a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back"> &#8592; Vai allo Shopping </a>
   
     <div class="titolo" >
     
@@ -99,7 +99,7 @@
 
 <?php else : ?>
 <p class="lead">Nessun elemento nel carrello...</p>
-<a href="<?php echo ROOT_URL . 'public?pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
+<a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
 <?php endif ; ?>
 
  
@@ -112,7 +112,7 @@
         var immagine = x.get('immagine');
         if (username && surname) {
           
-          document.getElementById('bottone').innerHTML="<a onclick='return confirm('Confermi invio ordine?');' class='btn btn-primary btn-block' href='<?php echo ROOT_URL . 'shop?page=checkout' ?>''>Invia Ordine</a>";
+          document.getElementById('bottone').innerHTML="<a onclick='return confirm('Confermi invio ordine?');' class='btn btn-primary btn-block' href='<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'page=checkout' ?>''>Invia Ordine</a>";
         }
         else {
           document.getElementById('bottone').innerHTML="<a class='Registrazione' href='<?php echo '../../Registrazione/registrazione.html' ?>''>Registrati per effettuare l'ordine</a>";

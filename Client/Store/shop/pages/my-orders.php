@@ -11,7 +11,7 @@
 
   global $loggedInUser;
 
-  $userId = $loggedInUser->id;
+  $userId = $loggedInUser->email;
   $orderMgr = new OrderManager();
   $status = 'pending';
   $pendingOrders = $orderMgr->getOrdersOfUser($userId, $status);

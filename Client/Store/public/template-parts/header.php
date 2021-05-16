@@ -11,7 +11,7 @@ $email = $_GET['email'];
 $immagine = $_GET['immagine'];
 
 $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
-//global $loggedInUser;
+global $loggedInUser;
 
 ?>
 
@@ -43,16 +43,16 @@ $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$imm
             </a>
             <div id="comparsa" class="men">   
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;    </a>
-                <a href="../../index.html" role="button" class="btn"> HOME                       </a><br>
-                <a href="../../Gofishing/gofishing.html" role="button" class="btn"> GO FISHING   </a><br>
-                <a href="../../Galleria/galleria.html" role="button" class="btn"> GALLERIA       </a><br>
-                <a href="../../Faq/faq.html" role="button" class="btn" > FAQ                     </a><br>
-                <a href="../../ChiSiamo/chisiamo.html" role="button" class="btn"> CHI SIAMO      </a>   
+                <a href="../../index.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> HOME                       </a><br>
+                <a href="../../Gofishing/gofishing.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> GO FISHING   </a><br>
+                <a href="../../Galleria/galleria.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> GALLERIA       </a><br>
+                <a href="../../Faq/faq.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn" > FAQ                     </a><br>
+                <a href="../../ChiSiamo/chisiamo.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> CHI SIAMO      </a>   
             </div>
         </li>
         </ul>
         <ul id="menu-center">
-            <a href="../../index.html" role="button" class="img"> <img src="../../img/logo.png"></a>
+            <a href="../../index.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="img"> <img src="../../img/logo.png"></a>
         </ul>  
         <ul id="menu-2">
             <a href="../../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a> 

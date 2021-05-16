@@ -8,6 +8,6 @@
   session_start();
   
 
-  if (isset($_SESSION['user'])) {
-    $loggedInUser = unserialize($_SESSION['user']);
+  if (isset($_SESSION['Utenti'])) {
+    $loggedInUser = unserialize($_SESSION['Utenti']);
   }
