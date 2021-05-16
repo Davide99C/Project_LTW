@@ -12,7 +12,14 @@ class DB {
     if (mysqli_connect_errno()) {
       echo 'Failed to connect to MySql ' . mysqli_connect_errno();
     }
-    $this->pdo = new PDO('mysql:dbname='. DB_NAME .';host=' . DB_HOST, DB_USER, DB_PASS);
+    try {
+      $this->pdo = new PDO('mysql:dbname='. DB_NAME .';host=' . DB_HOST, DB_USER, DB_PASS);
+      // set the PDO error mode to exception
+      $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      //echo "Connected successfully";
+    } catch(PDOException $e) {
+      echo "Connection failed: " . $e->getMessage();
+    }
   }
 
   public function query($sql) {
@@ -148,7 +155,8 @@ class DBManager {
   }
 
   public function getAll() {
-    $results = $this->db->select_all($this->tableName, $this->columns);
+    $results = $this->db->query("SELECT * From product");
+    //$results = select_all($this->tableName, $this->columns);
     $objects = array();
     foreach($results as $result) {
       array_push($objects, (object)$result);

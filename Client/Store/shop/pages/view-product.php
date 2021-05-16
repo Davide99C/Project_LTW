@@ -4,6 +4,14 @@
     die;
   }
 
+  //VARIABILI GLOBALI 
+  $nome = $_GET['nome'];
+  $cognome = $_GET['cognome'];
+  $email = $_GET['email'];
+  $immagine = $_GET['immagine'];
+
+  $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
+
   if (!isset($_GET['id'])) {
     Header('Location '. ROOT_URL);
     exit;
@@ -25,6 +33,7 @@
 
   $id = esc_html(trim($_GET['id']));
 
+  
   $pm = new ProductManager();
   $product = $pm->get($id);
   

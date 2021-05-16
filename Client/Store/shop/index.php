@@ -6,7 +6,8 @@ if(isset($_GET['page'])) {
   $page = $_GET['page'];
 }
 ?>
-<?php include ROOT_PATH . 'public/template-parts/header.php'; ?>
+<?php //include ROOT_PATH . 'public/template-parts/header.php'; ?>
+<?php include '../public/template-parts/header.php'; ?>
 
  
       <div class="main">
@@ -16,4 +17,5 @@ if(isset($_GET['page'])) {
     
 
 
-<?php include ROOT_PATH . 'public/template-parts/footer.php'; ?>
+<?php include '../public/template-parts/footer.php'; ?>
+<?php// include ROOT_PATH . 'public/template-parts/footer.php'; ?>

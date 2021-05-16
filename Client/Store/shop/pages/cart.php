@@ -24,11 +24,20 @@
   // var_dump($cartId);
   // var_dump($cart_items);
   // var_dump($cart_total);
+
+  //VARIABILI GLOBALI 
+  $nome = $_GET['nome'];
+  $cognome = $_GET['cognome'];
+  $email = $_GET['email'];
+  $immagine = $_GET['immagine'];
+
+  $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
 ?>
 
 <div class="cart-centro">
-  <a href="<?php echo ROOT_URL . 'public?pages=homepage'; ?>" class="back"> &#8592; Vai allo Shopping </a>
   <?php if (count($cart_items) > 0) : ?>
+    <a href="<?php echo ROOT_URL . 'public?pages=homepage'; ?>" class="back"> &#8592; Vai allo Shopping </a>
+  
     <div class="titolo" >
     
       <label class="t1">Carrello</label>
@@ -64,9 +73,6 @@
     
     </td>
     </tr>
-    
-
-    
     
      <?php endforeach; ?>
     <tr><td>

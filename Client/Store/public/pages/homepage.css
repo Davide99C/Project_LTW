@@ -15,14 +15,18 @@ body {
     background-size: cover;
     text-align: center;
   
-  
 }
+
 h1 {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-size: 3.6vw;
 	color: #a50520;
   padding: 20px;
   text-shadow: 2px 4px 2px rgb(110, 110, 110);
+}
+
+#titolo {
+  text-align: center;
 }
 
 
@@ -40,7 +44,7 @@ h1 {
 }
 
 .product-card {
-  
+  cursor: pointer;
   width:30%;
   display: inline-block;
   /*border: 1px solid black;
@@ -79,26 +83,29 @@ h1 {
   margin-top: 20px;
   background-color:rgb(97, 97, 97);
   color: white;
-  border-radius: 5%;
+  border-radius: 5px;
   padding: 5px;
   font-size: 1.2vw;
   border: 1px solid #f3f3f3;
+  cursor: pointer;
 }
 .vedi:hover {
   border: 1px solid #303030;
   background-color: #303030;
   color: #ffffff;
   padding: 5px;
+  
 }
 .add_to_cart{
   border:none;
   margin-top: 20px;
   background-color:rgb(109, 0, 0);
   color: white;
-  border-radius: 5%;
+  border-radius: 5px;
   padding: 15px;
   font-size: 1.2vw;
   border: 1px solid #f3f3f3;
+  cursor: pointer;
 }
 
 .add_to_cart:hover {

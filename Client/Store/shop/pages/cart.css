@@ -1,7 +1,9 @@
 .cart-centro {
     background-color: rgb(204, 204, 204);
     padding-bottom: 8%;
-    
+    text-align: center;
+    padding-top:2%;
+    font-weight:bold;
 }
 
 .titolo {
@@ -77,7 +79,6 @@ table {
 td {
     
     padding:20px;
-    
 
 }
 
@@ -128,5 +129,5 @@ a.back{
 }
 
 a.back:hover{
-    opacity:0.2;
+    opacity:0.4;
 }
