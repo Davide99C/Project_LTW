@@ -5,25 +5,41 @@
 }
 
 .titolo {
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin:auto;
+    padding:3%
 }
+
+.t1 {
+    font-size: 30px;
+    float:left;
+    font-weight: bold;
+
+}
+
+#t2 {
+    float:right;
+    background-color: darkred;
+    color: #ffffff;
+    border-radius: 10px 10px 10px 10px;
+    padding:5px;
+}
+
 
 .cart-product {
     width: 100%;
-    padding-top: 5%;
-    
+    padding-top: 1%;
+    margin: auto;
     
     
 }
 
-
-
 .name {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #5a0000;
-    font-weight: bold;
-    font-size: 30px;
+    color: #350000;
+  
+    font-size: 25px;
     display: inline-flex;
 }
 
@@ -44,24 +60,48 @@
 }
 
 table {
-    border: 2px solid black;
+    border: 1px solid black;
     width: 80%;
     margin:auto;
+    border-radius: 10px 10px 10px 10px;
     
     
+}
+
+.l-totale{
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #020202;
+    font-size: 15px;
 }
 
 td {
-    border-bottom: 2px solid black;
+    
     padding:20px;
+    
+
 }
 
-#int, .totale{
-    font-weight: bold;
+#int{
+    
     font-size: 20px;
     text-align: center;
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+.prezzo {
+    text-align: center;
+}
+
+.minus,.plus {
+    background-color:darkred;
+    border:0;
+    border-radius: 2%;
+    color: white;
+}
+
+.minus:hover,.plus:hover {
+    opacity: 0.2;
 }
 
 .Registrazione {
@@ -77,4 +117,16 @@ td {
   font-size: 1vw;
   font-weight: bold;
   text-decoration: none;
+}
+
+a.back{
+    text-decoration: none;
+    margin:2%;
+    color: black;
+    margin-top: 20px;
+
+}
+
+a.back:hover{
+    opacity:0.2;
 }

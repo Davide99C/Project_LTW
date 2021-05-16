@@ -158,7 +158,7 @@
 
     private function createItem($productId, $cartId){
       $item_id = $this->cartItemMgr->create(new CartItem(0, $cartId, $productId, 1));
-      var_dump($item_id); die;
+      //var_dump($item_id); die;
       return $item_id;
     }
 

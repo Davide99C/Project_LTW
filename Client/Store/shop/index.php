@@ -10,7 +10,7 @@ if(isset($_GET['page'])) {
 
  
       <div class="main">
-        <?php include ROOT_PATH . 'inc/alert-message.php'; ?>
+        
         <?php include "pages/$page.php"; ?>
       </div>
     

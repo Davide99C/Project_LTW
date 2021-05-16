@@ -12,10 +12,6 @@
     $cartId = $cm->getCurrentCartId();
     //var_dump($cartId); die;
     $cm->addToCart($productId, $cartId);
-
-    $alertMsg = 'add_to_cart';
-    echo "<script>location.href='".ROOT_URL."public?pages=homepage&msg=$alertMsg';</script>";
-    exit;
   }
   
   $pm = new ProductManager();
@@ -75,7 +71,7 @@
         <form method="post">
           
           <input type="hidden" name="id" value="<?php echo esc_html($product->id); ?>">
-          <input name="add_to_cart" type="submit" class="add_to_cart" value="Aggiungi al carrello">
+          <input name="add_to_cart"  type="submit" class="add_to_cart" value="Aggiungi al carrello">
         </form>
       </div>
     </div>
