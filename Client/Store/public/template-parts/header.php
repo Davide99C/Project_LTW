@@ -27,6 +27,7 @@ global $loggedInUser;
   <link rel="stylesheet" href="../../aux.css">
   <link rel="stylesheet" href="<?php echo ROOT_URL; ?>public/pages/homepage.css">
   <link rel="stylesheet" href="<?php echo ROOT_URL; ?>shop/pages/cart.css">
+  
 
   
 </head>

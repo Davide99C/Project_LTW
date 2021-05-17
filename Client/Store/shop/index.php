@@ -1,10 +1,6 @@
 <?php
 require_once '../inc/init.php'; 
-
-$page = 'homepage';
-if(isset($_GET['page'])) {
-  $page = $_GET['page'];
-}
+$page = isset($_GET["page"]) ? $_GET["page"] : 'checkout';
 ?>
 <?php //include ROOT_PATH . 'public/template-parts/header.php'; ?>
 <?php include '../public/template-parts/header.php'; ?>

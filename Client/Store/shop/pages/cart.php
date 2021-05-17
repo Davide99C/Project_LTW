@@ -88,11 +88,11 @@
     
     </tr>
     </table>
-  
-   
-
-
-<div id="bottone"></div>
+      <br>
+      <br>
+      <div class ="checkout" align="center">
+    <a class="checkout" href="<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'pages=checkout'; ?>">CHECKOUT</a>
+    </div>
 
 
 
@@ -110,13 +110,7 @@
         var surname = x.get('cognome');console.log(surname);
         var email = x.get('email');console.log(email);
         var immagine = x.get('immagine');
-        if (username && surname) {
-          
-          document.getElementById('bottone').innerHTML="<a onclick='return confirm('Confermi invio ordine?');' class='btn btn-primary btn-block' href='<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'page=checkout' ?>''>Invia Ordine</a>";
-        }
-        else {
-          document.getElementById('bottone').innerHTML="<a class='Registrazione' href='<?php echo '../../Registrazione/registrazione.html' ?>''>Registrati per effettuare l'ordine</a>";
-        }
+        
 
 </script> 
 

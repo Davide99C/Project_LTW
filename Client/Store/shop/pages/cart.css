@@ -1,7 +1,6 @@
 .cart-centro {
     background-color: rgb(204, 204, 204);
     padding-bottom: 8%;
-    text-align: center;
     padding-top:2%;
     font-weight:bold;
 }
@@ -40,7 +39,7 @@
 .name {
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
     color: #350000;
-  
+    text-align: left;
     font-size: 25px;
     display: inline-flex;
 }
@@ -85,7 +84,7 @@ td {
 #int{
     
     font-size: 20px;
-    text-align: center;
+    
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -105,19 +104,21 @@ td {
     opacity: 0.2;
 }
 
-.Registrazione {
-    border: 1px solid #949494;
+a.checkout {
+    
+  border: 1px solid #949494;
   background-color: #8a8a8a;
   color: #ffffff;
-  padding: 10px 20px 10px;
-  border-radius: 5%;
-  float: right;
+  padding:10px 30% 10px 30%;
+  border-radius: 10px 10px 10px 10px;
   margin-top: 2%;
   margin-right: 5%;
   cursor: pointer;
   font-size: 1vw;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
+  
 }
 
 a.back{
