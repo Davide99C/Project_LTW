@@ -91,7 +91,7 @@
       <br>
       <br>
       <div class ="checkout" align="center">
-    <a class="checkout" href="<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'pages=checkout'; ?>">CHECKOUT</a>
+    <a class="checkout" href="<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'&pages=checkout'; ?>">CHECKOUT</a>
     </div>
 
 

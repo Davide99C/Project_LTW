@@ -168,3 +168,15 @@
   </div>
 </div>
 
+ <!-- CONTROLLO LOGIN UTENTE -->
+ <script>
+      var x = new URLSearchParams(window.location.search);
+      var username = x.get('nome');console.log(username);
+      var surname = x.get('cognome');console.log(surname);
+      var email = x.get('email');console.log(email);
+      
+      if (email) {
+          document.getElementById('fname').value = username +' '+ surname;
+          document.getElementById('email').value = email;
+        }
+      </script>

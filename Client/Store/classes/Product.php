@@ -25,6 +25,6 @@ class ProductManager extends DBManager {
   public function __construct(){
     parent::__construct();
     $this->columns = array( 'id', 'name', 'description', 'price', 'category_id', 'img' );
-    $this->tableName = 'Product';
+    $this->tableName = 'product';
   }
 }

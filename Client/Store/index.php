@@ -11,7 +11,7 @@
 
   $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
 
-  $querystring = "public/".$_GLOBALS['URL_USER'].".&pages=homepage"; 
+  $querystring = "public/".$_GLOBALS['URL_USER']; 
   
   header('Location: '.$querystring);
   exit; 

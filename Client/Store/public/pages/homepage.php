@@ -75,7 +75,7 @@
       
         <div class="product-actions">
 
-          <button class="vedi" onclick="location.href='<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'&page=view-product&id='. esc_html($product->id); ?>'<?php echo $_GLOBALS['URL_USER']?>">Vedi</button>
+          <button class="vedi" onclick="location.href='<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'&page=view-product&id='. esc_html($product->id); ?>'">Vedi</button>
           <!--<a class="btn btn-outline-primary btn-sm" href="#">Aggiungi al carrello</a>-->
           <form method="post">
             <input type="hidden" name="id" value="<?php echo esc_html($product->id); ?>">
