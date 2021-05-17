@@ -7,7 +7,7 @@ define('SITE_NAME', 'WildFishing_STORE');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'phpecommerce');
+define('DB_NAME', 'WildFishing');
 
 /*require_once ROOT_PATH . '/inc/include-classes.php'; 
 require_once ROOT_PATH . '/inc/globals.php'; 

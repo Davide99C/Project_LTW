@@ -8,10 +8,24 @@
    // echo "<script>location.href='".ROOT_URL."auth?page=login&msg=login_for_checkout';</script>";
    // exit;
   //}
+  
+
+  
   $cm = new CartManager();
   $cartId = $cm->getCurrentCartId();
   $cart_items = $cm->getCartItems($cartId);
   $cart_total = $cm->getCartTotal($cartId);
+
+  //VARIABILI GLOBALI
+  $nome = $_GET['nome'];
+  $cognome = $_GET['cognome'];
+  $email = $_GET['email'];
+  $immagine = $_GET['immagine'];
+
+  $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
+  
+  
+
 //?>
 
 <?php
@@ -23,98 +37,36 @@
 
   $cartId = $cartMgr->getCurrentCartId();
 
-  //if ($cartMgr->isEmptyCart($cartId)){
-  //  $alertMsg = 'cart_empty';
-  //  $error = true;
-  //}
-  
-  //$address = $orderMgr->getUserAddress($loggedInUser->id);
-  //if(!$error && !$address) {
-    
-  //  $alertMsg = 'address_not_found';
-  //  $error = true;
-  //}
 
-  if(!$error){
-    
-    /*$orderId = $orderMgr->createOrderFromCart($cartId, $loggedInUser->id);
-
-    $orderItems = $orderMgr->getOrderItems($orderId);
-    $orderTotal = $orderMgr->getOrderTotal($orderId)[0];
-
-    $br = "\r\n";
-    $to = $loggedInUser->email;
-    $subject = "ORDINE N. " . $orderId;
-    $txt = "<h2>Grazie per l'acquisto</h2>" . $br ;
-
-    $headers = "From: ".SITE_NAME . $br ;
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-    $style = "style='border: 1px solid black; border-collapse: collapse;'";
-
-    $br = "<br>";
-    $txt.= $br . "<h3>Riepilogo Ordine:</h3>";
-
-    $mailBody = "<table $style><tr><th $style>Prodotto</th><th $style >Prezzo Unitario</th><th $style >N. Pezzi</th><th $style >Importo</th></tr>";
-    foreach($orderItems as $item){
-      $mailBody .= "<tr><td $style>".$item['product_name']."</td><td $style>".$item['single_price']."</td><td $style>".$item['quantity']."</td><td $style>".$item['total_price']."</td></tr>";
-    }
-    $mailBody .= "<tr><td $style colspan='4'>Totale €". $orderTotal['total'] . "</td></tr></table>";
- 
-    $txt .= $mailBody . $br ;
-    $txt.= $br . "<h3>Indirizzo di spedizione:</h3>";
-
-    //$shippingAddressStr = "<strong>Indirizzo: </strong>" . $address['street'] . $br;
-    //$shippingAddressStr .= "<strong>Città: </strong>" . $address['city'] . $br;
-    //$shippingAddressStr .= "<strong>CAP: </strong>" . $address['cap'] . $br;
-
-    $txt .= $shippingAddressStr . $br;
-    $txt .= $br . "Riceverà una mail quando l'ordine sarà spedito.";
-
-    $style="";
-    $htmlBody = "<table class='table table-bordered' $style><tr><th $style>Prodotto</th><th $style >Prezzo Unitario</th><th $style >N. Pezzi</th><th $style >Importo</th></tr>";
-    foreach($orderItems as $item){
-      $htmlBody .= "<tr><td $style>".$item['product_name']."</td><td $style>€ ".$item['single_price']."</td><td $style>".$item['quantity']."</td><td $style>€ ".$item['total_price']."</td></tr>";
-    }
-    $htmlBody .= "<tr><td $style colspan='4'>Totale €". $orderTotal['total'] . "</td></tr></table>";
-
-    mail($to,$subject,$txt,$headers);
-  } else {
-    echo "<script>location.href='".ROOT_URL."shop?page=cart';</script>";
-    exit;
-  }*/
-}
 ?>
-
-  <head>
-  <link rel="stylesheet" href="<?php echo ROOT_URL; ?>shop/pages/checkout.css">
+  <head><link rel="stylesheet" href="<?php echo ROOT_URL; ?>shop/pages/checkout.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+  
   <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="/action_page.php">
+      <form action="../../php/ordine.php<?php echo $_GLOBALS['URL_USER']?>" method="POST" onsubmit="return validaOrdine()">
       
         <div class="row">
           <div class="col-50">
             <h3>Indirizzo di fatturazione</h3>
             <label for="fname"><i class="fa fa-user"></i> Nome e Cognome</label>
-            <input type="text" id="fname" name="firstname" >
+            <input type="text" id="fname" name="firstname" required>
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" >
+            <input type="text" id="email" name="email" required>
             <label for="adr"><i class="fa fa-address-card-o"></i> Indirizzo</label>
-            <input type="text" id="adr" name="address" >
+            <input type="text" id="adr" name="address" required >
             <label for="city"><i class="fa fa-institution"></i> Citta'</label>
-            <input type="text" id="city" name="city" >
+            <input type="text" id="city" name="city" required>
 
             <div class="row">
               <div class="col-50">
                 <label for="state">Nazione</label>
-                <input type="text" id="state" name="state" >
+                <input type="text" id="state" name="state" required>
               </div>
               <div class="col-50">
                 <label for="zip">CAP</label>
-                <input type="text" id="cap" name="cap" >
+                <input type="text" id="cap" name="cap" required>
               </div>
             </div>
           </div>
@@ -129,19 +81,19 @@
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
             <label for="cname">Nome sulla carta</label>
-            <input type="text" id="cname" name="cardname" >
+            <input type="text" id="cname" name="cardname" required>
             <label for="ccnum">Numero della carta</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
             <label for="expmonth">Mese di Scadenza</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="Settembre">
+            <input type="text" id="expmonth" name="expmonth" placeholder="Settembre" required>
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Anno di scadenza</label>
-                <input type="text" id="expyear" name="expyear" >
+                <input type="text" id="expyear" name="expyear" required>
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" >
+                <input type="text" id="cvv" name="cvv" required>
               </div>
             </div>
           </div>
@@ -151,6 +103,12 @@
           <input type="checkbox" checked="checked" name="sameadr"> L'indirizzo di spedizione e' lo stesso di fatturazione
         </label>
         <input type="submit" value="Acquista" class="acquista">
+
+        <?php $prodotti = array();
+        foreach ($cart_items as $item) : 
+          array_push($prodotti,$item['product_name'],$item['quantity']);
+        endforeach; ?>
+        <input name="prod" type="hidden" value="<?php foreach ($prodotti as $item){echo $item. " ";}?>">
       </form>
     </div>
   </div>
@@ -158,8 +116,10 @@
     <div class="container">
     
       <h4>Carrello <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><?php echo esc_html($cart_total[0]['num_products']); ?></b></span></h4>
+      
       <?php foreach ($cart_items as $item) : ?>
-        <p id="price"><label ><?php echo esc_html($item['product_name']); ?> <span class="price">€<?php echo esc_html($item['total_price']); ?></label></span></p>
+        <p id="price"><label><?php echo esc_html($item['product_name']); ?> <span class="price">€<?php echo esc_html($item['total_price']); ?></label></span></p>
+        
       <?php endforeach; ?>
       
       <hr>
@@ -168,15 +128,17 @@
   </div>
 </div>
 
+
+
  <!-- CONTROLLO LOGIN UTENTE -->
  <script>
-      var x = new URLSearchParams(window.location.search);
-      var username = x.get('nome');console.log(username);
-      var surname = x.get('cognome');console.log(surname);
-      var email = x.get('email');console.log(email);
-      
-      if (email) {
-          document.getElementById('fname').value = username +' '+ surname;
-          document.getElementById('email').value = email;
-        }
-      </script>
+  var x = new URLSearchParams(window.location.search);
+  var username = x.get('nome');console.log(username);
+  var surname = x.get('cognome');console.log(surname);
+  var email = x.get('email');console.log(email);
+  
+  if (email) {
+      document.getElementById('fname').value = username +' '+ surname;
+      document.getElementById('email').value = email;
+    }
+</script>

@@ -30,14 +30,14 @@
 
   class Order {
 
-    public $id;
-    public $user_id;
-    public $status;
+    
+    public $email;
+    public $prodotto;
 
-    public function __construct($id, $user_id, $status){
-      $this->id = $id > 0 ? $id : 0;
-      $this->user_id = $user_id;
-      $this->status = $status;
+    public function __construct($email, $prodotto){
+      $this->email = $email;
+      $this->prodotto = $prodotto;
+      
     }
   }
 
@@ -55,15 +55,10 @@
   class OrderManager extends DBManager {
     public function __construct(){
       parent::__construct();
-      $this->columns = array( 'id', 'user_id', 'status' );
-      $this->tableName = 'Orders';
+      $this->columns = array( 'email', 'prodotto');
+      $this->tableName = 'orders';
     }
 
-    public function updateStatus($orderId, $status){
-      $query = "UPDATE orders SET status = '$status', updated_at = CURRENT_TIMESTAMP() WHERE id = $orderId"; 
-      $result = $this->db->query($query);
-      return $result;
-    }
 
     public function getOrdersOfUser($userId, $status){
       $query = "CALL user_orders ($userId, '$status')"; 
@@ -79,9 +74,9 @@
       return $result[0];
     }
 
-    public function createOrderFromCart($cartId, $userId){
-      $orderId = $this->create(new Order(0, $userId, 'pending'));
-      $this->db->query("CALL cart_to_order ($cartId, $orderId)");
+    public function createOrderFromCart($cartId, $email){
+      $orderId = $this->create(new Order(0, $email));
+      $this->db->query("CALL cart_to_order ($cartId, $email)");
       return $orderId;
     }
 
