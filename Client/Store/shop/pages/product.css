@@ -6,6 +6,7 @@ body{
 
 .center{
     background-color: rgb(211, 211, 211);
+    padding-top: 2%;
 }
 
 .back {
@@ -65,8 +66,9 @@ body{
     font-size: 1.2vw;
 }
 
-h1 {
+h1.product-name {
     color:rgb(109, 0, 0);
+    font-size: 50px;
     
 }
 
@@ -174,6 +176,7 @@ h3 {
 a{
     text-decoration:none;
     color: black;
+    
 }
 
 a:hover {

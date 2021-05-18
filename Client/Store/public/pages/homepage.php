@@ -10,6 +10,8 @@
 
     $cm = new CartManager();
     $cartId = $cm->getCurrentCartId();
+
+    
     //var_dump($cartId); die;
     $cm->addToCart($productId, $cartId);
 

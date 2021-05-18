@@ -27,6 +27,15 @@
     padding:5px;
 }
 
+@media screen and (max-width: 700px){
+    #t2 {
+        font-size: 15px;
+        padding:3px;
+    }
+};
+    
+
+
 
 .cart-product {
     width: 100%;
@@ -44,6 +53,8 @@
     display: inline-flex;
 }
 
+
+
 .bottoni {
     text-align: center;
 }
@@ -60,6 +71,25 @@
     font-size: 15px;
 }
 
+
+@media screen and (max-width:700px){
+    .name{
+      font-size:15px;
+    }
+
+    .prezzo {
+        font-size: 10px;
+    }
+
+    .quantity{
+        font-size:10px;
+    }
+
+    .bottoni{
+        
+    }
+    
+  }
 table {
     border: 1px solid black;
     width: 80%;
@@ -112,13 +142,20 @@ a.checkout {
   padding:10px 30% 10px 30%;
   border-radius: 10px 10px 10px 10px;
   margin-top: 2%;
-  margin-right: 5%;
+  
   cursor: pointer;
-  font-size: 1vw;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   
+}
+
+@media screen and (max-width:700px) {
+    a.checkout{
+        font-size: 10px;
+    }
+    
 }
 
 a.back{

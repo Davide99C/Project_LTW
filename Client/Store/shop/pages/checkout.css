@@ -8,7 +8,7 @@ display: -ms-flexbox; /* IE10 */
 display: flex;
 -ms-flex-wrap: wrap; /* IE10 */
 flex-wrap: wrap;
-margin: 0 -16px;
+
 }
 
 .col-25 {
@@ -48,7 +48,7 @@ border: 1px solid #ccc;
 border-radius: 5px;
 }
 
-label {
+label #fname, #email{
 margin-bottom: 10px;
 display: block;
 }

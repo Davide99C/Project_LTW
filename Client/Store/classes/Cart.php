@@ -275,11 +275,12 @@
         $result = $this->db->query("SELECT id FROM cart WHERE user_id = $this->userId");
         if (count($result) == 0) {
           $cartId = $this->createCart();
+          $this->userId++;
         } else {
           $cartId = $result[0]['id'];
         }
       }
-        
+      
       return $cartId;
     }
 
