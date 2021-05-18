@@ -36,6 +36,7 @@
 
 <div class="cart-centro">
   <?php if (count($cart_items) > 0) : ?>
+  
     <a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back"> &#8592; Vai allo Shopping </a>
   
     <div class="titolo" >
@@ -98,8 +99,10 @@
 
 
 <?php else : ?>
-<p class="lead">Nessun elemento nel carrello...</p>
-<a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
+<div id="back-button">
+  <p class="lead">Nessun elemento nel carrello...</p>
+  <a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
+ </div> 
 <?php endif ; ?>
 
  

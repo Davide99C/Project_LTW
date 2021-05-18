@@ -169,3 +169,7 @@ a.back{
 a.back:hover{
     opacity:0.4;
 }
+
+#back-button {
+  text-align: center;
+}
