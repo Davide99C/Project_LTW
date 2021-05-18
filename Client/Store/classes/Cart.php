@@ -187,7 +187,7 @@
       }
     }
 
-    public function mergeCarts(){
+    /*public function mergeCarts(){
 
       $oldUserCart = $this->db->query("SELECT id FROM cart where user_id = $this->userId");
       $oldClientCart = $this->db->query("SELECT id FROM cart where client_id = '$this->clientId'");
@@ -230,7 +230,7 @@
 
       unset($_SESSION['client_id']);
       return $result;
-    }
+    }*/
 
 
     public function addToCart($productId, $cartId) {
@@ -263,7 +263,7 @@
     public function getCurrentCartId(){
       $cartId = 0;
 
-      if (!$this->userId) {
+      //if ($this->userId) {
         //var_dump($this->clientId, $_SESSION['client_id']); die;
         $result = $this->db->query("SELECT id FROM cart WHERE client_id = '$this->clientId'"); 
         if (count($result) == 0) {
@@ -271,7 +271,7 @@
         } else {
           $cartId = $result[0]['id'];
         }
-      } else {
+      /*} else {
         $result = $this->db->query("SELECT id FROM cart WHERE user_id = $this->userId");
         if (count($result) == 0) {
           $cartId = $this->createCart();
@@ -279,7 +279,7 @@
         } else {
           $cartId = $result[0]['id'];
         }
-      }
+      }*/
       
       return $cartId;
     }
