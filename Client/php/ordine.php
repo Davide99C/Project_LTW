@@ -19,25 +19,23 @@
      }
 
     //VARIABILI GLOBALI
-  $nome = $_GET['nome'];
-  $cognome = $_GET['cognome'];
-  $email = $_GET['email'];
-  $immagine = $_GET['immagine'];
+    $nome = $_GET['nome'];
+    $cognome = $_GET['cognome'];
+    $email = $_GET['email'];
+    $immagine = $_GET['immagine'];
 
-  $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
+    $_GLOBALS['URL_USER'] = "?nome=$nome&cognome=$cognome&email=$email&immagine=$immagine";
   
-
+       
 ?>
 
 <!DOCTYPE html>
 <html >
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?php echo SITE_NAME; ?></title>
-  <link rel="stylesheet" href="../aux.css">
+  <title><?php echo 'WildFishing_STORE'; ?></title>
+  <link rel="stylesheet" type="text/css" href="../aux.css">
   
 </head>
 

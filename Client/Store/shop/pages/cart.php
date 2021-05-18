@@ -99,7 +99,7 @@
 
 <?php else : ?>
 <p class="lead">Nessun elemento nel carrello...</p>
-<a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
+<a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back">&#8592; Vai allo Shopping </a>
 <?php endif ; ?>
 
  

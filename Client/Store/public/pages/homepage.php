@@ -54,7 +54,7 @@
         <span class="badge badge-primary badge-pill js-totCartItems"></span>
         </a>
       </div>
-      <?php if (count($products) > 0) : ?>
+      <?php //if (count($products) > 0) : ?>
       <div id="titolo" > <h1 >SHOP</h1> </div>
       <?php foreach($products as $product) : ?>
       <div class="product-card" onclick="location.href='<?php echo ROOT_URL . 'shop'.$_GLOBALS['URL_USER'].'&page=view-product&id='. esc_html($product->id); ?>'">
@@ -104,8 +104,6 @@
 
 </div>
 
-<?php else : ?>
 
-<?php endif; ?>
 
 
