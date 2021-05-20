@@ -142,10 +142,10 @@ input[type="reset"], input[type="submit"]{
     font-weight:bold;
 }
 
-input[type="text"], input[type="data"] {
+input[type="text"], input[type="data"], input[type="password"] {
     width:15vw;
     height:3vh;
-    
+    border-color: #ccc;
 }
 
 @media screen and (max-width:900px) { 

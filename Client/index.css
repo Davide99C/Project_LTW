@@ -550,7 +550,22 @@ body.anim .scroll-arrow-box {
     background-color:#490000;
 }
 
-
+@media screen and (max-width:950px) {
+	.image {
+		height: 240px;
+		width: 240px;
+	}
+	.newsletter input[type="email"] {
+		font-size:12px;
+		width: 330px;
+		height: 40px;
+	}
+	.newsletter button {
+		height: 40px;
+		width: 80px;
+		font-size: 12px;
+	}
+}
 @media screen and (max-width:700px) {
 	.image {
 		height: 140px;

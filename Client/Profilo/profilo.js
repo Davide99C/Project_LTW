@@ -26,6 +26,30 @@ function apriUsername() {
   $('#change-password').css('display','none');
 }
 
+function validatePassword() {
+    //var emailValue = $('#email').val();
+    var pwdValue = document.getElementById("new-password").value;
+    var pwdValue2 = document.getElementById("new-password2").value;
+    if (pwdValue != pwdValue2) {
+        passwordWrong();
+        return false;
+    }
+}
+function passwordWrong(){
+  var input = document.getElementsByClassName('sign_error');
+  input[1].innerHTML = "<h5 style='color:red'>Le password non corrispondono</h5>";
+  input[2].innerHTML = "<h5 style='color:red'>Le password non corrispondono</h5>";
+  document.getElementById("new-password").style.borderColor="red";
+  document.getElementById("new-password2").style.borderColor="red";
+  
+  setTimeout(() => {
+      input[1].innerHTML = "";
+      input[2].innerHTML = "";
+      document.getElementById("new-password").style.borderColor="#ccc";
+      document.getElementById("new-password2").style.borderColor="#ccc"; 
+    },5000);
+  console.log("fatto");
+}
 
 //CARICAMENTO
 

@@ -81,15 +81,18 @@
                     </div>
                 </div>
                 <div id="change-password">
-                    <form action='../php/modifica_Psw.php' method="POST" id="info1" onsubmit="validatePassword()">
+                    <form action='../php/modifica_Psw.php' method="POST" id="info1" onsubmit="return validatePassword()">
                         <p>Vecchia Password: <input type='text' id="old-password" name="old-psw"></input></p>
-                        <p>Nuova Password: <input type='text' id="new-password" name="new-psw"></input></p>
+                        <p>Nuova Password: <input type='password' id="new-password" name="new-psw"></input></p>
+                        <span class="sign_error"></span>
+                        <p>Conferma Password: <input type='password' id="new-password2" name="new-psw2"></input></p>
+                        <span class="sign_error"></span>
                         <input type="submit" value="Invia">
                         <input type="reset" value="Reset">
                     </form>
                 </div>
                 <div id="change-email">
-                    <form action='../php/modifica_Email.php' method="POST" id="info2" onsubmit="validateEmail()">
+                    <form action='../php/modifica_Email.php' method="POST" id="info2">
                         <p>Vecchia Email: <input type='text' id="old-email" name="old-email"></input></p>
                         <p>Nuova Email: <input type='text' id="new-email" name="new-email"></input></p>
                         <input type="submit" value="Invia">

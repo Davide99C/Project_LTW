@@ -15,11 +15,24 @@
     //var_dump($cartId); die;
     $cm->addToCart($productId, $cartId);
 
+    /*include "../../php/connection.php";
+    $mysqli = dbConnection();
+    $result = $mysqli -> query("SELECT client_id FROM cart where client_id='$cm->clientId'");
+    $count = mysqli_num_rows($result);
 
+    if ($count==0) {
+      $result = $mysqli -> query("DELETE FROM cart ");
+      if (!$result) {
+          echo "Query failed";
+          exit();
+      }
+    }*/
   }
   
   $pm = new ProductManager();
   $products = $pm->getAll();
+
+  
 
   //VARIABILI GLOBALI 
   $nome = $_GET['nome'];

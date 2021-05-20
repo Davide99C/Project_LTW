@@ -120,7 +120,7 @@
       global $loggedInUser;
 
       $this->userId = isset($_SESSION['Utenti']) ? unserialize($_SESSION['Utenti'])->email : 0;
-      // $this->clientId = isset($_COOKIE['client_id']) ? $_COOKIE['client_id'] : random_string();
+      // $this->clientId = isset($_COOKIE['client_id']) ? $_COOKIE[''] : random_string();
       $this->clientId = isset($_SESSION['client_id']) ? $_SESSION['client_id'] : random_string();
 
       $_SESSION['client_id'] = $this->clientId;
@@ -186,52 +186,6 @@
         $this->db->query('DELETE cart, cart_item FROM cart INNER JOIN cart_item ON cart.id = cart_item.cart_id WHERE cart.user_id = ' . $this->userId );
       }
     }
-
-    /*public function mergeCarts(){
-
-      $oldUserCart = $this->db->query("SELECT id FROM cart where user_id = $this->userId");
-      $oldClientCart = $this->db->query("SELECT id FROM cart where client_id = '$this->clientId'");
-      //var_dump($oldUserCart, $oldClientCart, $this->userId, $this->clientId); die;
-      if (count($oldClientCart) > 0 AND count($oldUserCart) == 0){
-        $result = $this->db->query("UPDATE cart SET user_id = $this->userId, client_id = '' WHERE client_id = '$this->clientId'");
-      }
-
-      else if (count($oldClientCart) > 0 AND count($oldUserCart) > 0 ) {
-
-        $userCartId = $oldUserCart[0]['id'];
-        $userCartItems = $this->getCartItems($userCartId);
-
-        $clientCartId = $oldClientCart[0]['id'];
-        $clientCartItems = $this->getCartItems($clientCartId);
-        
-
-        foreach($clientCartItems as $clientItem){
-          
-          $isAlreadyInCart = false;
-          $clientProductId = $clientItem['product_id'];
-
-          foreach($userCartItems as $userItem){
-            if ($userItem['product_id'] == $clientProductId){
-              $isAlreadyInCart = true;
-              $newQuantity = $userItem['quantity'] + $clientItem['quantity'];
-              $this->db->query("UPDATE cart_item SET quantity = $newQuantity  WHERE cart_id = $userCartId AND product_id = $clientProductId");
-              $this->db->query("DELETE FROM cart_item WHERE cart_id = $clientCartId AND product_id = $clientProductId");
-              break;
-            }
-          }
-
-          if (!$isAlreadyInCart) {
-            $this->db->query("UPDATE cart_item SET cart_id = $userCartId  WHERE cart_id = $clientCartId AND product_id = $clientProductId");
-          }
-        }
-
-        $result = $this->db->query("DELETE FROM cart WHERE id = $clientCartId");
-      }
-
-      unset($_SESSION['client_id']);
-      return $result;
-    }*/
-
 
     public function addToCart($productId, $cartId) {
       // $this->clearCart($cartId);
