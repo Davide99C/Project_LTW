@@ -48,6 +48,10 @@ body {
         height:100px;
         width:100px;
     }
+    #change-image {
+        width:50px;
+        text-emphasis: none;
+    }
 }
 
 #gestione {
@@ -142,7 +146,7 @@ input[type="reset"], input[type="submit"]{
     font-weight:bold;
 }
 
-input[type="text"], input[type="data"], input[type="password"] {
+input[type="text"], input[type="data"], input[type="password"], .span {
     width:15vw;
     height:3vh;
     border-color: #ccc;

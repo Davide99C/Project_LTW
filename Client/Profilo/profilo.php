@@ -203,5 +203,6 @@
             echo "<script>document.getElementById('bio').value='".$bio."' </script>";
 
         ?> 
+        
     </body>
 </html>
