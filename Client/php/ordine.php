@@ -51,7 +51,7 @@
             </a>
             <div id="comparsa" class="men">   
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;    </a>
-                <a href="../index.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> HOME                       </a><br>
+                <a href="../Store/<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> NEGOZIO                       </a><br>
                 <a href="../Gofishing/gofishing.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> GO FISHING   </a><br>
                 <a href="../Galleria/galleria.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn"> GALLERIA       </a><br>
                 <a href="../Faq/faq.html<?php echo $_GLOBALS['URL_USER']?>" role="button" class="btn" > FAQ                     </a><br>
@@ -69,8 +69,15 @@
 
     <script>
       function openNav() {
-        document.getElementById("comparsa").style.width = "230px";
-        document.getElementById("main").style.marginLeft = "230px";
+        if(window.matchMedia("(max-width: 900px)").matches) {
+          document.getElementById("comparsa").style.width = "100%";
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("comparsa").style.zIndex='4';
+        }
+        else {
+          document.getElementById("comparsa").style.width = "230px";
+          document.getElementById("main").style.marginLeft = "230px";
+        }
         
       }
 
@@ -108,6 +115,7 @@
               font-size: 1.5vw;
               font-weight: bold;
           }
+          
           .back:hover{
               opacity: 0.7;
           }
@@ -115,9 +123,20 @@
           h1 {
               color: darkred;
               text-align: center;
-             padding-top:15%;
-             text-shadow: 0px 2px 2px black;
+              padding-top:15%;
+              text-shadow: 0px 2px 2px black;
           }
+          @media screen and (max-width:700px) {
+              .back {
+                  font-size: 16px;
+              }
+              h1 {
+                  padding-top:20%;
+              }
+              
+          }
+          
+
         </style>
     
 
@@ -155,7 +174,7 @@
                 document.getElementById("comparsa").innerHTML = "<a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>&times;</a><a href='../Store/?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> NEGOZIO  </a><br><a href='../Gofishing/gofishing.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> GO FISHING </a><br><a href='../Galleria/galleria.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> GALLERIA </a><br><a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> FAQ </a><br><a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> CHI SIAMO </a>";
                 document.getElementById("menufooter").innerHTML = "<a href='../ChiSiamo/chisiamo.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> CHI SIAMO </a><br><a href='../Privacy/privacy.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn'> PRIVACY POLICY </a><br> <a href='../Faq/faq.html?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' class='btn' > FAQ </a><br>";
             }
-            else document.getElementById("menu-2").innerHTML = "<a href='../index.html' role='button'  class='btn' > HOME </a>";
+            else document.getElementById("menu-2").innerHTML = "<a href='../Login/login.html' role='button'  class='btn' ><img class='img-accedi' src='../img/44948.png' style='height:20px; width:20px;'> &nbspACCEDI </a>";
             if (immagine)   document.getElementById("menu-2").innerHTML = "<a href='../Profilo/profilo.php?nome="+username+'&cognome='+surname+'&email='+email+'&immagine='+immagine+"' role='button' id='accesso' class='btn' ><img class='img-accedi' src='../Profilo/img_utenti/"+immagine+"' style='height:40px; width:40px;border-radius: 50%;margin-right:10px;margin-top:-10px;'>"+username+' '+surname+"</a>";
         </script>
 </body>

@@ -78,6 +78,12 @@ header {
 #menu-2 {
     margin-right: 10px;
 }
+@media screen and (max-width:700px) {
+  #menu-2 {
+    margin-right: 0;
+  }
+  
+}
 #menu-center {
     margin: auto;
 }
@@ -111,7 +117,7 @@ header {
 
 #menu-2 a.btn {
   font-size: 20px;
-    float:left;
+    float:right;
     width:auto;
    
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

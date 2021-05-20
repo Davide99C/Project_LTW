@@ -62,8 +62,15 @@ global $loggedInUser;
 
     <script>
       function openNav() {
-        document.getElementById("comparsa").style.width = "230px";
-        document.getElementById("main").style.marginLeft = "230px";
+        if(window.matchMedia("(max-width: 900px)").matches) {
+          document.getElementById("comparsa").style.width = "100%";
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("comparsa").style.zIndex='4';
+        }
+        else {
+          document.getElementById("comparsa").style.width = "230px";
+          document.getElementById("main").style.marginLeft = "230px";
+        }
         
       }
 
