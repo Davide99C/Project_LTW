@@ -45,6 +45,12 @@
         <div class="img_sx">
             <img class="img-lato" src="../../img/White-logo.png" />  
         </div>
+        <div class="img_sx">
+            <img class="img-lato" src="../../img/White-logo.png" />  
+        </div>
+        <div class="img_sx">
+            <img class="img-lato" src="../../img/White-logo.png" />  
+        </div>
     </div>
 
     
@@ -93,6 +99,12 @@
       
       
     <div id="dx" class="lato">
+      <div class="img_dx">
+          <img class="img-lato" src="../../img/White-logo.png" /> 
+      </div>
+      <div class="img_dx">
+          <img class="img-lato" src="../../img/White-logo.png" /> 
+      </div>
       <div class="img_dx">
           <img class="img-lato" src="../../img/White-logo.png" /> 
       </div>

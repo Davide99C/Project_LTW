@@ -18,6 +18,18 @@
         exit();
      }
 
+    $result = $mysqli -> query("DELETE FROM cart ");
+    if (!$result) {
+        echo "Query failed";
+        exit();
+     }
+    $result = $mysqli -> query("DELETE FROM cart_item ");
+    if (!$result) {
+        echo "Query failed";
+        exit();
+     }
+
+
     //VARIABILI GLOBALI
     $nome = $_GET['nome'];
     $cognome = $_GET['cognome'];
