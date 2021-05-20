@@ -42,3 +42,6 @@ function nascondi_loading_screen()
 {
   document.getElementById("loading_screen").style.display = 'none';
 }
+
+
+ 

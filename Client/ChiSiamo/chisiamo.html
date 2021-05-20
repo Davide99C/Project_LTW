@@ -11,21 +11,20 @@
     </head>    
     <body>
 
-         <!--LOADING SCREEN-->
+        <!--LOADING SCREEN-->
         <div id="loading_screen">
             <div id="caricamento">
                 <div width="100" height="100" viewBox="0 0 24 24">
                     <img class="image-spin" src="../img/loading.png" style="height:150px; width:150px;">
-                    <!--<path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
-                    -->
                 </div><br>
                 <h1>Loading...</h1>
-                <p>La pagina è in caricamento<br />
-                    Resta connesso e non cambiare sito!</p>
+                <p>La pagina è in caricamento<br/>
+                   Resta connesso e non cambiare sito!</p>
             </div>
-          </div>
-          <!---->
-        
+        </div>
+        <!---->
+
+        <!--HEADER-->
         <header id="menu">
             <ul id="menu-1">
             <li> 
@@ -52,12 +51,14 @@
                 <a href="../Login/login.html" role="button" class="btn"><img class="img-accedi" src="../img/44948.png" style="height:20px; width:20px;">&nbspACCEDI </a> 
             </ul>
         </header>
+        <!---->
         
+        <!--MAIN-->
         <div id="main">
             <section id="centro" align="center">
                
                 
-
+                <!--Titolo-->
                 <label id="title">CHI SIAMO</label>
                 <br>
                 <br>
@@ -87,11 +88,10 @@
                             Organizzeremo eventi formativi facendovi scoprire quanto è importante conoscere gli habitat e
                             come utilizzare al meglio la vostra attrezzatura.
                         </p>
-                      </div>
-                    
-                  
+                    </div>
                 </div>
                 
+                <!--Obiettivo-->
                 <div id="obiettivo" align="center">
 
                   <label id="tit"><strong> Il nostro obiettivo</strong></label>
@@ -105,6 +105,7 @@
                   
                 </div> 
                 
+                <!--Colonne-->
                 <div class="row2" align="center">
                     <div class="column2">
                       <div id="link1">
@@ -115,15 +116,17 @@
                           ideale per tutte<br> le tue esigenze.
                       </p>
                     </div>
+                    
                     <div class="column2" >
                         <div id="link2">
                             <a href="../Gofishing/gofishing.html"><img src="../img/Schermata 2021-04-27 alle 19.05.49.png" style="width: 110px; height: 100px;  "  ></a>
                         </div>
-                      <h2>GoFishing</h2>
-                      <p>Vogliamo trasmettervi <br>le migliori strategie<br> e nozioni tecnico-scientifiche <br>
+                        <h2>GoFishing</h2>
+                        <p>Vogliamo trasmettervi <br>le migliori strategie<br> e nozioni tecnico-scientifiche <br>
                           indispensabili per capire<br> l’ambiente di pesca del territorio.
-                      </p>
+                        </p>
                     </div>
+                    
                     <div class="column2" >
                         <div id="link3">
                             <a href="../Galleria/galleria.html"><img src="../img/Schermata 2021-04-27 alle 19.09.33.png" style="width: 110px; height: 100px;  "  ></a>
@@ -133,47 +136,41 @@
                             membri della community. <br>Unisciti a noi!
                         </p>
                       </div>
-                    
-                  
                 </div>
-
+                
+                <!--Team-->
                 <div class="section2">
                     <label id="team"><strong> Il nostro team</strong></label>
                     <div id="contatti" align="center" >   
                         <div class="colonna" id="sx" >
                             <div class="card">
-                            <img id="elisa" src="../img/depositphotos_169265766-stock-illustration-young-caucasian-woman-fishing-on.jpg">
-                            <div class="container">
-                                <h2>Elisa De Bellis</h2>
-                                <p class="title">Art Director</p>
-                                <p></p>
-                                <p>17elisa99@live.it</p>
-                                <p><button class="button">Contact</button></p>
-                            </div>
+                                <img id="elisa" src="../img/depositphotos_169265766-stock-illustration-young-caucasian-woman-fishing-on.jpg">
+                                <div class="container">
+                                    <h2>Elisa De Bellis</h2>
+                                    <p>debellis.1858927@studenti.uniroma1.it</p>
+                                    <p><button class="button" onclick="location.href = 'mailto:debellis.1858927@studenti.uniroma1.it?subject=WildFishing'">Contact</button></p>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="colonna" id="dx">
                             <div class="card">
-                            <img id="davide" src="../img/pesca-dell-uomo-sull-illustrazione-di-vettore-del-molo-79701282.jpg">
-                            <div class="container">
-                                <h2>Davide Chiarabini</h2>
-                                <p class="title">Designer</p>
-                                <p></p>
-                                <p>chiarabini.1844615@studenti.uniroma1.it</p>
-                                <p><button class="button">Contact</button></p>
-                            </div>
+                                <img id="davide" src="../img/pesca-dell-uomo-sull-illustrazione-di-vettore-del-molo-79701282.jpg">
+                                <div class="container">
+                                    <h2>Davide Chiarabini</h2>
+                                    <p id=email>chiarabini.1844615@studenti.uniroma1.it</p>
+                                    <p><button class="button" onclick="location.href = 'mailto:chiarabini.1844615@studenti.uniroma1.it?subject=WildFishing'">Contact</button></p>
+                                </div>
                             
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                
-            
             </section>
-        
         </div>
+        <!---->
+        
+        <!--FOOTER-->
         <footer id="footer">
             <ul id="imagefooter">
                 <img src="../img/White-logo.png" >
@@ -195,6 +192,7 @@
                 <label> E-mail: wildfishing@hotmail.it </label>
             </ul>
         </footer>
+        <!---->
 
         <!-- CONTROLLO LOGIN UTENTE -->
         <script>

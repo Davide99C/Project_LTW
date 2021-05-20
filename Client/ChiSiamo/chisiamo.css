@@ -168,10 +168,12 @@ body {
 }
   
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(112, 112, 112, 0.781);
   margin: 8px;
   background-color:rgb(206, 206, 206);
   padding-top: 15px;
+  border-radius: 10px 10px 10px 10px;
+  
 }
 
 .card #elisa{
