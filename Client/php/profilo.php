@@ -30,7 +30,6 @@
         if(is_uploaded_file($_FILES["immagine"]["tmp_name"])) {
             //sposto il file nella cartella desiderata
             if (move_uploaded_file($_FILES["immagine"]["tmp_name"], $target_file)) {
-            //if( copy($_FILES['immagine']['tmp_name'], $target_file) ) {
                 echo "The file ". htmlspecialchars( basename( $_FILES["immagine"]["name"])). " has been uploaded.";
               } 
             else {
