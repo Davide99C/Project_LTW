@@ -64,7 +64,7 @@
                 </div>
                 <div id="gestione">
                     <div id="img-profilo">
-                        <img id="image-utente" src="img_utenti/44948.png" style="height:200px; width:200px;" ><br><br>
+                        <img id="image-utente" src="img_utenti/44948.png" style="height:160px; width:160px;"><br><br>
                         <form action='../php/profilo.php' method="POST" enctype="multipart/form-data" id="info">
                                 <p>Nome: </p>
                                 <p>Cognome: </p>
@@ -132,6 +132,21 @@
                 <label> E-mail: wildfishing@hotmail.it </label>
             </ul>
         </footer>
+
+        <style> 
+            @media screen and (max-height: 700px) {
+                #main {
+                    height: 700px;
+                }
+            }
+            @media screen and (max-width:500px) {
+                #info {
+                    padding:0;
+                    box-shadow: 0 0 0 0;
+                }
+            }
+        </style>
+
         <!---->
         <script>
             var x = new URLSearchParams(window.location.search);
