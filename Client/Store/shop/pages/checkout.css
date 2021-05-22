@@ -29,8 +29,9 @@ flex: 75%;
 .col-25,
 .col-50,
 .col-75 {
-padding: 0 16px;
+    padding: 0 16px;
 }
+
 
 .container {
 
@@ -40,13 +41,16 @@ border-radius: 10px;
 width: 100%;
 }
 
-input[type=text] {
+input{
 width: 100%;
 margin-bottom: 20px;
 padding: 12px;
 border: 1px solid #ccc;
 border-radius: 5px;
+margin-top: 3px;
 }
+
+
 
 label #fname, #email{
 margin-bottom: 10px;
