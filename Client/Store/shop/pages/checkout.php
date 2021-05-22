@@ -100,9 +100,6 @@
           </div>
           
         </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> L'indirizzo di spedizione e' lo stesso di fatturazione
-        </label>
         <input type="submit" value="Acquista" class="acquista">
 
         <?php $prodotti = array();
