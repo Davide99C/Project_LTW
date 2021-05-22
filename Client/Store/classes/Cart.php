@@ -119,9 +119,9 @@
 
       global $loggedInUser;
 
-      $this->userId = isset($_SESSION['Utenti']) ? unserialize($_SESSION['Utenti'])->email : 0;
+      $this->userId = isset($_SESSION['user_id']) ? unserialize($_SESSION['user_id']) : 0;
       // $this->clientId = isset($_COOKIE['client_id']) ? $_COOKIE[''] : random_string();
-      $this->clientId = isset($_SESSION['client_id']) ? $_SESSION['client_id'] : random_string();
+      $this->clientId = isset($_SESSION['client_id']) ? $_SESSION['client_id'] : 0;//random_string();
 
       $_SESSION['client_id'] = $this->clientId;
       //var_dump($this->clientId, $_SESSION);
@@ -181,11 +181,11 @@
       return $this->db->query("DELETE FROM cart_item WHERE cart_id = '$cartId' AND product_id = '$productId'");
     }
 
-    private function clearUserCart() {
+    /*private function clearUserCart() {
       if($this->userId) {
         $this->db->query('DELETE cart, cart_item FROM cart INNER JOIN cart_item ON cart.id = cart_item.cart_id WHERE cart.user_id = ' . $this->userId );
       }
-    }
+    }*/
 
     public function addToCart($productId, $cartId) {
       // $this->clearCart($cartId);
@@ -219,11 +219,12 @@
 
       //if ($this->userId) {
         //var_dump($this->clientId, $_SESSION['client_id']); die;
-        $result = $this->db->query("SELECT id FROM cart WHERE client_id = '$this->clientId'"); 
+        $result = $this->db->query("SELECT id,client_id FROM cart WHERE client_id = '$this->clientId'"); 
         if (count($result) == 0) {
           $cartId = $this->createCart();
         } else {
           $cartId = $result[0]['id'];
+          //$cartId = $this->clientId;
         }
       /*} else {
         $result = $this->db->query("SELECT id FROM cart WHERE user_id = $this->userId");

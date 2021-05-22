@@ -46,7 +46,7 @@
   <div class="col-75">
     <div class="container">
       <a href="<?php echo ROOT_URL . 'public'.$_GLOBALS['URL_USER'].'&pages=homepage'; ?>" class="back" style="font-weight:bold;">&#8592; Torna allo Shopping </a>
-      <form action="../../php/ordine.php<?php echo $_GLOBALS['URL_USER']?>" method="POST" onsubmit="return validaOrdine()" style='cursor:auto;'>
+      <form action="../../php/ordine.php<?php echo $_GLOBALS['URL_USER']?>" method="POST" style='cursor:auto;'>
       
         <div class="row">
           <div class="col-50">
