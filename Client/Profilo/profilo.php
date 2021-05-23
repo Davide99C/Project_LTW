@@ -7,6 +7,8 @@
         <script type="text/javascript" lang="javascript" src="profilo.js"> </script>
         <link rel="stylesheet" type="text/css" href="profilo.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     </head>
     <body >
         <!--HEADER-->
@@ -123,14 +125,14 @@
             </ul>
 
             <ul id="social">
-                <label> Facebook: WildFishing </label>
-                <br>
-                <label> Instagram: @wildfishing </label>
-                <br>
-                <label> Telefono: ********** </label>
-                <br>
-                <label> E-mail: wildfishing@hotmail.it </label>
-            </ul>
+            <label> <p><i class="fab fa-facebook"></i> WildFishing </label>
+            <br>
+            <label><p> <i class="fab fa-instagram"></i> @wildfishing </label>
+            <br>
+            <label><p><i class="fas fa-phone"></i> 333 123456789</label>
+            <br>
+            <label><p><i class="far fa-envelope"></i> wildfishing@hotmail.it </label>
+        </ul>
         </footer>
 
         <style> 

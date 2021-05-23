@@ -30,14 +30,14 @@
             </ul>
 
             <ul id="social">
-                <label> Facebook: WildFishing </label>
-                <br>
-                <label> Instagram: @wildfishing </label>
-                <br>
-                <label> Telefono: ********** </label>
-                <br>
-                <label> E-mail: wildfishing@hotmail.it </label>
-            </ul>
+            <label> <p><i class="fab fa-facebook"></i> WildFishing </label>
+            <br>
+            <label><p> <i class="fab fa-instagram"></i> @wildfishing </label>
+            <br>
+            <label><p><i class="fas fa-phone"></i> 333 123456789</label>
+            <br>
+            <label><p><i class="far fa-envelope"></i> wildfishing@hotmail.it </label>
+        </ul>
         </footer>
 
  <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
