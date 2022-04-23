@@ -20,3 +20,4 @@
  ° La galleria presenterà varie foto di catture di pesci con relative descrizioni
    
 In ogni pagina ci sarà la barra superiore con menu a tendina e logo per poter spostarsi agevolmente in altre pagine
+Ps: per scaricare la gif di sfondo della homepage clicca qui https://drive.google.com/file/d/1ECed0SrvK3zVib9LCp4JFammdDi6eDr4/view
